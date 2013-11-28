@@ -1,0 +1,6 @@
+:javascript
+  window._gaq = [['_setAccount','#{ENV['ANALYTICS_KEY']}'],['_trackPageview'],['_trackPageLoadTime'],
+    ['k._setAccount', '#{ENV['ANALYTICS_KEY2']}'],['k._trackPageview']];
+  Modernizr.load({
+    load: ('https:' == location.protocol ? '//ssl' : '//www') + '.google-analytics.com/ga.js'
+  })

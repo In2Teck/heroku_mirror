@@ -1,0 +1,73 @@
+<!DOCTYPE HTML> 
+<html>
+<head>
+	
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<title>Philadelphia.com.mx</title>
+	
+	<meta name="description" content="" />
+
+	<%= stylesheet_link_tag    "mobile/mobile", :media => "all" %>
+	<!--<% javascript_include_tag "mobile/mobile" %>-->
+	<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+
+	<script type="text/javascript">
+	function notifywhat(){
+		$('#notifywhat').fadeIn('200');
+		}
+		function hidewhat(){
+		$('#notifywhat').fadeOut('200');
+		}
+		</script>
+</head>
+
+<body>
+
+<div id="wrapper_mobile320">
+
+
+<div class="block">
+	<ul id="social_btns">
+		<li><a class="soc_facebook" target="_blank" href="http://www.facebook.com/philadelphiamx"></a></li>
+		<li><a class="soc_twitter" target="_blank" href="http://twitter.com/philadelphiamx"></a></li>
+		<li><a class="soc_youtube" target="_blank" href="http://www.youtube.com/user/philadelphiamexico"></a></li>
+		<li><a class="soc_pinterest" target="_blank" href="https://pinterest.com/philadelphiamx/"></a></li>
+		<li><a class="soc_telefono" target="_blank" title="WhatsApp" onclick="notifywhat();"></a></li>
+		<div id="notifywhat" style="display:none;"><img src="http://philadelphia.com.mx/yazwhatsappmsg_mobile2.png" onclick="hidewhat();"/></div>
+		<li><a class="soc_instagram" target="_blank" href="http://instagram.com/philadelphiamx/"></a></li>
+	</ul>
+</div>
+	
+<div class="block">
+<div id="logo_mobile">
+	<a  href="/"></a>
+</div>
+</div>
+
+<div id="divcentral" class="block" style="display:block">
+<%= yield %>
+</div>
+
+		
+<div class="block bordes">
+	<div class="suscribir_320">
+	<a href="http://www.philadelphia.com.mx/#nosotrasyphiladelphia"></a>
+	</div>
+
+</div>
+
+<div class="block">
+	<div class="footer_320"> 
+	<a class="linkmarca" href="http://www.philadelphia.com.mx/#marca"></a>
+
+	</div>
+</div>
+
+</div>
+
+	
+</body>
+</html>

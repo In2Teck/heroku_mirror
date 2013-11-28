@@ -1,0 +1,32 @@
+- content_for :title do
+  ="Recetas de la Comunidad - Philadelphia"
+
+%section.panel.recetas
+  %article.recetas.comunidad
+    .header
+      %h2.comunidad-titulo
+        Recetas de la comunidad
+      %form#buscar(method="get" action="/recetas/comunidad/busqueda" )
+        %a{:href => 'http://www.philadelphia.com.mx/recetas', :style => 'float: left; margin-right: 20px;'}
+          =image_tag 'recetas/comunidad/botin.png'
+        = text_field_tag 'q', '', :autocomplete => 'off', :placeholder => 'Busca recetas', :class => 'busqueda'
+        = submit_tag "", :id => 'buscar_do'
+      .banner
+        %a.enviar{ :href => "/#receta-enviar" }
+        %a.mail{ :href => "mailto:?subject=Philadelphia%20quiere%20publicar%20tu%20receta&body=%20%20%20Hola%3A%20%20%20%0D%0A%20%20%20%20%20%20%0D%0A%20%20%20%20%20%20%20Sabemos%20que%20tienes%20una%20receta%20preparada%20con%20Philadelphia%2C%20%20nos%20gustar%C3%ADa%20que%20la%20compartieras%20con%20nosotros%2C%20s%C3%B3lo%20da%20clic%20en%20el%20link.%20%20%20%0D%0A%20%20%20%20%20%20%0D%0A%20%20%20http%3A%2F%2Fwww.philadelphia.com.mx%2F%23receta-enviar%20%20%20%0D%0A%20%20%20%20%20%20%0D%0A%20%20%20" }
+        = image_tag 'recetas/comunidad/banner.png'
+
+    #recetas_cont
+      - if @recetas.empty?
+        %span.recetas-sinresultados
+      .flechas
+        .scrolls
+      - @recetas.each do |receta|
+        .receta.inlineblock{ :class => "adorno-#{rand(4)+1}"}
+          .img
+            =link_to image_tag(receta.pic_small.url(:normal)), receta_path(receta.id, receta.slug)
+          %h2
+            = link_to receta.titulo, receta_path(receta.id, receta.slug)
+    = paginate @recetas     
+
+  = render 'base/footer'

@@ -1,0 +1,50 @@
+!!! 5
+/ paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/
+/[if lt IE 7 ] <html class="ie6" lang="en" xmlns:fb="http://ogp.me/ns/fb#">
+/[if IE 7 ]    <html class="ie7" lang="en" xmlns:fb="http://ogp.me/ns/fb#">
+/[if IE 8 ]    <html class="ie8" lang="en" xmlns:fb="http://ogp.me/ns/fb#">
+/[if IE 9 ]    <html class="ie9" lang="en" xmlns:fb="http://ogp.me/ns/fb#">
+/[if (gt IE 9)|!(IE)] <!--> <html lang="en" xmlns:fb="http://ogp.me/ns/fb#">
+
+%head
+  %meta{ :charset => "utf-8" }
+
+  -# Uncomment to make IE8 render like IE7
+  -# meta http-equiv="X-UA-Compatible" content="IE=7"
+  = javascript_include_tag 'modernizr'
+
+  %title= content_for?(:title) ? yield(:title) : "Philadelphia"
+  %link(href="/favicon.ico" rel="shortcut icon")
+
+  = csrf_meta_tag
+  %meta( name="description" content="Con el Queso Crema Philadelphia y Yaz, tu comida de todos los días será una nueva versión fácil y deliciosa ¡Conócela y súmate a la comunidad de cocina más divertida de México!" )
+
+  -# Included CSS Files
+  = stylesheet_link_tag "application"
+  :plain
+    <script type="text/javascript">
+      (function() {
+        var config = {
+          kitId: 'jjc5fek',
+          scriptTimeout: 3000
+        };
+        var h=document.getElementsByTagName("html")[0];h.className+=" wf-loading";var t=setTimeout(function(){h.className=h.className.replace(/(\s|^)wf-loading(\s|$)/g," ");h.className+=" wf-inactive"},config.scriptTimeout);var tk=document.createElement("script"),d=false;tk.src='//use.typekit.net/'+config.kitId+'.js';tk.type="text/javascript";tk.async="true";tk.onload=tk.onreadystatechange=function(){var a=this.readyState;if(d||a&&a!="complete"&&a!="loaded")return;d=true;clearTimeout(t);try{Typekit.load(config)}catch(b){}};var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(tk,s)
+      })();
+    </script>
+
+
+%body
+  .container
+    =render 'base/menu'
+
+    #main(role="main")
+      = yield
+
+  -# Included JS Files
+  = javascript_include_tag "application"
+  = yield(:javascripts) if content_for?(:javascripts)
+  = render 'base/analytics' if ENV['ANALYTICS_KEY']
+  #reveal-video-global.reveal-modal
+    %a.close-reveal-modal
+    %h1
+    .video.flex-video.widescreen

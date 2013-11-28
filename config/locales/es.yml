@@ -1,0 +1,72 @@
+# encoding: UTF-8
+
+es:
+  date:
+    formats:
+      default: "%Y-%m-%d"
+      short: "%b %d"
+      long: "%B %d, %Y"
+  time:
+    formats:
+      default: "%a, %d %b %Y %H:%M:%S %z"
+      short: "%d %b %H:%M"
+      long: "%B %d, %Y %H:%M"
+    am: "am"
+    pm: "pm"
+  i18n:
+    transliterate:
+      rule:
+        ñ: "ni"
+  active_admin:
+    dashboard: Panel
+    dashboard_welcome:
+      welcome: "Bienvenido a Philadelphia Admin."
+    update_model: "Editar %{model}"
+  activerecord:
+    models:
+      recipe: "Receta"
+    attributes:
+      recipe:
+        product: Producto
+        desayuno: Desayuno
+        p_postre: Postre / Dulce
+        p_sopa: Sopa
+        p_botana: Botana / Salado
+        p_entrada: Entrada
+        p_aves: Pollo (Plato Fuerte)
+        p_carne: Carne (Plato Fuerte)
+        p_pescado: Pescado (Plato Fuerte)
+        p_pasta: Pasta (Plato Fuerte)
+        p_cerdo: Cerdo (Plato Fuerte)
+        p_ensalada: Ensalada
+        t_relleno: Rellenar
+        t_licuadora: Licuar
+        t_sarten: Calentar
+        t_mezclar: Mezclar
+        t_hornear: Hornear
+        t_batir: Batir
+        recipe_photo: Foto Grande
+    errors:
+      messages:
+        blank: "no puede estar vacio"
+  formtastic:
+    titles:
+      recipe:
+        basico: Básico
+        categorias: Categorías
+        tipo_platillo: "Tipo de platillo"
+        preparacion: "Preparación"
+        tutoriales: Tutoriales
+    hints:
+      recipe:
+        product: El producto de la familia Philadelphia
+        tiempo: En minutos
+        porciones: "Con número"
+        ingredientes: 
+          "Cada ingrediente en una línea. Todos los ingredientes se procesan automáticamente.
+          Recuerda prioritizar las medidas en tazas sobre las medidas en gramos.
+          Ejemplo: preferir 2 tazas a 300 gramos"
+        recipe_photo: "JPG 680px de ancho"
+  views:
+    pagination:
+      next: "Siguiente"

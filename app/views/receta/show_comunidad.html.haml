@@ -1,0 +1,53 @@
+- @meta_description = "Prueba esta receta con Queso Crema Philadelphia® ¡Fácil y deliciosa!"
+- content_for :head do
+  %meta{ :property => "og:title", :content => "#{@receta.titulo}"}
+  %meta{ :property => "og:type", :content => "food"}
+  %meta{ :property => "og:url", :content => "http://www.philadelphia.com.mx/receta/#{@receta.id}/#{@receta.slug}.html"}
+  %meta{ :property => "og:image", :content => "#{@receta.small_photo}"}
+  %meta{ :property => "og:site_name", :content => "Philadelphia México"}
+  %meta{ :property => "fb:app_id", :content => "#{ENV['FB_APP_ID']}"}
+  = stylesheet_link_tag 'receta_print', media: 'print'
+
+- content_for :title do
+  ="#{@receta.titulo} - Philadelphia México"
+%section.panel
+  %article#receta.comunidad( itemscope itemtype="http://schema.org/Recipe" )
+    .row
+      .ten.columns
+        %h2.titulo{ itemprop: 'name' }
+          = @receta.titulo
+        %h3.autor
+          Receta de:
+          %span.nombre
+            #{@receta.comunidad_autor}
+        .imagen
+          %span.img
+            = image_tag @receta.pic_big.url(:normal)
+            .festejemos
+        .thumb
+          = image_tag @receta.pic_small.url(:normal), itemprop: "image"
+        .row
+          .eight.columns
+            .preparacion
+              %h3 Preparación
+              %div{ itemprop: 'recipeInstructions' }
+                = simple_format @receta.preparacion
+          .four.columns
+            .ingredientes
+              %h3 Ingredientes
+              %ul.nicelist
+                = ingredientes @receta.ingredientes
+
+      .two.columns
+        .canales-ayuda
+          = image_tag 'recetas/comunidad/preguntaleayaz.png'
+          .canales
+            %a.chat{ :href => '/#canalesayuda' }
+            %a.fb{ :href => 'http://www.facebook.com/preguntaleayaz' }
+            %a.tw{ :href => 'http://twitter.com/preguntaleayaz' }
+            %a.mail{ :href => '/#canalesayuda' }
+            %a.tel{ :href => '/#canalesayuda' }
+
+  .flechas
+    .scrolls
+  = render 'base/footer'

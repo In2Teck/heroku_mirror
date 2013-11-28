@@ -1,0 +1,5 @@
+%section.panel.promo-festejemos
+  %article#festejemos
+    .iframe
+      %iframe{ :src => "//fbapp-philly.herokuapp.com/#{"votar/#{params[:receta]}" unless params[:receta].nil?}", :width => "810", :height => "1000" }
+  = render 'base/footer'

@@ -1,0 +1,11 @@
+%p A continuación te proporcionamos la receta que tu o alguno de tus amigos decidió enviar a tu correo por medio de nuestra página philadelphia.com.mx
+
+%p ¡Disfrútala y compártela!
+
+= ingredientes @receta.ingredientes
+
+%ul
+  - @receta.preparacion.lines.each do |paso|
+    %li= paso
+
+= link_to 'Para ver más recetas da clic aquí', recetas_url

@@ -1,0 +1,9 @@
+.no-textshadow {
+  .container > header > nav > a {
+    color: #666;
+    &.active, &:hover {
+      color: #fff;
+      margin-top: 0;
+    }
+  }
+}

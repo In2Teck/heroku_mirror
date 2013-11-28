@@ -1,0 +1,72 @@
+= semantic_form_for [:admin, @recipe], html: {multipart: true} do |f|
+  = f.inputs name: "Datos" do
+    %li.string
+      = f.label :consecutivo
+      %span#recipe_consecutivo= "#{@recipe.id}"
+    %li.string
+      = f.label :imagen
+      - unless @recipe.recipe_photo.blank?
+        = image_tag @recipe.recipe_photo, {height: 100, id: 'recipe_imagen'}
+      - else
+        = image_tag "http://phillybeta.outofthebox.mx/recetas/clasico/#{@recipe.imagen}.jpg", {height: 100, id: 'recipe_imagen'}
+
+  = f.inputs :basico do
+    = f.input :titulo
+    = f.input :product
+    = f.input :porciones
+    = f.input :orden
+    = f.input :pic_big, as: :file, :label => 'Foto grande'
+    - unless @recipe.pic_big_file_name.to_s.empty?
+      %li
+        %label.label
+          %small Vista previa
+        = image_tag @recipe.pic_big.url(:mini)
+    = f.input :pic_small, as: :file, :label => 'Foto miniatura'
+    - unless @recipe.pic_small_file_name.to_s.empty?
+      %li
+        %label.label
+          %small Vista previa
+        = image_tag @recipe.pic_small.url(:mini)
+    %li
+      %label.label{ :for => "recipe_video" } Videoreceta
+      = f.check_box :video
+    = f.input :video_url, :label => "URL del Video"
+  = f.inputs name: "Dificultad" do
+    = f.input :dificultad, as: :radio, collection: 1.upto(10)
+  = f.inputs name: "Grupos" do
+    = f.input :grupos, as: :check_boxes
+  = f.semantic_errors
+  = f.inputs name: "Tipo de platillo" do
+    = f.input :desayuno
+    = f.input :p_postre
+    = f.input :p_sopa
+    = f.input :p_botana
+    = f.input :p_entrada
+    = f.input :p_aves
+    = f.input :p_carne
+    = f.input :p_pescado
+    = f.input :p_cerdo
+    = f.input :p_pasta
+    = f.input :p_ensalada
+  = f.inputs name: "Preparación" do
+    = f.input :ingredientes
+    = f.input :preparacion
+    = f.input :tips
+    = f.input :etiquetas
+    = f.input :tiempo
+  = f.inputs :tutoriales do
+    = f.input :t_relleno
+    = f.input :t_licuadora
+    = f.input :t_sarten
+    = f.input :t_mezclar
+    = f.input :t_hornear
+    = f.input :t_batir
+  = f.inputs name: "Utensilios" do
+    = f.input :utensilios, as: :check_boxes
+  = f.inputs name: "Usos" do
+    = f.input :usos, as: :check_boxes
+  = f.inputs name: "Medios sociales" do
+    = f.input :medios, as: :check_boxes
+  = f.inputs name: "Comunidad" do
+    = f.input :comunidad_autor
+  = f.buttons :commit

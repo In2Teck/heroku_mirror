@@ -1,0 +1,22 @@
+%footer.block
+  .col_40
+    %a.logo_footer{:href => "/#marca"}
+    %br
+    .mas
+      .styled
+        %select
+          %option Más de la familia kraft
+          %option{:value => "//www.kraft-philadelphia.at"} Philadelphia Austria
+          %option{:value => "//www.philadelphia.co.uk"} Philadelphia Inglaterra
+          %option{:value => "//www.philadelphia.com.br"} Philadelphia Brasil
+          %option{:value => "//www.philadelphia.de"} Philadelphia Alemania
+          %option{:value => "//www.philadelphia.info"} Philadelphia en el Mundo
+          %option{:value => "//www.hemelsevariaties.nl"} Philadelphia Holanda
+
+     
+  .col_60
+    %ul#menu_footer
+      %li= link_to 'Contáctenos', marca_contacto_path
+      %li= link_to 'Preguntas frecuentes', marca_ayuda_path
+      %li= link_to 'Política de privacidad y términos de uso', marca_politicas_path
+      %li= link_to 'Aviso Legal', marca_legal_path

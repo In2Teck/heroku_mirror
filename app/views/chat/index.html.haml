@@ -1,0 +1,37 @@
+.chat
+  %header
+    %h1 
+      Preguntale a Yaz
+      %span.yaz en linea
+    = image_tag "chat/logo_philly.png"  
+    
+  %form#chat_philly(method="post" action="http://200.66.107.211/taw/light/chat/chat_page.jsp")
+    #forma.row
+      .six.columns
+        = field_set_tag(raw('Introduzca su información personal <span class="necesario">*Informacion necesaria</span>')) do 
+          = label_tag 'firstName', '*Nombre'
+          = text_field_tag 'firstName'    
+          = label_tag 'lastName', '*Apellido'
+          = text_field_tag 'lastName' 
+          = label_tag 'email', '*Correo electronico'
+          = email_field_tag 'email'
+          = hidden_field_tag 'countryCode', '1'
+          = hidden_field_tag 'company', ''
+          = hidden_field_tag 'projectId', '233'
+          = hidden_field_tag 'languageId', '7'
+          = hidden_field_tag 'collaborationAcrossDomain', '0'
+          = hidden_field_tag 'isIE', 'false'
+          = hidden_field_tag 'extensionTemplateLibId', '-1'          
+          .row
+            .three.columns
+              = label_tag 'phoneNumber', 'Teléfono'
+              = text_field_tag 'phoneNumber'
+            .three.columns
+              = label_tag 'extension', 'Extensión'
+              = text_field_tag 'extension'
+  
+        = submit_tag "Chat", :id => 'chat'
+      
+      %aside.six.columns
+        = image_tag "chat/yaz_chat.png", :class => 'jaz_img'
+        %p En su horario de atención de 9am a 9pm de lunes a viernes y sábados de 9am a 4pm 

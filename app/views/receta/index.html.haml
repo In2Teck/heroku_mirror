@@ -1,0 +1,156 @@
+%section.panel.recetas
+  %div.imagen2{ :style => "width: 100%; height: 286px; position:relative; top:223px; text-align:center;" } 
+    = link_to image_tag( 'home/consentidas_home_recetas.jpg'), 'http://www.consentidas.com.mx ', :target => '_blank' 
+  %nav#lateral    
+    %dl.tabs.contained
+      %dd.tab.mejora
+        %a.active{ href: "#mejora" }
+          %span Aprende
+      %dd.tab.aprende
+        %a{ href: "#aprende" }
+          %span Mejora
+      %dd.tab.impresiona
+        %a{ href: "#impresiona" }
+          %span Impresiona
+    %ul.tabs-content.contained
+      %li#mejoraTab.active
+        .intro
+          %big Dále un giro a tus recetas de todos los días.
+          %big ¿Qué quieres preparar hoy?
+        %ul.grupo-filtros
+          %li
+            %a.filtro{ href: '?filtro=platillo-desayuno', :'data-filtro' => "platillo-desayuno" }
+              Desayuno
+              %span
+          %li
+            %a.filtro{ href: '?filtro=platillo-sopa', :'data-filtro' => "platillo-sopa" }
+              Sopa
+              %span
+          %li
+            %a.filtro{ href: '?filtro=platillo-entrada', :'data-filtro' => "platillo-entrada" }
+              Entrada
+              %span
+          %li
+            %a.filtro{ href: '?filtro=platillo-carne', :'data-filtro' => "platillo-carne" }
+              Carne
+              %span
+          %li
+            %a.filtro{ href: '?filtro=platillo-cerdo', :'data-filtro' => "platillo-cerdo" }
+              Cerdo
+              %span
+          %li
+            %a.filtro{ href: '?filtro=platillo-postre', :'data-filtro' => "platillo-postre" }
+              Postre / Dulce
+              %span
+          %li
+            %a.filtro{ href: '?filtro=platillo-botana', :'data-filtro' => "platillo-botana" }
+              Botana / Salado
+              %span
+          %li
+            %a.filtro{ href: '?filtro=platillo-pollo', :'data-filtro' => "platillo-pollo" }
+              Pollo
+              %span
+          %li
+            %a.filtro{ href: '?filtro=platillo-pescado', :'data-filtro' => "platillo-pescado" }
+              Pescado
+              %span
+          %li
+            %a.filtro{ href: '?filtro=platillo-pasta', :'data-filtro' => "platillo-pasta" }
+              Pasta
+              %span
+          %li
+            %a.filtro{ href: '?filtro=platillo-ensalada', :'data-filtro' => "platillo-ensalada" }
+              Ensalada
+              %span
+        .filtro-tiempo
+          %span.inlineblock
+            %input( type="radio" autocomplete="off" name="filtro_tiempo1" value="0" checked )
+          %span.inlineblock
+            %input( type="radio" autocomplete="off" name="filtro_tiempo1" value="1" )
+          %span.inlineblock
+            %input( type="radio" autocomplete="off" name="filtro_tiempo1" value="2" )
+          %span.inlineblock
+            %input( type="radio" autocomplete="off" name="filtro_tiempo1" value="3" )
+          %span.inlineblock
+            %input( type="radio" autocomplete="off" name="filtro_tiempo1" value="4" )
+      %li#aprendeTab
+        .intro
+          %big Conoce las diferentes técnicas para incorporar Philadelphia® a tus comidas.
+        %ul.grupo-filtros
+          %li
+            %a.inlineblock.rellenar.filtro{ href: '?filtro=tutorial-rellenar', :'data-filtro' => "tutorial-rellenar" }
+              %span Rellenar
+          %li
+            %a.inlineblock.calentar.filtro{ href: '?filtro=tutorial-calentar', :'data-filtro' => "tutorial-calentar" }
+              %span Calentar
+          %li
+            %a.inlineblock.licuar.filtro{ href: '?filtro=tutorial-licuar', :'data-filtro' => "tutorial-licuar" }
+              %span Licuar
+        .filtro-tiempo
+          %span.inlineblock
+            %input( type="radio" autocomplete="off" name="filtro_tiempo2" value="0" checked )
+          %span.inlineblock
+            %input( type="radio" autocomplete="off" name="filtro_tiempo2" value="1" )
+          %span.inlineblock
+            %input( type="radio" autocomplete="off" name="filtro_tiempo2" value="2" )
+          %span.inlineblock
+            %input( type="radio" autocomplete="off" name="filtro_tiempo2" value="3" )
+          %span.inlineblock
+            %input( type="radio" autocomplete="off" name="filtro_tiempo2" value="4" )
+      %li#impresionaTab
+        .intro
+          %big Sorprende a tu familia y a tus amigos con recetas especiales
+        %ul.grupo-filtros
+          - @porgrupo.reject!{|k,v| k.to_s['utensilio'] }.each do |grupo|
+            %li
+              =link_to("#{grupo.nombre} <span/>".html_safe, "?filtro=grupo-#{grupo.slug}", { class: 'filtro', :'data-filtro' => "grupo-#{grupo.slug}" })
+        .filtro-tiempo
+          %span.inlineblock
+            %input( type="radio" autocomplete="off" name="filtro_tiempo3" value="0" checked )
+          %span.inlineblock
+            %input( type="radio" autocomplete="off" name="filtro_tiempo3" value="1" )
+          %span.inlineblock
+            %input( type="radio" autocomplete="off" name="filtro_tiempo3" value="2" )
+          %span.inlineblock
+            %input( type="radio" autocomplete="off" name="filtro_tiempo3" value="3" )
+          %span.inlineblock
+            %input( type="radio" autocomplete="off" name="filtro_tiempo3" value="4" )
+      %section.busqueda
+        %h1 Buscar receta por ingrediente:
+        %form#buscar(method="get" action="/receta/busqueda" )       
+          = label_tag 'q', 'Buscar'
+          = text_field_tag 'q', '', :autocomplete => 'off', :id => '', :class => 'busqueda'
+          = submit_tag "Buscar", :id => 'buscar_do'
+          %p.mensaje Introduce un ingrediente 
+      %section.comu
+        =link_to image_tag('recetas/comunidad/comu_boton.jpg'), '/recetas/comunidad'
+  %article.recetas
+    - if @video_tutorial
+      .video.videotutorial
+        %h3
+          = @video_tutorial[:titulo]
+        = image_tag "videos/#{@video_tutorial[:img_url]}", size: '641x321', class: "video-embed #{'youtube' unless @youtube.blank?}", :'data-video' => "http://philly.2013.s3.amazonaws.com/videos/#{@video_tutorial[:video_url]}"
+    #recetas_cont
+      - if @recetas.empty?
+        %span.recetas-sinresultados
+      .cuaresma-liston
+      #videos-small
+        .liston-videos
+          =image_tag 'recetas/liston_recetas.png', class: 'lol', size: '440x55'
+        %a.rellenar-vid.video-float{ href: "?filtro=tutorial-rellenar" }Rellenar
+        %a.calentar-vid.video-float{ href: "?filtro=tutorial-calentar" }Sarten
+        %a.licuar-vid.video-float{ href: "?filtro=tutorial-licuar" }Licuar
+      .flechas
+        .scrolls
+      - @recetas.each do |receta|
+        .receta.inlineblock
+          - unless receta.pic_small_file_name.nil?
+            =link_to image_tag(receta.pic_small.url(:normal)), receta_path(receta.id, receta.slug)
+          - else
+            =link_to image_tag(receta.small_photo), receta_path(receta.id, receta.slug)
+          - if receta.new?
+            .badge-nuevo.inlineblock
+          %h2
+            = link_to receta.titulo, receta_path(receta.id, receta.slug)
+    = paginate @recetas     
+  = render 'base/footer'

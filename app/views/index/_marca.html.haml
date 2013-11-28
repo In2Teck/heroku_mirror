@@ -1,0 +1,294 @@
+:css
+  nav.interna a{background: #014282; width:15px; margin:10px 0; padding:3px 10px ; float:left; -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;}
+%section#marca.productos.panel
+  %nav.interna
+    %span.flecha
+    %a{:href => "#infografia", :style => "margin-bottom:0;"}= image_tag "menu/producto/infografia_boton.png", alt: "Infografia"
+    %a{:href => "#producto_barra", :style => "margin-bottom:0;"}= image_tag "menu/producto/philibarraoriginal.png", alt: "Barra Original 190g"
+    %a{:href => "#producto_barra_mini", :style => "margin-bottom:0;"}= image_tag "menu/producto/philioriginal95gr.png", alt: "Barra Original 95g"
+    %a{:href => "#producto_light", :style => "margin-bottom:0;"}= image_tag "menu/producto/phililight190gr.png", alt: "Barra Light 190g"
+    %a{:href => "#producto_light_mini", :style => "margin-bottom:0;"}= image_tag "menu/producto/philylight95gr.png", alt: "Barra Light 95g"
+    %a{:href => "#producto_untable", :style => "margin-bottom:0;"}= image_tag "menu/producto/philyuntableoriginal150gr.png", alt: "Untable Original 150g"
+    %a{:href => "#producto_untable_mini", :style => "margin-bottom:0;"}= image_tag "menu/producto/philyuntableoriginal90gr.png", alt: "Untable Original 90g"
+    %a{:href => "#producto_untable_light", :style => "margin-bottom:0;"}= image_tag "menu/producto/philyuntablelight150gr.png", alt: "Untable Light 150g"
+    / <a href="#producto_untable_light_mini"><haml:loud> image_tag &quot;menu/philibarraoriginal.png&quot;, alt: &quot;Untable Light 90g&quot; </haml:loud></a>
+    %a{:href => "#producto_rebanadas" , :style => "margin-bottom:0;"}= image_tag "menu/producto/philyrebanadasoriginal.png", alt: "Rebanadas Cremosas"
+    %a{:href => "#producto_rebanadas_light" , :style => "margin-bottom:0;"}= image_tag "menu/producto/philyrebanadaslight.png", alt: "Rebanadas Cremosas Light"
+  %article#infografia
+    =image_tag 'marca/infografia.png', size: '787x717'    
+  %article#producto_barra
+    %header{:style=>"color:#004B96"} Philadelphia® Original Barra 190 g
+    .main-section.row
+      .six.columns
+        = image_tag "producto/philyoriginal190gr.png", class: 'main-image', size: '395x183', class: 'img-producto'
+        .row.recetas
+          %h4 Nuestras sugerencias son:
+          %a{ href: '/receta/138/enchiladas-suizas-philadelphia.html' }
+            = image_tag 'producto/receta_barraoriginal190g_1.png', lazy: false, size: '135x134'
+          %a{ href: '/receta/110/calabacitas-rellenas-philadelphia.html' }
+            = image_tag 'producto/receta_barraoriginal190g_2.png', lazy: false, size: '135x134'
+          %a{ href: '/receta/128/muslos-de-pollo-en-salsa-de-ajo-y-perejil.html' }
+            = image_tag 'producto/receta_barraoriginal190g_3.png', lazy: false, size: '135x134'
+      %aside.four.columns{:style => "background:#27B0F0;"}
+        %h4 Ingredientes:
+        %ul
+          %li Leche entera de vaca pasteurizada
+          %li Crema de leche pasteurizada
+          %li Sal yodatada
+        %h4 Usos:
+        %p Calientes: Sopas, Postres, Pastas, Carnes y Botanas. <br> Fríos: Botanas y Ensaladas.
+        %h4 Información Nutricional:
+        %p
+          Tamaño de la porción: 30 g
+          %br
+          Número de porciones por envase: 6.3
+    .row.slogan
+      %p{:style=>"background:#004B96"} "La fórmula original de Philadelphia®, para hacer deliciosas todas tus recetas."    
+  %article#producto_barra_mini
+    %header{:style=>"color:#004B96"} Philadelphia® Original Barra 95 g
+    .main-section.row
+      .six.columns
+        = image_tag "producto/philyoriginal95gr.png", class: 'main-image', lazy: true, size: '298x223', class: 'img-producto'
+        .row.recetas.recetas-menos
+          %h4 Nuestras sugerencias son:
+          %a{ href: '/receta/302/arroz-con-leche-de-chocolate.html' }
+            = image_tag 'producto/receta_barraoriginal95g_1.png', lazy: true, size: '135x134'
+          %a{ href: '/receta/141/tostadas-philadelphia.html' }
+            = image_tag 'producto/receta_barraoriginal95g_2.png', lazy: true, size: '135x134'
+          %a{ href: '/receta/123/pure-de-papa-philadelphia.html' }
+            = image_tag 'producto/receta_barraoriginal95g_3.png', lazy: true, size: '135x134'
+      %aside.four.columns{:style => "background:#27B0F0;"}
+        %h4 Ingredientes:
+        %ul
+          %li Leche entera de vaca pasteurizada
+          %li Crema de leche pasteurizada
+          %li Sal yodatada
+        %h4 Usos:
+        %p Calientes: Sopas, Postres, Pastas, Carnes y Botanas. <br> Fríos: Botanas y Ensaladas.
+        %h4 Información Nutricional:
+        %p
+          Tamaño de la porción: 30 g
+          %br
+          Número de porciones por envase: 3.16
+    .row.slogan
+      %p{:style=>"background:#004B96"} "La fórmula original de Philadelphia®, para hacer deliciosas todas tus recetas."
+  %article#producto_light
+    %header{:style=>"color:#004B96"} Philadelphia® Light Barra 190 g
+    .main-section.row
+      .six.columns
+        = image_tag "producto/philylight190gr.png", class: 'main-image', lazy: true, size: '397x201', class: 'img-producto'
+        .row.recetas
+          %h4 Nuestras sugerencias son:
+          %a{ href: '/receta/88/ensalada-de-espinaca,-surimi-y-mango.html' }
+            = image_tag 'producto/receta_barralight190g_1.png', lazy: true, size: '135x134'
+          %a{ href: '/receta/164/postre-de-frutas-y-philadelphia.html' }
+            = image_tag 'producto/receta_barralight190g_2.png', lazy: true, size: '135x134'
+          %a{ href: '/receta/90/crema-de-espinacas-philadelphia-light.html' }
+            = image_tag 'producto/receta_barralight190g_3.png', lazy: true, size: '135x134'
+      %aside.four.columns{:style => "background:#27B0F0;"}
+        %h4 Ingredientes:
+        %ul
+          %li Leche entera pasteurizada de vaca
+          %li Crema de leche pasteurizada de vaca
+          %li Agua
+          %li Sal yodada
+        %h4 Usos:
+        %p Calientes: Sopas, Postres, Pastas, Carnes y Botanas. <br> Fríos: Botanas y Ensaladas.
+        %h4 Información Nutricional:
+        %p
+          Tamaño de la porción: 30 g
+          %br
+          Número de porciones por envase: 6.3
+    .row.slogan
+      %p{:style=>"background:#004B96"}
+        "La deliciosa fórmula de Philadelphia® Light, te ofrece el mismo sabor y consistencia de siempre.
+        %br Ahora disfrutar, no te va a pesar nada"
+  %article#producto_light_mini
+    %header{:style=>"color:#004B96"} Philadelphia® Light Barra 95 g
+    .main-section.row
+      .six.columns
+        = image_tag "producto/philylight95gr.png", class: 'main-image', lazy: true, size: '272x203', class: 'img-producto'
+        .row.recetas
+          %h4 Nuestras sugerencias son:
+          %a{ href: '/receta/281/albondigas-con-salsa-de-yoghurt.html' }
+            = image_tag 'producto/receta_barralight95g_1.png', lazy: true, size: '135x134'
+          %a{ href: '/receta/153/ensalada-de-berros-con-aderezo-cilantro.html' }
+            = image_tag 'producto/receta_barralight95g_2.png', lazy: true, size: '135x134'
+          %a{ href: '/receta/296/ensalada-de-mousse-de-aguacate.html' }
+            = image_tag 'producto/receta_barralight95g_3.png', lazy: true, size: '135x134'
+      %aside.four.columns{:style => "background:#27B0F0;"}
+        %h4 Ingredientes:
+        %ul
+          %li Leche entera pasteurizada de vaca
+          %li Crema de leche pasteurizada de vaca
+          %li Agua
+          %li Sal yodada
+        %h4 Usos:
+        %p Calientes: Sopas, Postres, Pastas, Carnes y Botanas. <br> Fríos: Botanas y Ensaladas.
+        %h4 Información Nutricional:
+        %p
+          Tamaño de la porción: 30 g
+          %br
+          Número de porciones por envase: 3.16
+    .row.slogan
+      %p{:style=>"background:#004B96"}
+        "La deliciosa fórmula de Philadelphia® Light, te ofrece el mismo sabor y consistencia de siempre.
+        %br Ahora disfrutar, no te va a pesar nada"
+  %article#producto_untable
+    %header{:style=>"color:#004B96"} Philadelphia® Untable Original 150 g
+    .main-section.row
+      .six.columns
+        = image_tag "producto/philyuntableoriginal150gr.png", class: 'main-image', lazy: true, size: '397x237'
+        .row.recetas
+          %h4 Nuestras sugerencias son:
+          %a{ href: '/receta/294/baguette-de-pescado-philadelphia.html' }
+            = image_tag 'producto/receta_untable_1.png', lazy: true, size: '135x134'
+          %a{ href: '/receta/145/sandwiches-de-pollo-philadelphia.html' }
+            = image_tag 'producto/receta_untable_2.png', lazy: true, size: '135x134'
+          %a{ href: '/receta/144/sandwiches-integrales-de-atun-philadelphia.html' }
+            = image_tag 'producto/receta_untable_3.png', lazy: true, size: '135x134'
+      %aside.four.columns{:style => "background:#27B0F0;"}
+        %h4 Ingredientes:
+        %ul
+          %li Leche entera de vaca pasteurizada
+          %li Crema de leche pasteurizada
+          %li Sal yodatada
+        %h4 Usos:
+        %p Calientes: Pan Tostado, Hot Cakes, Waffles, Crepas y Baguettes. <br> Fríos: Frutas, Verduras, Totopos y Galletas.
+        %h4 Información Nutricional:
+        %p
+          Tamaño de la porción: 30 g
+          %br
+          Número de porciones por envase: 5
+    .row.slogan
+      %p{:style=>"background:#004B96"} "La fórmula original de Philadelphia®, para hacer deliciosas todas tus recetas."
+  %article#producto_untable_mini
+    %header{:style=>"color:#004B96"} Philadelphia® Untable Original 90g
+    .main-section.row
+      .six.columns
+        = image_tag "producto/philyuntableoriginal90gr.png", class: 'main-image', lazy: true, size: '354x277'
+        .row.recetas.recetas-menos
+          %h4 Nuestras sugerencias son:
+          %a{ href: '/receta/294/baguette-de-pescado-philadelphia.html' }
+            = image_tag 'producto/receta_untable_1.png', lazy: true, size: '135x134'
+          %a{ href: '/receta/145/sandwiches-de-pollo-philadelphia.html' }
+            = image_tag 'producto/receta_untable_2.png', lazy: true, size: '135x134'
+          %a{ href: '/receta/144/sandwiches-integrales-de-atun-philadelphia.html' }
+            = image_tag 'producto/receta_untable_3.png', lazy: true, size: '135x134'
+      %aside.four.columns{:style => "background:#27B0F0;"}
+        %h4 Ingredientes:
+        %ul
+          %li Leche entera de vaca pasteurizada
+          %li Crema de leche pasteurizada
+          %li Sal yodatada
+        %h4 Usos:
+        %p Calientes: Pan Tostado, Hot Cakes, Waffles, Crepas y Baguettes. <br> Fríos: Frutas, Verduras, Totopos y Galletas.
+        %h4 Información Nutricional:
+        %p
+          Tamaño de la porción: 30 g
+          %br
+          Número de porciones por envase: 3
+    .row.slogan
+      %p{:style=>"background:#004B96"} "La fórmula original de Philadelphia®, para hacer deliciosas todas tus recetas."
+  %article#producto_untable_light
+    %header{:style=>"color:#004B96"} Philadelphia® Untable Light 150 g
+    .main-section.row
+      .six.columns
+        = image_tag "producto/philyuntablelight150gr.png", class: 'main-image', lazy: true, size: '397x203', class: 'img-producto'
+        .row.recetas
+          %h4 Nuestras sugerencias son:
+          %a{ href: '/receta/294/baguette-de-pescado-philadelphia.html' }
+            = image_tag 'producto/receta_untable_1.png', lazy: true, size: '135x134'
+          %a{ href: '/receta/145/sandwiches-de-pollo-philadelphia.html' }
+            = image_tag 'producto/receta_untable_2.png', lazy: true, size: '135x134'
+          %a{ href: '/receta/144/sandwiches-integrales-de-atun-philadelphia.html' }
+            = image_tag 'producto/receta_untable_3.png', lazy: true, size: '135x134'
+      %aside.four.columns{:style => "background:#27B0F0;"}
+        %h4 Ingredientes:
+        %ul
+          %li Leche entera pasteurizada de vaca
+          %li Crema de leche pasteurizada de vaca
+          %li Agua
+          %li Sal yodada
+        %h4 Usos:
+        %p Calientes: Pan Tostado, Hot Cakes, Waffles, Crepas y Baguettes. <br> Fríos: Frutas, Verduras, Totopos y Galletas.
+        %h4 Información Nutricional:
+        %p
+          Tamaño de la porción: 30 g
+          %br
+          Número de porciones por envase: 6.3
+    .row.slogan
+      %p{:style=>"background:#004B96"}
+        "La deliciosa fórmula de Philadelphia® Light, te ofrece el mismo sabor y consistencia de siempre.
+        %br Ahora disfrutar, no te va a pesar nada"
+  %article#producto_rebanadas
+    %header{:style=>"color:#004B96"} Philadelphia® Rebanadas Cremosas
+    .main-section.row
+      .six.columns
+        = image_tag "producto/philyrebanadasoriginal.png", class: 'main-image', lazy: true, size: '374x340'
+        .row.recetas.menos
+          %h4 Nuestras sugerencias son:
+          %a{ href: '/receta/171/lasana-de-carne.html' }
+            = image_tag 'producto/receta_rebanadasoriginal_1.png', lazy: true, size: '135x134'
+          %a{ href: '/receta/172/molletes.html' }
+            = image_tag 'producto/receta_rebanadasoriginal_2.png', lazy: true, size: '135x134'
+          %a{ href: '/receta/175/crepa-de-queso-y-zarzamora.html' }
+            = image_tag 'producto/receta_rebanadasoriginal_3.png', lazy: true, size: '135x134'
+      %aside.four.columns{:style => "background:#27B0F0;"}
+        %h4 Ingredientes:
+        %ul
+          %li Leche entera de vaca pasteurizada
+          %li Crema de leche pasteurizada
+          %li Sal yodatada
+        %h4 Usos:
+        %p
+          Calientes: Lasaña, Omelet, Molletes, Sandwiches, Hamburguesas.
+          %br
+            Fríos: Ensaladas, Salchichas, Sándwich.
+        %h4 Información Nutricional:
+        %p
+          Tamaño de la porción: 30 g
+          %br
+          Número de porciones por envase: 5.3
+    .row.slogan
+      %p{:style=>"background:#004B96"}
+        ¡Nuevo Philadelphia® en cremosas rebanadas, dejarlas caer será tu tentación!
+        %br Usa Philadelphia® en rebanadas y lúcete en todas tus comidas de forma fácil.
+  %article#producto_rebanadas_light
+    %header{:style=>"color:#004B96"} Philadelphia® Rebanadas Cremosas Light
+    .main-section.row
+      .six.columns
+        = image_tag "producto/philyrebanadaslight.png", class: 'main-image', lazy: true, size: '344x272'
+        .row.recetas.recetas-menos
+          %h4 Nuestras sugerencias son:
+          %a{ href: '/receta/304/alambre-de-pollo.html' }
+            = image_tag 'producto/receta_rebanadaslight_1.png', lazy: true, size: '135x134'
+          %a{ href: '/receta/307/pizzeta-de-atun-parrillado-y-hierbas.html' }
+            = image_tag 'producto/receta_rebanadaslight_2.png', lazy: true, size: '135x134'
+          %a{ href: '/receta/305/sopa-de-cebollas.html' }
+            = image_tag 'producto/receta_rebanadaslight_3.png', lazy: true, size: '135x134'
+      %aside.four.columns{:style => "background:#27B0F0;"}
+        %h4 Ingredientes:
+        %ul
+          %li Leche entera de vaca pasteurizada
+          %li Crema de leche pasteurizada
+          %li Sal yodatada
+        %h4 Usos:
+        %p
+          Calientes: Lasaña, Omelet, Molletes.
+          %br
+            Fríos: Ensaladas, Salchichas, Sándwich.
+        %h4 Información Nutricional:
+        %p
+          Tamaño de la porción: 30 g
+          %br
+          Número de porciones por envase: 5.3
+    .row.slogan
+      %p{:style=>"background:#004B96"}
+        ¡Nuevo Philadelphia® en cremosas rebanadas light, el mejor aliado ligero para tu cocina!
+        %br>/
+        Usa Philadelphia® en rebanadas light y lúcete en todas tus comidas de forma fácil.
+  %article.ghost
+  = render 'base/footer'

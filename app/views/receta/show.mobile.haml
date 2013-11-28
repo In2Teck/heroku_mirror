@@ -1,0 +1,56 @@
+%section#receta
+  = javascript_include_tag "mobile/mobile"
+  .sub-menu
+    %a{ :href => '#', :'data-rel' => 'back', :class => 'regresar-icon' } regresar 
+  .contenidos-show
+    %nav.top
+      %ul
+        %li.ingredientes
+          %a.menu{ :href => '#', :'data-ajax' => 'false', :'data-target' => 'ingredientes' }
+            Ingredientes
+        %li.preparacion
+          %a.menu{ :href => '#', :'data-ajax' => 'false', :'data-target' => 'preparacion' }
+            Preparación
+        %li.imagen
+          %a.menu{ :href => '#', :'data-ajax' => 'false', :'data-target' => 'imagen' }
+            Foto
+        %li.compartir
+          %a.menu{ :href => '#', :'data-ajax' => 'false', :'data-target' => 'share-buttons' }
+            Compartir
+    .imagen.activo
+      .titulo
+        %h1
+          = @receta.titulo
+      - unless @receta.pic_big_file_name.nil?
+        = image_tag @receta.pic_big.url(:normal)
+      - else
+        - unless @receta.recipe_photo.blank?
+          = image_tag @receta.recipe_photo
+        - else
+          =image_tag("http://phillybeta.outofthebox.mx/recetas/clasico/#{@receta.imagen}.jpg")
+    .ingredientes
+      .titulo
+        %h1
+          = @receta.titulo        
+      %ul.nicelist
+        = ingredientes @receta.ingredientes
+    .preparacion
+      .titulo
+        %h1
+          = @receta.titulo
+      %ul.nicelist{ itemprop: 'recipeInstructions' }
+        - @receta.preparacion.lines.each do |paso|
+          %li
+            = paso
+    .share-buttons
+      .titulo
+        %h1 Comparte esta receta con tus amigos.       
+      .share
+        .twitter
+          %a{ :href => "https://twitter.com/share", :class => "twitter-share-button", :'data-text' => "Checa esta receta", :'data-via' => "Philadelphiamx", :'data-lang' => "es", :'data-hashtags' => "FácilyDeliciosa"} Tweet
+          <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+        .facebook
+          .fb-like{ :'data-send' => "false", :'data-layout' => "button_count", :'data-width' => "450", :'data-show-faces' => "true", :'data-action' => "recommend"}
+        .mail
+          %a{ :href => "mailto:?subject=Mira esta deliciosa receta que encontré&body=¡Hola! quiero compartirte esta fácil y deliciosa receta con Queso Crema Philadelphia® que sé que te va a gustar. [sub]", :onclick => "this.href = this.href.replace('[sub]',window.location)"}
+            =image_tag 'mobile/mail.png'

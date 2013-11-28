@@ -1,0 +1,142 @@
+%section.preguntaleayaz.panel
+  %nav
+    %span.flecha
+    %ul
+      %li.videos
+        %a{href: '#videos', class: 'videos'} Videos Pregúntale a Yaz
+      %li.conoceyaz
+        %a{href: '#yazinicio', class: 'yazinicio'} Conoce a Yaz
+      %li.facebook
+        %a{href: '#fblikebox', class: 'fblikebox'} Videos Pregúntale a Yaz
+      %li.canalesayuda
+        %a{href: '#canalesayuda', class: 'canalesayuda'} Canales de Ayuda
+      %li.yaz-blog
+        %a{href: '#yazblog', class: 'yazblog'} Blog
+  #preguntaleayaz
+  %article#videos
+    .videos-intro
+      %h4 ¿No se te ocurre qué cocinar hoy?
+      %h4 ¿Quieres hacer más rica tu comida de todos los días?
+      %h4 ¿Te acabas de casar y quieres sorprender a tu suegra?
+      .intro-parrafo
+        %p No te preocupes, a partir de hoy estaré contigo para enseñarte mis trucos y recetas que te ayudarán a hacer tu comida fácil y deliciosa; ya verás lo bien que te quedará.
+        %p En este espacio te compartiré los mejores secretos para incorporar Philadelphia® en tus platillos fríos o calientes. Además, te revelaré los mejores trucos de cocina que utilizo a diario para tener un toque especial en mis comidas y te iré mostrando paso a paso como preparar varios platillos para darles un toque especial.
+      %h3 ¡Descubre qué fácil es!
+    .videos-platillos
+      %a{href: '#',:'data-reveal-id'=>'reveal-video-global', :'data-video-url' => 'tutorial-licuar.mov', :'data-video-titulo' => 'Integra Philadelphia® en la licuadora', class:'vid_img licuar_vid_img'} licuar
+      %a{href: '#',:'data-reveal-id'=>'reveal-video-global', :'data-video-url' => 'tutorial-calentar.mov', :'data-video-titulo' => 'Agrega Philadelphia® en el sartén', class:'vid_img sarten_vid_img'} Sarten    
+      %a{href: '#',:'data-reveal-id'=>'reveal-video-global', :'data-video-url' => '4kBXPT3mqcw', :'data-video-titulo' => 'Rellena con Philadelphia®', class:'vid_img youtube rellenar_vid_img'} rellenar
+    .videos-vermas
+    .videos-content             
+      -#.video-embed.flex-video.widescreen{ :'data-video' => 'http://www.philadelphia.com.mx/img/2012/philadelphia.mp4'}
+      %a{href: '#',:'data-reveal-id'=>'reveal-video-global', :'data-video-url' => 'preguntale-a-yaz.mov', :'data-video-titulo' => 'Pregúntale a Yaz', class:'vid_img yaz_vid_img'} preguntale a yaz          
+      %h4.subtitulo_vid.vid_yaz Yaz y Philadelphia
+      .paginacion
+        %a{href: '#',:'data-reveal-id'=>'reveal-video-global', :'data-video-url' => 'FxR0_dV_xtg', :'data-video-titulo' => 'Cena Romántica', class:'vid_img youtube cena_vid_img'} cena romantica 
+        %a{href: '#',:'data-reveal-id'=>'reveal-video-global', :'data-video-url' => '8kkIxKWmNNI', :'data-video-titulo' => 'Baguette de pescado con Philadelphia®', class:'vid_img youtube baguette_pescado_vid_img'} baguette de pescado
+        %a{href: '#',:'data-reveal-id'=>'reveal-video-global', :'data-video-url' => '3howJRASKKU', :'data-video-titulo' => 'Ensalada Griega con Philadelphia®', class:'vid_img youtube ensalada_griega_vid_img'} ensalada griega      
+      #reveal-video.reveal-modal
+        %a{class: 'close-reveal-modal'} cerrar
+        %h1
+        .video.flex-video.widescreen
+
+      / termina seccion nueva de videos 
+  %article#yazinicio    
+    .conoce-yaz
+      .intro-text
+        %p Yaz es madre, fotógrafa y ama de casa. Ella ha sido seleccionada como vocera de Philadelphia® para compartirte sus conocimientos culinarios heredados de su abuela, con el toque moderno de la mujer de hoy.
+        %p Yaz te ayudará a llevar a tu hogar la cocina fácil y deliciosa.
+      .intro-video
+        %a{href: '#',:'data-reveal-id'=>'reveal-video-global', :'data-video-url' => 'conoce-a-yaz.mov', :'data-video-titulo' => 'Conoce a Yaz', class:'vid_img pregunta_vid_img'} conoce a yaz
+    .fotos-yaz 
+      .fotos-titulo
+        =image_tag 'yaz/fotostitulo.png', size: '190x46', lazy: true
+      .yaz-galeria
+        .yaz-familia
+          =image_tag 'yaz/galeria/yaz_familia/liston_yaz_familia.jpg', size: '189x33'
+          %a{class: 'grouped_elements', rel: 'group_familia', title: 'Tiempo con Mamá', href: 'assets/yaz/galeria/yaz_familia/1_big.jpg'}
+            =image_tag 'yaz/galeria/yaz_familia/1.jpg', :class => 'phot-margin'
+          %a{class: 'grouped_elements', rel: 'group_familia', title: 'Un buen día de Escuela', href: 'assets/yaz/galeria/yaz_familia/2_big.jpg'}
+            =image_tag 'yaz/galeria/yaz_familia/2.jpg'
+          %a{class: 'grouped_elements', rel: 'group_familia', title: '¿A que hora se volvió tan bueno?', href: 'assets/yaz/galeria/yaz_familia/3_big.jpg'}
+            =image_tag 'yaz/galeria/yaz_familia/3.jpg', :class => 'phot-margin'
+          %a{class: 'grouped_elements', rel: 'group_familia', title: 'Día de Novios', href: 'assets/yaz/galeria/yaz_familia/4_big.jpg'}
+            =image_tag 'yaz/galeria/yaz_familia/4.jpg'
+          %a{class: 'grouped_elements', rel: 'group_familia', title: 'Una tarde en el parque', href: 'assets/yaz/galeria/yaz_familia/5_big.jpg'}
+            =image_tag 'yaz/galeria/yaz_familia/5.jpg', :class => 'phot-margin'
+        .yaz-compras
+          =image_tag 'yaz/galeria/yaz_compras/liston_yaz_compras.jpg', size: '191x33'
+          %a{class: 'grouped_elements', rel: 'group_compras', title: 'Flores para mi casa', href: 'assets/yaz/galeria/yaz_compras/1_big.jpg'}
+            =image_tag 'yaz/galeria/yaz_compras/1.jpg', :class => 'phot-margin'
+          %a{class: 'grouped_elements', rel: 'group_compras', title: 'Haciendo el Super', href: 'assets/yaz/galeria/yaz_compras/2_big.jpg'}
+            =image_tag 'yaz/galeria/yaz_compras/2.jpg'
+          %a{class: 'grouped_elements', rel: 'group_compras', title: 'Consintiéndome', href: 'assets/yaz/galeria/yaz_compras/3_big.jpg'}
+            =image_tag 'yaz/galeria/yaz_compras/3.jpg', :class => 'phot-margin'
+          %a{class: 'grouped_elements', rel: 'group_compras', title: 'Buscando opciones para mi club de Lectura ', href: 'assets/yaz/galeria/yaz_compras/4_big.jpg'}
+            =image_tag 'yaz/galeria/yaz_compras/4.jpg'
+        .yaz-vida
+          =image_tag 'yaz/galeria/yaz_vida/liston_yaz_vida.jpg', size: '190x33'
+          %a{class: 'grouped_elements', rel: 'group_vida', title: 'Una tarde relajada', href: 'assets/yaz/galeria/yaz_vida/1_big.jpg'}
+            =image_tag 'yaz/galeria/yaz_vida/1.jpg', :class => 'phot-margin'
+          %a{class: 'grouped_elements', rel: 'group_vida', title: 'Recargando Pilas', href: 'assets/yaz/galeria/yaz_vida/2_big.jpg'}
+            =image_tag 'yaz/galeria/yaz_vida/2.jpg'
+          %a{class: 'grouped_elements', rel: 'group_vida', title: 'Ordenando recuerdos', href: 'assets/yaz/galeria/yaz_vida/3_big.jpg'}
+            =image_tag 'yaz/galeria/yaz_vida/3.jpg', :class => 'phot-margin'
+          %a{class: 'grouped_elements', rel: 'group_vida', title: 'Disfrutando la ciudad', href: 'assets/yaz/galeria/yaz_vida/4_big.jpg'}
+            =image_tag 'yaz/galeria/yaz_vida/4.jpg'
+        .yazcocina 
+          =image_tag 'yaz/galeria/yaz_cocina/liston_yaz_cocina.jpg', size: '190x33'
+          %a{class: 'grouped_elements', rel: 'group_cocina', title: 'Lista para preparar algo delicioso', href: 'assets/yaz/galeria/yaz_cocina/1_big.jpg'}
+            =image_tag 'yaz/galeria/yaz_cocina/1.jpg', :class => 'phot-margin'
+          %a{class: 'grouped_elements', rel: 'group_cocina', title: 'Así de fácil con Philadelphia', href: 'assets/yaz/galeria/yaz_cocina/2_big.jpg'}
+            =image_tag 'yaz/galeria/yaz_cocina/2.jpg' 
+          %a{class: 'grouped_elements', rel: 'group_cocina', title: 'Día de Mercado', href: 'assets/yaz/galeria/yaz_cocina/3_big.jpg'}
+            =image_tag 'yaz/galeria/yaz_cocina/3.jpg' , :class => 'phot-margin'
+  %article#fblikebox
+    %h4 Pregúntale a Yaz en Facebook
+    =image_tag 'yaz/liston_facebook.png', size: '664x78', lazy: true
+    .fb-like-box( href="http://www.facebook.com/preguntaleayaz" width="664" height="300" show_faces="true" stream="true" header="true" )
+    %a{class:'boton_facebook', href: 'http://www.facebook.com/Preguntale.a.Yaz', target:'blank' } Facebook
+  %article#canalesayuda   
+    -#.video-embed.flex-video.widescreen{ :'data-video' => 'http://www.philadelphia.com.mx/img/2012/philadelphia.mp4'}%article#canalesayuda
+    .row.callcenter
+      .two.columns
+        =image_tag 'yaz/icono_callcenter.png', lazy: true, size: '92x104'
+      .nine.columns
+        01•800•444•4321
+        %small.horario Horario: <br> Lunes a Viernes 9:00 a.m. a 9:00 p.m. <br> Sábado 9:00 a.m. a 4:00 p.m.
+    .row.mail
+      .two.columns
+        %a{ href: 'mailto:preguntaleayaz@philadelphia.com.mx' }=image_tag 'yaz/icono_mail.png', lazy: true, size: '92x104'
+      .nine.columns
+        %a{ href: 'mailto:preguntaleayaz@philadelphia.com.mx' } preguntaleayaz@philadelphia.com.mx
+    -# .row.chat
+    -#   .two.columns
+    -#     %a{ href: '/' }=image_tag 'yaz/icono_chat.png', lazy: true, size: '93x104'
+    -#   .nine.columns
+    -#     Chat Online
+    .row.twitter
+      .two.columns
+        %a{ target: '_blank', href: '//twitter.com/preguntaleayaz' }=image_tag 'yaz/icono_twitter.png', lazy: true, size: '92x104'
+      .nine.columns
+        %a{ target: '_blank', href: '//twitter.com/preguntaleayaz' } @preguntaleayaz
+    .row.facebook
+      .two.columns
+        %a{ target: '_blank', href: '//www.facebook.com/Preguntale.a.Yaz' }=image_tag 'yaz/icono_facebook.png', lazy: true, size: '92x104'
+      .nine.columns
+        %a{ target: '_blank', href: '//www.facebook.com/Preguntale.a.Yaz' } /Preguntale.a.Yaz
+    .row.youtube
+      .two.columns
+        %a{ target: '_blank', href: '//www.youtube.com/PreguntaleaYaz' }=image_tag 'yaz/icono_youtube.png', lazy: true, size: '92x104'
+      .nine.columns
+        %a{ target: '_blank', href: '//www.youtube.com/PreguntaleaYaz' } /PreguntaleaYaz
+  %article.ghost
+  %article#yazblog
+    .titulo_yaz_fotos 
+      =link_to(image_tag('yaz/liston_blogyaz.png'), 'http://www.preguntaleayaz.blogspot.mx/', { target: '_blank' })          
+    .intro_yaz_blog
+      %p Yaz quiere que la conozcas más a fondo. Una mujer como tú, con emociones y retos cotidianos.
+      %p Acompáñala en su blog y verás que juntas el día a día.
+      %p es más fácil y delicioso.  
+    %iframe{ :width => 600, :height => 700, :src => 'http://www.preguntaleayaz.blogspot.mx/' }
+  = render 'base/footer'

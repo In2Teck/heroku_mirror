@@ -1,0 +1,282 @@
+
+
+%section.foodservice.panel
+  %nav
+    %span.flecha
+    %ul
+      %li
+        %a{href: '#comidarapida', class: 'comidarapida'} Comida Rápida
+      %li
+        %a{href: '#panaderia', class: 'panaderia'} Panadería
+      %li
+        %a{href: '#socios', class: 'socios'} Socios
+      %li
+        %a{href: '#entretenimiento', class: 'entretenimiento'} Entretenimiento
+      %li
+        %a{href: '#restaurantes', class: 'restaurantes'} Restaurantes
+      %li
+        %a{href: '#centrogastronomico', class: 'centrogastronomico'} Centro Gastronómico     
+      %li
+        %a{href: '#contactoventas', class: 'contactoventas'} Contacto de Venta para Empresas
+  %article#foodservice{ 'data-nav' => 'none' }
+    %br
+    #bannerocultable{ :onmouseover => "zaraza();"}
+      .insidebannerocultable
+        %a{href: 'http://www.burgerking.com.mx/', :target => '_blank', class: 'insidebannerocultable'}
+          =image_tag 'foodservice/burger-big-conlogo2.jpg'
+    %header ¿En dónde más puedo encontrar Philadelphia®?
+    .main-section
+      = image_tag 'foodservice/fotophilyencajas.png', class: "main-image", size: '557x234'
+    .slogan
+      %p.normal Foodservice es un mercado que comprende a todas las categorías que se utilizan fuera de casa en segmentos como el Comercial y el Social en donde encontramos hoteles, restaurantes, congelados, panaderías, cines, teatros, etc. Por esta razón queremos compartir contigo las iniciativas que van mas allá de nuestros productos, las cuales son respaldadas por la calidad que ofrece nuestra Marca.
+      %p Para nosotros, tú eres lo más importante, por ello te invitamos a que conozcas y disfrutes con tu familia y amigos los productos elaborados con Philadelphia®    
+  %article#comidarapida
+    %h1.titulos Comida Rápida
+    .subtitulo
+      %h4 Disfruta del inigualable sabor de Philadelphia® probando sus deliciosas combinaciones en restaurantes.
+    .logos
+      %span.logo-element.inlineblock
+        =image_tag 'foodservice/logos/logo_pizzahut.png', class: 'food-logo', lazy: true, size: '100x102'
+        .fs-contenido
+          .content-principal
+            .img-content
+              =image_tag 'foodservice/pizzahut/popdulces_pizzahut.png', class: 'main-image', size: '430x238'
+            %p ¿Has ido a Pizza Hut y probado los Pops Dulces?
+            %p Los Pops Dulces de Pizza Hut están elaborados con los ingredientes más selectos y por supuesto no podía faltar el ingrediente principal: queso crema Philadelphia®
+            %p Recuerda, cuendo estés en Pizza hut, date un pequeño capricho con ésta rica botana.
+            =image_tag 'foodservice/flecha.png', class: 'flecha-next'
+            =image_tag 'foodservice/flecha-left.png', class: 'flecha-prev' 
+          .content-secundario
+            %h1 Pops Dulces
+            =image_tag 'foodservice/logo_philly.png'
+            %p De venta en 
+            =link_to(image_tag('foodservice/logos/logo_pizzahut.png'), '//www.pizzahut.com.mx/', { target: '_blank' })
+        .fs-contenido
+          .content-principal
+            .img-content
+              =image_tag 'foodservice/pizzahut/pizzahut_salado.png', class: 'main-image', size: '430x238'
+            %p ¿Has ido a Pizza Hut y probado los Palitos de Queso?
+            %p Los Palitos de Queso de Pizza Hut están elaborados con los ingredientes más selectos y por supuesto no podía faltar el ingrediente principal: queso crema Philadelphia®
+            %p Recuerda, cuendo estés en Pizza hut, date un pequeño capricho con ésta rica botana.
+            =image_tag 'foodservice/flecha.png', class: 'flecha-next'
+            =image_tag 'foodservice/flecha-left.png', class: 'flecha-prev'
+          .content-secundario
+            %h1 Palitos de Queso
+            =image_tag 'foodservice/logo_philly.png'
+            %p De venta en 
+            =link_to(image_tag('foodservice/logos/logo_pizzahut.png'), '//www.pizzahut.com.mx/', { target: '_blank' })
+      %span.logo-element.inlineblock
+        =image_tag 'foodservice/logos/lonchibon.png', class: 'food-logo lonchi', lazy: true, size: '159x92'
+        .fs-contenido
+          .content-principal
+            .img-content
+              =image_tag 'foodservice/lonchibon/burritos.png', class: 'main-image', size: '340x208'
+            %p.inlineblock Lonchibon te ofrece una Edición Limitada de productos elaborados con Rebanadas Philadelphia®. Búscalos en tu
+            =image_tag 'foodservice/logos/oxxo-logo.png', class: 'oxxo-logo inlineblock', size: '75x38'
+            %p.inlineblock más cercano.
+            =image_tag 'foodservice/flecha.png', class: 'flecha-next'
+            =image_tag 'foodservice/flecha-left.png', class: 'flecha-prev' 
+          .content-secundario.lonchibon
+            %h1.lonch Burritos
+            %h1.lonch Sandwiches
+            %h1.lonch Cuernitos
+            =image_tag 'foodservice/logo_philly.png'
+            =link_to(image_tag('foodservice/logos/lonchibon.png'), 'http://www.lonchibon.com.mx/', { target: '_blank' })        
+    .content-contenedor   
+  %article#panaderia
+    %h1.titulos Panadería
+    .subtitulo 
+      %h4 Prueba el toque especial que Philadelphia® le da a tus pasteles y postres favoritos. 
+    .logos
+      %span.logo-element.inlineblock
+        =image_tag 'foodservice/logos/logo_terecazola.png', class: 'food-logo', lazy: true, size: '169x85'
+        .fs-contenido
+          .content-principal
+            .img-content
+              =image_tag 'foodservice/terecazola/pastelterecazola.png', class: 'main-image', size: '297x195'
+            %p ¿Has ido a Tere Cazola y probado la Rosca Brioche?
+            %p La Rosca Brioche de Tere Cazola está elaborada con los ingredientes más selectos y por supuesto no podía faltar el ingrediente principal: queso crema Philadelphia®
+            %p Recuerda, cuando estés en Tere Cazola, date un pequeño capricho con éste postre delicioso.
+            =image_tag 'foodservice/flecha.png', class: 'flecha-next'
+            =image_tag 'foodservice/flecha-left.png', class: 'flecha-prev' 
+          .content-secundario
+            %h1 Rosca Brioche
+            =image_tag 'foodservice/logo_philly.png'
+            %p De venta en 
+            =link_to(image_tag('foodservice/logos/logo_terecazola.png'), '//www.terecazola.com/', { target: '_blank' })        
+      %span.logo-element.inlineblock
+        =image_tag 'foodservice/logos/logo_lazarza.png', class: 'food-logo', lazy: true, size: '163x85'
+        .fs-contenido
+          .content-principal
+            .img-content
+              =image_tag 'foodservice/lazarza/pastellazarza.png', class: 'main-image', size: '347x206'
+            %p ¿Has ido a La Zarza y probado el Mousse de Zarzamora?
+            %p El Mousse de Zarzamora de La Zarza está elaborado con los ingredientes mas selectos y por supuesto no podía falta el ingrediente principal: queso crema Philadelphia®
+            %p Recuerda, cuando estés en la Zarza, date un pequeño capricho con éste postre delicioso.
+            =image_tag 'foodservice/flecha.png', class: 'flecha-next'
+            =image_tag 'foodservice/flecha-left.png', class: 'flecha-prev'                       
+          .content-secundario
+            %h1 Mousse de Zarzamora
+            =image_tag 'foodservice/logo_philly.png'
+            %p De venta en 
+            =link_to(image_tag('foodservice/logos/logo_lazarza.png'), '//www.lazarza.com.mx/', { target: '_blank' })
+        .fs-contenido
+          .content-principal
+            .img-content
+              =image_tag 'foodservice/lazarza/pastel_mango.png', class: 'main-image', size: '347x206'
+            %p ¿Has ido a La Zarza y probado el Mousse de Mango?
+            %p El Mousse de Mango de La Zarza está elaborado con los ingredientes mas selectos y por supuesto no podía falta el ingrediente principal: queso crema Philadelphia®
+            %p Recuerda, cuando estés en la Zarza, date un pequeño capricho con éste postre delicioso.
+            =image_tag 'foodservice/flecha.png', class: 'flecha-next'
+            =image_tag 'foodservice/flecha-left.png', class: 'flecha-prev'           
+          .content-secundario
+            %h1 Mousse de Mango
+            =image_tag 'foodservice/logo_philly.png'
+            %p De venta en 
+            =link_to(image_tag('foodservice/logos/logo_lazarza.png'), '//www.lazarza.com.mx/', { target: '_blank' })
+      %span.logo-element.inlineblock
+        =image_tag 'foodservice/logos/logo_esperanza.jpg', class: 'food-logo', lazy: true, size: '163x85'
+        .fs-contenido
+          .content-principal
+            .img-content
+              =image_tag 'foodservice/esperanza/roscaesperanza.jpg', class: 'main-image', size: '347x206'
+            %p Este mes de septiembre Pastelerías La Esperanza tiene para ti una deliciosa sorpresa.
+            %p Prueba la edición especial de Corona de Independencia y compártela con tus seres queridos.
+            %p Vigencia: 1 al 30 de septiembre.
+            =image_tag 'foodservice/flecha.png', class: 'flecha-next'
+            =image_tag 'foodservice/flecha-left.png', class: 'flecha-prev'                       
+          .content-secundario
+            %h1.esperanza Corona de Independencia
+            =image_tag 'foodservice/logo_philly.png'
+            %p De venta en 
+            =link_to(image_tag('foodservice/logos/logo_s_esperanza.jpg'), '//www.esperanza.mx/web2/pruebas/especialidades/', { target: '_blank' })          
+    .content-contenedor    
+  %article#socios
+    %h1.titulos Socios Comerciales
+    .subtitulo 
+      %h4 Estés donde estés podrás encontrar y disfrutar del delicioso sabor de Philadelphia®.
+    .logos
+      %span.logo-element.inlineblock
+        =image_tag 'foodservice/logos/logo_delico.png', class: 'food-logo', lazy: true, size: '86x85'
+        .fs-contenido
+          .content-principal
+            .img-content
+              =image_tag 'foodservice/delico/mousedelico.png', class: 'main-image', size: '430x182'
+            %p ¿Has probado el Mousse de Delico elaborado con Philadelphia®?
+            %p El Mousse de Delico es una buena opción para tus botanas, elaborado con queso Philadelphia®.
+            %p Encuentralo en tu supermercado más cercano.
+            =image_tag 'foodservice/flecha.png', class: 'flecha-next'
+            =image_tag 'foodservice/flecha-left.png', class: 'flecha-prev'    
+          .content-secundario
+            %h1 Mousses elaborados con:
+            =image_tag 'foodservice/logo_philly.png'
+            =link_to(image_tag('foodservice/logos/logo_delico.png'), '//www.delico.com.mx/', { target: '_blank' }) 
+      %span.logo-element.inlineblock
+        =image_tag 'foodservice/logos/logo_tyson.png', class: 'food-logo', lazy: true, size: '115x80'
+        .fs-contenido
+          .content-principal
+            .img-content
+              =image_tag 'foodservice/tyson/pechugatyson.png', class: 'main-image', size: '186x164'
+            %p ¿Has probado la pechuga poblana Philadelphia® ?
+            %p Las Pechugas Poblanas Philadelphia®  de Tyson están elaborada con los ingredientes más selectos y por supuesto no podía faltar el ingrediente principal: queso crema Philadelphia®
+            %p Recuerda, cuando estés en el super mercado, probar esta deliciosa comida.
+            =image_tag 'foodservice/flecha.png', class: 'flecha-next'
+            =image_tag 'foodservice/flecha-left.png', class: 'flecha-prev'   
+          .content-secundario
+            %h1 Pechuga Poblana elaborada con:
+            =image_tag 'foodservice/logo_philly.png'
+            =link_to(image_tag('foodservice/logos/logo_tyson.png'), '//www.tyson.com.mx/', { target: '_blank' })            
+    .content-contenedor
+    / .main-section
+    /   =image_tag 'foodservice/delico/mousedelico.png', class: 'main-image', lazy: true, size: '603x182'
+    / .row.venta
+    /   .three.columns
+    /     %h4 Mousse de Alcachofa
+    /     =image_tag 'foodservice/logo_philly.png'
+    /     %p.deventa de venta en
+    /     =image_tag('foodservice/delico/logo_delico.png')
+    /   .nine.columns
+    /     %h3 ¿Has probado el Mousse de Alcachofa elaborado con Philadelphia®?
+    /     %p El Mousse de Alcachofa con Parmesano de Delico es una buena opción para tus botanas, elaborado con alcachofa, parmesano y queso Philadelphia®.
+    /     %p.slogan Encuentralo en tu supermercado más cercano en la sección de salchichonería.
+  %article#entretenimiento
+    %h1.titulos Entretenimiento
+    .subtitulo
+      %h4 Mientras te diviertes con tu familia y amigos Philadelphia® te acompaña en tus antojos favoritos ¡Compártelos!
+    .logos
+      %span.logo-element.inlineblock
+        =image_tag 'foodservice/logos/logo_cinepolis.png', class: 'food-logo', lazy: true, size: '176x64'
+        .fs-contenido
+          .content-principal
+            .img-content
+              =image_tag 'foodservice/cinepolis/crepascinepolis.png', class: 'main-image', size: '348x168'
+            %p Te invitamos a probar las deliciosas crepas de Cinecafé® / Coffee Tree® elaboradas con los mejores ingredientes.
+            %p Nuestras crepas elaboradas con queso crema Philadelphia®,  tienen combinaciones únicas y exquisitas que no podrás resistir. Ven a Cinépolis® y compruébalo.
+            =image_tag 'foodservice/flecha.png', class: 'flecha-next'
+            =image_tag 'foodservice/flecha-left.png', class: 'flecha-prev'  
+          .content-secundario
+            %h1 Crepas de Zarzamora
+            =image_tag 'foodservice/logo_philly.png'
+            %p De venta en 
+            =link_to(image_tag('foodservice/logos/logo_cinepolis.png'), '//www.cinepolis.com.mx/', { target: '_blank' }) 
+    .content-contenedor
+    / .main-section(style="margin-left: auto;margin-right: auto;width: 300px;")
+    /   = image_tag 'foodservice/cinepolis/crepascinepolis.png', class: 'main-image', lazy: true, size: '157x184', style: 'display: inline-block'      
+    / .row.venta
+    /   .three.columns
+    /     %h4 Crepas de Fresa
+    /     =image_tag 'foodservice/logo_philly.png'
+    /     %p.deventa de venta en
+    /     =link_to(image_tag('foodservice/cinepolis/logo_cinepolis.png'), '//www.cinepolis.com.mx/', { target: '_blank' })
+    /   .nine.columns
+    /     %h3 ¿Has ido a Cinépolis y probado las crepas de fresa con Philadelphia®?
+    /     %p Las crepas de Coffee Tree están elaboradas con el único sabor de Queso Crema Philadelphia® y las puedes encontrar en Cinépolis.
+    /     %p.slogan No olvides en tu próxima visita probar este delicioso postre.
+  %article#restaurantes
+    %h1.titulos Restaurantes
+    .subtitulo
+      %h4 Disfruta el sabor de Philadelphia® en tus restaurantes favoritos.
+    .logos
+      %span.logo-element.inlineblock
+        =image_tag 'foodservice/logos/logo_italiannis.png', class: 'food-logo', lazy: true, size: '111x71'
+        .fs-contenido
+          .content-principal
+            .img-content
+              =image_tag 'foodservice/italianis/pizzadiformaggio.jpg', class: 'main-image', size: '226x141'
+            %p Italianni's Pizza, el nuevo concepto de la famiglia Italianni's te invita a disfrutar una deliciosa pizza di Formaggio.
+            %p La pizza di Formaggio de Italianni's Pizza está elaborada con una deliciosa mezcla de alcachofas, champiñones, jitomate horneado y queso o crema Philadelphia®.
+            %p Te invitamos a probar nuestras pizzas elaboradas de forma artesanal con tutto il sapore d'Italia.
+            =image_tag 'foodservice/flecha.png', class: 'flecha-next'
+            =image_tag 'foodservice/flecha-left.png', class: 'flecha-prev'    
+          .content-secundario
+            %h1 Pizza di Formaggio
+            =image_tag 'foodservice/logo_philly.png'
+            %p De venta en 
+            =link_to(image_tag('foodservice/logos/logo_italiannis.png'), '//www.italiannis.com/', { target: '_blank' })
+    .content-contenedor
+  %article#centrogastronomico
+    %h3 Centro Gastronómico Kraft Foods de México
+    .bloque1
+      =image_tag 'marca/bloque1.jpg', lazy: true, size: '160x160'
+      %p Kraft Foods de México® ha estado presente desde hace más de 50 años en los hogares e industrias mexicanas con una gran variedad de productos en el sector de alimentos. Actualmente cuenta con un centro gastronómico ubicado en la ciudad de México
+      %p Este se creo a partir de la necesidad ofrecer a nuestros consumidores nuevos usos y cualidades de la amplia gama de productos Kraft conocidos por su gran calidad y versatilidad con marcas de renombre como Philadelphia®, Tang®, Oreo®, Chips Ahoy®, Clight®, Ritz® entre otras.
+      %p En este centro se experimenta creando nuevas texturas, colores, aromas y sabores que se ven reflejadas en el desarrollo de novedosas recetas y exquisitos productos liderado por un equipo de chefs con amplia experiencia en el arte de la gastronomía.
+    .bloque2
+      =image_tag 'marca/bloque2.jpg', lazy: true, size: '160x160'
+      %p El nuevo Centro Gastronómico Kraft cuenta con el equipo más avanzado e instalaciones especializadas donde se capacitan a socios comerciales y consumidores en la creación de nuevos productos y recetas.
+      %p Todo el contenido de esta pagina está avalado por nuestro equipo del Centro Gastronómico por lo que cada receta o tip garantizará un platillo delicioso…
+    .bloque3.row
+      .eight.columns
+        =image_tag 'marca/foto1.jpg', lazy: true, size: '100x100'
+        =image_tag 'marca/foto2.jpg', lazy: true, size: '100x100'
+        =image_tag 'marca/foto3.jpg', lazy: true, size: '100x100'
+        =image_tag 'marca/foto4.jpg', lazy: true, size: '100x100'
+      .four.columns
+        =image_tag 'marca/sello.png', lazy: true, size: '150x141'  
+  %article#contactoventas
+    -# iframe for now. Despues, se puede hacer en html y solo enlazar a wufoo
+    .iframe
+      %iframe(height="800" allowTransparency="true" frameborder="0" scrolling="no" style="width:700px;border:none;margin-left:50px"  src="http://outoftheboxmx.wufoo.com/embed/s7x2r7/")>
+        %a(href="http://outoftheboxmx.wufoo.com/forms/s7x2r7/") Forma de contacto
+  %article.ghost
+  = render 'base/footer' 

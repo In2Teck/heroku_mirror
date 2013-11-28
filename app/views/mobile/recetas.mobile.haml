@@ -1,0 +1,54 @@
+%section#opciones-mobile
+  .sub-menu
+    %a{ :href => '#', :'data-rel' => 'back', :class => 'regresar-icon' } regresar 
+    / =image_tag 'mobile/regresar.png', class: 'regresar-icon'
+    / %a{ :href => '#', :class => 'vista' } vista 
+    / =image_tag 'mobile/regresar.png', class: 'regresar-icon'
+    / %a{ :href => '#', :class => 'vista-lista' } lista
+    / =image_tag 'mobile/regresar.png', class: 'regresar-icon'
+  .mobile-lista
+    %ul.mobile-lista
+      - @recetas.each do |receta|
+        %li
+          %a{ :href => receta_path(receta.id, receta.slug) }
+            .imagen
+              - unless receta.pic_big_file_name.nil?
+                = image_tag receta.pic_big.url(:normal)
+              - else
+                - unless receta.recipe_photo.blank?
+                  = image_tag receta.recipe_photo
+                - else
+                  =image_tag("http://phillybeta.outofthebox.mx/recetas/clasico/#{receta.imagen}.jpg")
+            .descripcion
+              .titulo
+                %h1 
+                  = receta.titulo
+              .tiempo
+                %h2!= "Tiempo de preparación:<b> #{receta.tiempo} minutos.</b>"
+              .porciones
+                %h2!= "Porciones:<b> #{receta.porciones}</b>"
+              .platillos
+                %h2
+                  =image_tag 'mobile/platillo_icon.png', class: 'platillo-icon'
+                  = receta.tipo_platillo
+  = paginate @recetas
+  / .mobile-view
+  /   #slideshow
+  /     %ul
+  /       %li
+  /         %img{:src => "http://placekitten.com/500/300", :width => "500", :height => "300", :alt => ""}
+  /       %li
+  /         %img{:src => "http://placekitten.com/501/301", :width => "500", :height => "300", :alt => ""}
+  /       %li
+  /         %img{:src => "http://placekitten.com/502/302", :width => "500", :height => "300", :alt => ""}
+  /       %li
+  /         %img{:src => "http://placekitten.com/503/303", :width => "500", :height => "300", :alt => ""}
+  /       %li
+  /         %img{:src => "http://placekitten.com/504/304", :width => "500", :height => "300", :alt => ""}
+  /   #overview
+  /     %ul>
+  /       %li 1
+  /       %li 2
+  /       %li 3
+  /       %li 4
+  /       %li 5

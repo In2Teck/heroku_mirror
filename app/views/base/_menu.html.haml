@@ -1,0 +1,36 @@
+%header
+  %nav
+    %a.producto{:href => "/#marca"} Marca
+    =link_to 'Recetas', recetas_path, { class: "recetas #{@recetas_nuevas ? 'new' : nil} #{@recetas_activo ? 'active' : nil}"}
+    %a.twolines.nosotrasyphiladelphia{:href => "/#nosotrasyphiladelphia"} Nosotras y Philadelphia
+    %a.twolines.foodservice{:href => "/#foodservice"} Food Service
+    %h1#logo{:style => "position: absolute; top: -34px; left: 50%; margin-left: -94px;"}
+      %a{:href => "/#home"} Philadelphia México
+    %a.twolines.preguntaleayaz{style: 'margin-left: 200px', :href => "/#preguntaleayaz"} Pregúntale a Yaz
+    %a.twolines.basicos{:href => "/#basicos"} Básicos de cocina
+    %a.recompensas{:href => "http://recompensasphiladelphia.com/" } 
+  %menu.secundario
+    %ul
+      %li.inlineblock{ style: "position: relative; top: 10px;"}
+        Sé parte de las redes Philadelphia®
+      %li
+        %a.inlineblock.twitter{:target => "_blank", :href => "//twitter.com/philadelphiamx"}
+          %span twitter
+      %li
+        %a.inlineblock.facebook{:target => "_blank", :href => "//www.facebook.com/philadelphiamx"}
+          %span Facebook
+      %li
+        %a.inlineblock.youtube{:target => "_blank", :href => "//youtube.com/philadelphiamexico"}
+          %span Youtube
+      -#%li
+      -#  %a.inlineblock.blogger{:target => "_blank", :href => "//blogspot.com/"}
+      -#    %span Blogspot
+      -#%li
+      -#  %a.inlineblock.gplus{:target => "_blank", :href => "//plus.google.com/100360379304245749280"}
+      -#    %span Google+
+  %menu.extra
+    %ul
+      %li.boletin
+        %a.inlineblock.bg-icon{ :href => "/#nosotrasyphiladelphia" }
+          %span
+            Boletín

@@ -1,0 +1,158 @@
+- @meta_description = "Prueba esta receta con Queso Crema Philadelphia® ¡Fácil y deliciosa!"
+- content_for :head do
+  %meta{ :property => "og:title", :content => "#{@receta.titulo}"}
+  %meta{ :property => "og:type", :content => "food"}
+  %meta{ :property => "og:url", :content => "http://www.philadelphia.com.mx/receta/#{@receta.id}/#{@receta.slug}.html"}
+  %meta{ :property => "og:image", :content => "#{@receta.pic_small}"}
+  %meta{ :property => "og:site_name", :content => "Philadelphia México"}
+  %meta{ :property => "fb:app_id", :content => "#{ENV['FB_APP_ID']}"}
+  = stylesheet_link_tag 'receta_print', media: 'print'
+
+- content_for :title do
+  ="#{@receta.titulo} - Philadelphia México"
+
+%section.panel
+  %article#receta{:style => "margin-top:111px; "}( itemscope itemtype="http://schema.org/Recipe" )
+    %a.buttonregresarrecetas{:href => "http://www.philadelphia.com.mx/recetas#mejora", :style => "margin-bottom:12px; "} Regresar
+    %br
+    .row
+      
+      .ten.columns
+        .row.engagement-bar
+          = link_to image_tag( 'home/consentidas_recetas.jpg'), 'http://www.consentidas.com.mx ', :target => '_blank' 
+        .imagen
+          %h2.titulo{ itemprop: 'name' }
+            %span
+              = link_to(@receta.titulo, receta_path(@receta.id, @receta.slug))
+              %span.liston-der
+          - unless @receta.pic_big_file_name.nil?
+            = image_tag @receta.pic_big.url(:normal)
+          - else
+            - unless @receta.recipe_photo.blank?
+              = image_tag @receta.recipe_photo
+            - else
+              =image_tag("http://phillybeta.outofthebox.mx/recetas/clasico/#{@receta.imagen}.jpg")
+          - if @receta.new?
+            .badge-nuevo.inlineblock
+          - if @receta.videoreceta?
+            %a.videotutorial{ href: @receta.video_url, :target => "_blank" }
+              %span Video tutorial
+        .thumb
+          - unless @receta.pic_small_file_name.nil?
+            = image_tag @receta.pic_small.url(:normal), itemprop: "image"
+          - else
+            - unless @receta.recipe_photo.blank?
+              = image_tag @receta.small_photo, itemprop: "image"
+        %ul.datos.nolist
+          %li.tiempo{ itemprop: "prepTime", content: "PT#{@receta.tiempo.to_i}M" }
+            ="#{@receta.tiempo} minutos"
+          %li.porciones
+            ="#{@receta.porciones} porciones"
+          %li.platillo
+            =@receta.tipos_platillo.first
+          -# %li.favoritos
+          -#   %a
+          -#     Añadir a mis favoritos
+        .row
+          .five.columns
+            %ul.acciones.nolist
+              %li.imprimir
+                %a.inlineblock(onclick="window.print()")
+                  Imprimir
+              -#%%li.enviar
+              -#%  %a.inlineblock
+              -#%    Enviar ingredientes
+          .seven.columns
+            .socialshare
+              .fb-like{:"data-href" => "http://www.philadelphia.com.mx/receta/#{@receta.id}/#{@receta.slug}.html", :"data-send" => "true", :"data-width"=>"450", :"data-show-faces"=>"true"}
+            -# %ul.socialshare.nolist
+            -#   %li.facebook
+            -#     %a.inlineblock
+            -#       Facebook
+            -#   %li.twitter
+            -#     %a.inlineblock
+            -#       twitter
+            -#   %li.email
+            -#     %a.inlineblock
+            -#       Email
+            -#   %li.share
+            -#     %a.inlineblock
+            -#       Share
+        .contenido
+          %h2.preparacion-titulo
+            Preparación
+          .secundario
+            %aside
+              .cont
+                .ingredientes
+                  %h4
+                    %span Ingredientes
+                  %ul.nicelist
+                    = ingredientes @receta.ingredientes
+                - if @utensilios.length > 0
+                  .utensilios
+                    %h4
+                      %span Utensilios
+                    %ul.nicelist
+                      - @utensilios.each do |utensilio|
+                        %li
+                          = utensilio
+          .principal
+            .preparacion
+              %ul.nicelist{ itemprop: 'recipeInstructions' }
+                - @receta.preparacion.lines.each do |paso|
+                  %li
+                    = paso
+            <div class="fb-comments" data-href="http://www.philadelphia.com.mx/receta/#{@receta.id}/#{@receta.slug}.html" data-width="397" data-num-posts="10"></div>
+      .two.columns{:style => " float:right; "}
+        %aside.tips{:style => " float:right; margin: 0; "}
+          %h4
+            Tips de la Receta
+          - @receta.tips.lines.each do |paso|
+            %p
+              = paso
+          .tipsphiladelphia
+            %h4
+              Cómo uso Philadelphia
+            %ul.nolist
+              %li.basicos-icon
+                %a.inlineblock{ href: "/#basicos" }
+              - if !@receta.tipo_tutorial.first.blank?
+                %li{ class: @receta.tipo_tutorial.first } 
+                  %a.bg-icon.tuto.inlineblock{ href: "/recetas?filtro=tutorial-#{@receta.tipo_tutorial.first}" }
+                    %span 
+                      =@receta.tipo_tutorial.first
+
+        - if @receta.videoreceta?
+          %aside.videotutorial
+            %a{ href: @receta.video_url, :target => "_blank" }
+              Video tutorial
+
+        %aside.canalesayuda
+          %p ¿Necesitas ayuda?
+          %br
+          =image_tag 'recetas/liston_preguntale_receta.png', class: 'liston-show', size: '152x28'
+          .sello
+          %ul.nolist
+            / %li.chat
+            /   %a.inlineblock{ href: '/#canalesayuda'}
+            /     Chat
+            %li.email
+              %a.bg-icon.inlineblock{ href: 'mailto:preguntaleayaz@philadelphia.com.mx'}
+                %span
+                  Mail
+            %li.callcenter
+              %a.bg-icon.inlineblock{ href: '/#canalesayuda'}
+                %span
+                  Call Center
+            %li.facebook
+              %a.bg-icon.inlineblock{ href: '//www.facebook.com/Preguntale.a.Yaz', target: '_blank'}
+                %span
+                  Facebook
+            %li.twitter
+              %a.bg-icon.inlineblock{ href: '//twitter.com/preguntaleayaz', target: '_blank'}
+                %span
+                  twitter
+          .flechas
+            .scrolls
+  = render 'base/footer'

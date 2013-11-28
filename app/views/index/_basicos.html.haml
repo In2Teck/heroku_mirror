@@ -1,0 +1,297 @@
+%section#basicos.basicos.panel
+  %nav.silver.nav-silver
+    %span.flecha
+    / %a(href="#reciencasadas")= image_tag "menu/salud/reciencasadas.png", alt: "Recién casadas"    
+    %a(href="#herramientas-cocina")= image_tag "menu/salud/herramientas.png", alt: "Herramientas de cocina"
+    %a(href="#video-recetas")= image_tag "menu/salud/videorecetas.png", alt: "Video recetas"
+    %a(href="#cocina-tips")= image_tag "menu/salud/tips.png", alt: "Tips de cocina"  
+  %article#herramientas-cocina
+    %h4.subtitulo_basicos.list_herramientas Herramientas de cocina
+    .basicos-content
+      %dl.tabs.contained
+        %dd.tab.manual
+          %a.active{ href: "#manual" }
+            %span Manual de Usos
+        %dd.tab.tips
+          %a{ href: "#tips" }
+            %span Tips de cocina
+        %dd.tab.equivalencias
+          %a{ href: "#equivalencias" }
+            %span Equivalencias
+        %dd.tab.platillos
+          %a{ href: "#platillos" }
+            %span Philadelphia® en tus platillos
+      %ul.tabs-content.contained
+        %li#manualTab.active
+          .manual-content
+            .titulo 
+              %h1 Aprende todas las maneras en las que puedes usar Philadelphia®en tus comidas.
+            .menu-manual
+              =link_to(image_tag('mundophiladelphia/basicos/acremar.png'), '#', { class: 'manual-icon acremar', :'data-id'=>'acremar-content'})
+              =link_to(image_tag('mundophiladelphia/basicos/batir.png'), '#', { class: 'manual-icon batir', :'data-id'=>'batir-content'})
+              =link_to(image_tag('mundophiladelphia/basicos/licuar.png'), '#', { class: 'manual-icon licuar', :'data-id'=>'licuar-content'})
+              =link_to(image_tag('mundophiladelphia/basicos/sarten.png'), '#', { class: 'manual-icon sarten', :'data-id'=>'sarten-content'})
+              =link_to(image_tag('mundophiladelphia/basicos/rellenar.png'), '#', { class: 'manual-icon rellenar', :'data-id'=>'rellenar-content'})
+            .manual-contenido
+              #contenido-intro.activo
+                .glos
+                  =image_tag 'mundophiladelphia/basicos/img1.jpg', class: 'glos-img', size: '150x80'
+                  =image_tag 'mundophiladelphia/basicos/img2.jpg', class: 'glos-img', size: '150x80'
+                  =image_tag 'mundophiladelphia/basicos/img3.jpg', class: 'glos-img', size: '150x80'
+                  =image_tag 'mundophiladelphia/basicos/img4.jpg', class: 'glos-img', size: '150x80'
+                  =image_tag 'mundophiladelphia/basicos/img5.jpg', class: 'glos-img', size: '150x80'
+                  =image_tag 'mundophiladelphia/basicos/img6.jpg', class: 'glos-img', size: '150x80'
+                  =image_tag 'mundophiladelphia/basicos/img7.jpg', class: 'glos-img', size: '150x80'
+                  =image_tag 'mundophiladelphia/basicos/img8.jpg', class: 'glos-img', size: '150x80'
+                  =image_tag 'mundophiladelphia/basicos/img9.jpg', class: 'glos-img', size: '150x80'
+              #acremar-content
+                .columna1.titulos
+                  %h1 Definición.
+                  %p Al acremar lo que queremos obtener es un queso de consistencia suave y cremosa.
+                  %p Colocar el Queso Crema Philadelphia® de Kraft® en cualquier recipiente y con un utensilio que te permita suavizar presiona directamente sobre el queso.
+                .columna2.titulos
+                  %h1 Beneficios.
+                  %p Para untar en un pastel, para rellenar en un pan o bien colocarlo en galletas y bocadillos.
+                .columna3.titulos
+                  %h1 Tip de cocina.
+                  %ul
+                    %li Puedes utilizar una pala de cocina, un tenedor, espátula o batidor de globo.
+                    %li Deja el queso a temperatura ambiente para que sea mas fácil al momento de utilizarlo.
+                    %li Al momento de acremar puedes agregar alguna especia o hierbas que sean de tu agrado.
+              #batir-content
+                .columna1.titulos
+                  %h1 Definición.
+                  %p Generalmente cuando batimos una preparación lo hacemos con el globo de la batidora, así se incorpora aire a una preparación revolviendo la mezcla con velocidad. 
+                  %p Se utiliza en su mayoría para preparaciones dulces, para postres y pastelería.
+                .columna2.titulos
+                  %h1.titulos Beneficios.
+                  %p La textura que obtenemos es mucho más consistente que una crema batida, el queso crema batido tiene mayor durabilidad y resistencia a la temperatura
+                .columna3.titulos
+                  %h1 Tip de cocina.
+                  %ul
+                    %li Se puede utilizar para algún betún y se puede saborizar con Tang.
+                    %li Agrega un poco de crema para batir para que la mezcla adquiera mayor volumen.
+                    %li Con ayuda de alguna espátula y pala de cocina revolver manualmente la preparación para deshacer los grumos y que la mezcla quede tersa.
+              #licuar-content
+                .columna1.titulos
+                  %h1 Definición.
+                  %p Cualquier preparación que ha sido procesada con algún líquido utilizando una licuadora hasta obtener la consistencia deseada.
+                  %p Al elaborar preparaciones con Queso Crema Philadelphia® de Kraft® en la licuadora es necesario agregar un liquido para procesarlo.
+                .columna2.titulos
+                  %h1 Beneficios.
+                  %p Es práctico ya que se reduce el tiempo de cocción obteniendo una salsa cremosa a la cual se le puede agregar cualquier otro ingrediente que resalte el sabor de tus platillos.
+                .columna3.titulos
+                  %h1 Tip de cocina.
+                  %ul
+                    %li Puedes licuarlo con cualquier otro ingrediente que sea de tu elección.
+                    %li Utiliza caldos de pollo o res, crema o leche, esto aportará mejor sabor a las preparaciones.
+                    %li Procura licuar las preparaciones con los ingredientes fríos para obtener una consistencia tersa.
+              #sarten-content
+                .columna1.titulos
+                  %h1 Definición.
+                  %p Otra opción es colocar el Queso Crema Philadelphia® de Kraft® directamente sobre cualquier ingrediente en un sartén, así facilitarás la elaboración de tus platillos y  le darás tu propio estilo gourmet.
+                .columna2.titulos
+                  %h1 Beneficios.
+                  %p Practicidad en una preparación. Poco tiempo de cocción.
+                .columna3.titulos
+                  %h1 Tip de cocina.
+                  %ul
+                    %li Antes de agregar el Queso Crema Philadelphia® de Kraft® porciona en cubos pequeños.
+                    %li Puedes agregar Queso Crema Philadelphia® de Kraft® a ingredientes de sabores fuertes para mejorar el sabor.
+                    %li Agrega cualquier verdura o carne en el platillo que estés preparando.
+              #rellenar-content
+                .columna1.titulos
+                  %h1 Definición.
+                  %p Es infinita la variedad que puedes experimentar en el uso de Queso Crema Philadelphia® de Kraft®. Como relleno lo podemos utilizar tanto en preparaciones saladas como dulces haciendo la diferencia en tus panes caseros, roscas navideñas, empanadas de pollo, en algunas verduras como calabazas y pimientos.
+                .columna2.titulos
+                  %h1 Beneficios.
+                  %p La combinación de un relleno ya sea salado o dulce con Queso Crema Philadelphia® de Kraft® hará que las preparaciones caseras den un giro gourmet.
+                .columna3.titulos
+                  %h1 Tip de cocina. 
+                  %ul
+                    %li Se puede acompañar con mermeladas de diferentes sabores, como chabacano, zarzamora, fresa o bien rellenos salados con cualquier guisado, ejemplo un picadillo, chorizo, tinga, atún, etc.
+                    %li Se pueden utilizar para masas tipo hojaldre, empanadas saladas, panques, mantecadas.
+                    %li Para tus postres puedes agregarle un poco de vainilla y acompañarlo con fruta.
+        %li#tipsTab
+          .tips-content
+            .titulo 
+              %h1 Conoce tips y secretos que te ayudarán diariamente en la cocina.
+            %ol.menu-tips
+              %li.coccion-li.tips-icon.active{ :'data-id'=>'coccion-content'} 1. Cocción de verduras
+              %li.descongelacion-li.tips-icon{ :'data-id'=>'descongelacion-content'}2. Descongelación
+              %li.emulsion-li.tips-icon{ :'data-id'=>'emulsion-content'} 3. Emulsión
+              %li.carne-li.tips-icon{ :'data-id'=>'carne-content'} 4. Cocción de una carne
+              %li.frescura-li.tips-icon{ :'data-id'=>'indicador-content'} 5. Indicador de frescura
+            .tips-cocina-content
+              #coccion-content.tips-contenido.activo
+                %p Para que tu verdura mantenga siempre los nutrimentos adecuados, textura firme y no pierde el color, empieza la cocción de estos en agua a punto de ebullición es decir a punto de que hierva, solo hasta que al meter un palillo el centro y la verdura este suave.
+                %br
+                =image_tag 'mundophiladelphia/basicos/coccion-img.jpg', size: '163x116'                  
+              #descongelacion-content.tips-contenido
+                %p Cuando tengas la carne en congelador, el método que mejor puedes utilizar para descongelar es por medio de refrigeración, dañas menos la textura, y la carne conserva su jugo.
+                %br
+                =image_tag 'mundophiladelphia/basicos/descon-img.jpg', size: '163x116'                  
+              #emulsion-content.tips-contenido
+                %p Para hacer una vinagreta en una receta, recuerda siempre verter sobre el medio acido ejemplo el vinagre, el aceite en forma de hilo y batir a una velocidad constante, esto hará que se emulsione y no se separe en dos fases.
+                %br
+                =image_tag 'mundophiladelphia/basicos/emulsion-img.jpg', size: '163x116'                  
+              #carne-content.tips-contenido
+                %p Recuerda que para no desjugar la carne, es importante sellar la carne correctamente es decir, en aceite muy caliente, dejar que forme la costra de un lado y voltear para sellar del otro lado, además de no picarla y sazonar antes de cocinar. Esto evitara que los jugos se salgan y la carne quede dura.
+                %br
+                =image_tag 'mundophiladelphia/basicos/carne-img.jpg', size: '163x116'                  
+              #indicador-content.tips-contenido
+                %p Para saber si un pescado es fresco, fíjate en los ojos, estos tienen que estar brillosos y saltones.
+                %br                
+                =image_tag 'mundophiladelphia/basicos/indicador-img.jpg', size: '163x116'
+            %h1.titulo-dos TIPS
+            .tips-cocina-content-dos
+              .tips-texto
+                %p <strong> - Para saber si un huevo esta fresco,</strong> debes fijarte en la consistencia y viscosidad de la clara, si esta esta muy aguada quiere decir que es un huevo viejo.
+                %p <strong> - Para hacer brochetas de camarón colócales un trozo de tocino,</strong> esto evitara que los camarones se hagan chiclosos.
+                %p <strong> - Para disolver chocolate recordar hacerlo en baño Maria,</strong> sin que toque el agua, solo con el vapor, esto evitara que tu chocolate se queme o espese.
+                %p <strong> - Para espesar una crema o sopa</strong> puedes utilizar un poco de papa así evitaras usar fécula o harina.
+                %p <strong> - Al sellar una carne utiliza mantequilla </strong> con un poco de aceite así evitaras, que la mantequilla se queme mas rápido.
+                %p <strong> - Si quieres que duren más tiempo,</strong> únicamente las tienes que poner en un colador sin quitarle el rabito y meterlas al refrigerador. Con esto aseguras que el aire circule entre los orificios del colador, lo cual permite su conservación.
+                %p <strong> - Cuando una receta contenga hierbas,</strong> colócalas al final de la preparación, esto evitara que se quemen y amarguen la preparación.
+                %p <strong> - Para que un pescado quede mas jugoso</strong> evita la sobre cocción recuerda que es mas suave y la cocción es mas rápida, una forma de saber si esta cocido, puedes introducir un palillo de madera si no sientes pasar fibras quiere decir que el pescado esta completamente cocido.
+                %p <strong> - Para salar una carne de porción o tamaño grueso,</strong> utiliza sal de mar esto potencia el sabor de la carne y evita salarla                
+              / =image_tag 'mundophiladelphia/basicos/flecha_scroll.png', class: 'scroll', size: '96x41'
+        %li#equivalenciasTab
+          .equivalencias-content
+            .titulo-equivalencias
+              %h1 Simplifica tu vida a la hora de cocinar con nuestras prácticas tablas de medidas.
+            .equivalencias-uno
+              %ul.equivalencias-menu
+                %li.equivalencias-boton{ :'data-id'=>'varias-content'} 
+                  %p Peso y equivalencias varias
+                %li.equivalencias-boton{ :'data-id'=>'peso-content'} 
+                  %p Equivalencia peso
+                %li.equivalencias-boton{ :'data-id'=>'volumen-content'} 
+                  %p Equivalencia volumen
+                %li.equivalencias-boton{ :'data-id'=>'temperatura-content'} 
+                  %p Equivalencia temperatura  
+              .equiv-content              
+                #varias-content.equivalencias-contenido
+                  %ul
+                    %li Arroz......................... 200 g
+                    %li Fresas picadas................ 170 g
+                    %li Manzanas picadas.............. 125 g
+                    %li Ciruelas, melocotones, naranjas, peras, sandías picadas ............... 150 g
+                    %li Galletitas molidas............ 100 g
+                    %li Nueces molidas................. 80 g
+                    %li Nueces en trozos.............. 100 g
+                  =image_tag 'mundophiladelphia/basicos/flecha-up.png', class: 'flecha', size: '38x7'
+                #peso-content.equivalencias-contenido
+                  %ul
+                    %li 1 onza (ounce) = 28.35 gramos
+                    %li 1 libra (pound) = 0.45 Kilogramos
+                  =image_tag 'mundophiladelphia/basicos/flecha-up.png', class: 'flecha', size: '38x7'
+                #volumen-content.equivalencias-contenido
+                  %ul
+                    %li 1 pinta (pint) = 0.47 litros
+                    %li 1 galón (gallon) = 3.78 litros
+                  =image_tag 'mundophiladelphia/basicos/flecha-up.png', class: 'flecha', size: '38x7'
+                #temperatura-content.equivalencias-contenido
+                  %ul
+                    %li 1&deg; Centígrado = 33.8&deg; Fahrenheit
+                    %li 1&deg; Fahrenheit = -17.22&deg; Centígrados
+                  =image_tag 'mundophiladelphia/basicos/flecha-up.png', class: 'flecha', size: '38x7'              
+            .equivalencias-dos
+              %ul.equivalencias-menu
+                %li.equivalencias-boton{ :'data-id'=>'utiles-content'} 
+                  %p Datos útiles
+                %li.equivalencias-boton{ :'data-id'=>'liquidos-content'} 
+                  %p En líquidos                
+                %li.equivalencias-boton{ :'data-id'=>'huevo-content'} 
+                  %p Un huevo
+                %li.equivalencias-boton{ :'data-id'=>'varios-content'} 
+                  %p Varios                
+              .equiv-content
+                #utiles-content.equivalencias-contenido
+                  %ul
+                    %li Para medir una taza, llenar el medidor sin comprimir el ingrediente.
+                    %li Para "rasar" una cucharada de ingrediente, utilizar un cuchillo para quitar el exceso.
+                    %li Una pizca, es lo que puede tomarse entre las puntas de dos dedos
+                    %li 1000 cc es igual a 1000 ml
+                    %li 1 cc es igual a 1 ml
+                    %li 1 Litro es igual a 1000 cc ó 1000 ml
+                  =image_tag 'mundophiladelphia/basicos/flecha-up.png', class: 'flecha', size: '38x7'
+                #liquidos-content.equivalencias-contenido
+                  %ul
+                    %li 1 taza = 225 ml
+                    %li 1 taza de té = 200 ml
+                    %li 1 taza de café = 100 ml
+                    %li 1 vaso de agua = 200 ml
+                    %li 1 copa de vino = 100 ml
+                    %li 1 copita de licor = 50 ml
+                    %li 1 cucharada = 15 ml
+                    %li 1 cucharadita = 5 ml
+                  =image_tag 'mundophiladelphia/basicos/flecha-up.png', class: 'flecha', size: '38x7'                
+                #huevo-content.equivalencias-contenido
+                  %ul
+                    %li Pequeño............ 50 g
+                    %li Mediano............ 55-60 g
+                    %li Grande........ + de 65 g
+                  =image_tag 'mundophiladelphia/basicos/flecha-up.png', class: 'flecha', size: '38x7'
+                #varios-content.equivalencias-contenido
+                  %ul
+                    %li 1 Libra = 1 Pinta = 16 Onzas = 450 - 480 g
+                    %li 1 Onza = 28, 5 - 30 g
+                  =image_tag 'mundophiladelphia/basicos/flecha-up.png', class: 'flecha', size: '38x7'                
+        %li#platillosTab 
+          .platillos-content
+            .titulo-platillos
+              %h1 Ve estos videos e integra Philadelphia® a tu comida de todos los días   
+            .paginacion 
+              %a{href: '#',:'data-reveal-id'=>'reveal-basicos', :'data-video-url' => 'tutorial-licuar.mov', :'data-video-titulo' => 'Integra Philadelphia® en la licuadora', class:'vid_img licuar_vid_img'} licuar
+              %a{href: '#',:'data-reveal-id'=>'reveal-basicos', :'data-video-url' => 'tutorial-calentar.mov', :'data-video-titulo' => 'Agrega Philadelphia® en el sartén', class:'vid_img sarten_vid_img'} Sarten    
+              %a{href: '#',:'data-reveal-id'=>'reveal-basicos', :'data-video-url' => '4kBXPT3mqcw', :'data-video-titulo' => 'Rellena con Philadelphia®', class:'vid_img youtube rellenar_vid_img'} rellenar 
+          #reveal-basicos.reveal-modal
+            %a{class: 'close-reveal-modal'} cerrar
+            %h1
+            .video.flex-video.widescreen
+  %article#video-recetas
+    %h4.subtitulo_basicos.vid_recetas Video Recetas
+    .paginacion-tips
+      %a{href: '#',:'data-reveal-id'=>'reveal-video-global', :'data-video-url' => 'crema.flv', :'data-video-titulo' => 'Crema de calabacitas y cilantro', class:'tips_vid_img tip_crema_vid_img'} crema de calabacitas y cilantro
+      %a{href: '#',:'data-reveal-id'=>'reveal-video-global', :'data-video-url' => 'enfrijoladas.flv', :'data-video-titulo' => 'Enfrijoladas Philadelphia®', class:'tips_vid_img tip_enfrijoladas_vid_img'} enfrijoladas
+      %a{href: '#',:'data-reveal-id'=>'reveal-video-global', :'data-video-url' => 'ensalada-fresa.flv', :'data-video-titulo' => 'Ensalada con Berros y aderezo de fresa', class:'tips_vid_img tip_ensalada_fresa_vid_img'} ensalada de fresa
+      %a{href: '#',:'data-reveal-id'=>'reveal-video-global', :'data-video-url' => 'ensalada.flv', :'data-video-titulo' => 'Ensalada de espinaca, surimi y mango', class:'tips_vid_img tip_ensalada_vid_img'} ensalada de espinaca
+      %a{href: '#',:'data-reveal-id'=>'reveal-video-global', :'data-video-url' => 'fideo.flv', :'data-video-titulo' => 'Fideo Mexicano Philadelphia®', class:'tips_vid_img tip_fideo_vid_img'} fideo mexicano
+      %a{href: '#',:'data-reveal-id'=>'reveal-video-global', :'data-video-url' => 'muslos.flv', :'data-video-titulo' => 'Muslo de pollo en salsa de ajo y perejil', class:'tips_vid_img tip_muslos_vid_img'} muslos en salsa de ajo
+      %a{href: '#',:'data-reveal-id'=>'reveal-video-global', :'data-video-url' => 'pasta.flv', :'data-video-titulo' => 'Pasta con salsa de hongos y tomillo', class:'tips_vid_img tip_pasta_vid_img'} pasta con salsa de hongos
+      %a{href: '#',:'data-reveal-id'=>'reveal-video-global', :'data-video-url' => 'rajas.flv', :'data-video-titulo' => 'Rajas poblanas Philadelphia®', class:'tips_vid_img tip_rajas_vid_img'} rajas
+      %a{href: '#',:'data-reveal-id'=>'reveal-video-global', :'data-video-url' => 'surimi.flv', :'data-video-titulo' => 'Salpicón de surimi de cangrejo', class:'tips_vid_img tip_surimi_vid_img'} salpicon de surimi        
+    #reveal-video.reveal-modal
+      %a{class: 'close-reveal-modal'} cerrar
+      %h1
+      .video.flex-video.widescreen
+  %article#cocina-tips
+    %h4.subtitulo_basicos.list_tips Tips de cocina
+    .cocina-tips
+      =image_tag 'mundophiladelphia/banner_tips.jpg', class: 'flecha', size: '721x333'
+      .cocina-tips-content
+        %ol
+          %li Siempre que prepares un panque, cup cakes o muffins te recomiendo engrasar y enharinar tus moldes para evitar que se peguen al momento de desmoldar. 
+          %li Para rellenar tus muffins de queso Philadelphia®, te recomiendo hacer bolitas de queso, poner una capa de batido, colocar la bolita y cubrir con otra capa de batido
+          %li Si preparas sopa de tortilla, te recomiendo que  uses tortillas de un día anterior, lograras que las tortillas fritas sean más crujientes. 
+          %li Cuando prepares pescado empapelado, te recomiendo sellar perfectamente de las orillas, ayudaras a que la cocción sea más rápida y que no se salgan los jugos y salsas.
+          %li Si vas a preparar trufas Oreo® te recomiendo formar las bolitas con ayuda de dos cucharas, así evitaras que se te peguen en las manos. 
+          %li Cuando compres pollo, asegúrate que tenga un color brillante y amarillo, que no tenga mal olor ni consistencia viscosa.
+          %li Si en alguna de tus recetas necesitas productos enlatados, te recomiendo que cuando vayas a compararlos te asegures que las latas no estén infladas,  golpeadas ni abolladas.
+          %li Si vas a preparar un betún de queso te recomiendo saborizar con  tu sabor preferido de Tang®. 
+          %li Si vas a preparar ensalada de lechuga, te recomiendo que laves hoja por hoja y desinfectes muy bien; deja el tiempo que se indica en tu desinfectante, así evitaras que las hojas se marchiten.
+          %li Si vas a preparar crepas, te recomiendo que las hagas en un sartén de teflón, evitaras que se peguen y se rompan.
+          %li Para no poner palillos en tus tacos dorados o burritos, te recomiendo colocar sobre el sartén la parte donde cierra la tortilla, espera a que dore un poco y gira.
+          %li Para obtener un empanizado perfecto, te recomiendo pasarlo dos veces por el pan.
+          %li Para dar más sabor a tus sopas y caldos, agrega hierbas de olor como tomillo, laurel, mejorana etc.
+          %li Si vas a preparar algún platillo con chorizo y quieres evitar que quede muy grasoso, utiliza papel absorbente después de freír para quitar el exceso de grasa. 
+          %li Si piensas preparar bocadillos con pan, te recomiendo que compres el pan un día antes, cortes rebanadas de aproximadamente 3 cm y coloques sobre cada una un poco de ajo picado, perejil picado y aceite de oliva, hornea a 180° por 5 minutos, lograras que tus bocadillos queden crujientes y con mejor sabor.
+          %li Utiliza plástico auto adherente para moldear tu queso Philadelphia®, esto evitará que se te pegue en las manos y que quede uniforme y atractivo a la vista.
+          %li Si preparas camarones, no olvides limpiarlos; lo que tienes que hacer es: quitar cáscara y cabeza, abrir con un cuchillo la parte exterior y quitar la vena, posteriormente enjuaga perfectamente. 
+          %li Para evitar que tu ensalada se marchite o remoje, te recomiendo agregar la vinagreta al final.
+          %li Para que tu cheese cake tenga una apariencia más uniforme, retira del baño maría y deja enfriar dentro del horno ya apagado.
+          %li Tanto el café, el cacao, la canela en polvo y cualquier otra especia,  no deben conservarse en paquetes. Guárdalos en frascos con tapa hermética así no perderán su aroma y sabor.
+          %li Para obtener un caldo sustancioso debe colocarse la carne cuando el agua se encuentra fría. Si se desea, en cambio, lograr un estofado con carne apetitosa, incorporarla cuando el agua está hirviendo.
+          %li Para que la consistencia de tu cheese cake sea más firme, te recomiendo que después de batir muy  bien el queso crema Philadelphiar® hasta que no queden grumos, agregues  los demás ingredientes sin sobre batir la mezcla. 
+  = render 'base/footer'

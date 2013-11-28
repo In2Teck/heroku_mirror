@@ -1,0 +1,122 @@
+%section#nosotrasyphiladelphia.nosotrasyphiladelphia.panel
+  %nav.silver
+    %span.flecha
+    %a(href="#suscribete")= image_tag "menu/salud/boletin.png", alt: "Suscr&iacute;bete al bolet&iacute;n"  
+    %a(href="#receta-enviar")= image_tag "menu/salud/cmft.png", alt: "Comparte tu receta"  
+    %a(href="#reciencasadas")= image_tag "menu/salud/reciencasadas.png", alt: "Reci&eacute;n casadas"
+    %a(href="#nutricion")= image_tag "menu/salud/salud.png", alt: "Nutricion"
+  %article#suscribete.boletin
+    - if flash[:notice].blank?      
+      .boletin-content
+        .boletin-intro
+          %p En Philadelphia® tenemos sorpresas especiales para ti, recibe las mejores recomendaciones de recetas de acuerdo a la ocasi&oacute;n y ent&eacute;rate de todas nuestras promociones a trav&eacute;s de nuestro bolet&iacute;n.
+        .boletin-text
+          %p S&oacute;lo registra tus datos y s&eacute; de las primeras en enterarte de lo que sucede en el mundo Philadelphia®.          
+        = form_for (@suscripcion || @suscripcion = Suscripcion.new), :url => "/boletin", :html => { :id => "boletin", :novalidate => true } do |f|
+          %p.mail-container
+            = form_error @suscripcion, :email
+            = f.label :email, 'Tu correo electr&oacute;nico', :class => 'form-error'
+            = f.email_field :email
+          %p.terminos-content
+            = form_error @suscripcion, :tos
+            .div.terminos
+              = f.check_box :tos, :class => "inline-block", :checked => true
+              = f.label :tos, "Acepto t&eacute;rminos y condiciones #{link_to('(Ver)', marca_politicas_path, :target => '_blank')}".html_safe, :class => 'inline-block label-error'
+          %p
+            = submit_tag "Boletin", :id => 'suscribe'
+    - else
+      .boletin-content
+        .boletin-intro
+          %p En Philadelphia® tenemos sorpresas especiales para ti, recibe las mejores recomendaciones de recetas de acuerdo a la ocasi&oacute;n y ent&eacute;rate de todas nuestras promociones a trav&eacute;s de nuestro bolet&iacute;n.
+        .boletin-text
+          %p S&oacute;lo registra tus datos y s&eacute; de las primeras en enterarte de lo que sucede en el mundo Philadelphia®.
+        .boletin-success
+          %p Tu suscripci&oacute;n al bolet&iacute;n se ha realizado con exito.
+          %p ¡Gracias!
+          :javascript
+            /*  */
+            var google_conversion_id = 1008906403;
+            var google_conversion_label = "tLQZCLWzzQQQo-GK4QM";
+            var google_custom_params = window.google_tag_params;
+            var google_remarketing_only = true;
+          %script{:src => "//www.googleadservices.com/pagead/conversion.js", :type => "text/javascript"}
+          %noscript
+            %div{:style => "display:inline;"}
+              %img{:alt => "", :height => "1", :src => "//googleads.g.doubleclick.net/pagead/viewthroughconversion/1008906403/?value=0&label=tLQZCLWzzQQQo-GK4QM&guid=ON&script=0", :style => "border-style:none;", :width => "1"}/
+  %article#receta-enviar
+    .cont
+      %h3 Comp&aacute;rtenos tu receta
+      .texto
+        %p Env&iacute;anos tu receta preparada con Queso Crema Philadelphia® de Kraft® con una foto. ¡Es muy f&aacute;cil!
+        %ol
+          %li M&aacute;ndanos tu receta llenando este simple formulario
+          %li Nosotros la prepararemos y te enviaremos v&iacute;a correo electr&oacute;nico la liga de tu receta.
+          %li Comp&aacute;rtelo con tus amigas de Facebook y/o Twitter
+          %li P&iacute;dele a tus amigas que la compartan para conseguir 2 estrellas (cada estrella equivale a 10 shares o retweet)
+        .redes
+          .inline-block
+            = image_tag 'nosotrasyphiladelphia/cmft_share.jpg'
+          .inline-block
+            = image_tag 'nosotrasyphiladelphia/cmft_tweet.jpg'
+        %p Con esto, tu receta podr&aacute; ser considerada para entrar al recetario virtual Philadelphia®.
+        %p.firma
+          ¿Verdad que todo es m&aacute;s rico cuando tienes con qui&eacute;n compartirlo?
+          %span
+      .tenedor
+        %span
+      %iframe{ :width =>'660px',:height=>'900px',:src=>'http://www.madhouse.com.mx/intheworks/philly/form_receta.php'}
+  %article#reciencasadas
+    %p.ctr
+      = image_tag 'nosotrasyphiladelphia/reciencasadas-liston.png', class: 'reciencasadas-liston'
+    .intro
+      .cont
+        %p A lo largo de mi experiencia me he encontrado con mujeres que sufren en la cocina durante sus primeros años en pareja, pero cocinar no debe ser un problema sino un momento para expresar nuestro cariño.
+        %p Recuerdo mi primer año de casada, al igual que muchas de nosotras pensaba que el asunto de la cocina era complicado y mi marido y yo no nos imagin&aacute;bamos disfrutando un delicioso platillo horneado por nosotros.
+        %p As&iacute; que si decidiste comenzar una vida en pareja y no sabes mucho de cocina, Philadelphia® y yo estaremos contigo para que disfrutes tu tiempo mientras elaboras deliciosos y pr&aacute;cticos platillos. 
+        %p Este recetario est&aacute; especialmente elaborado para que descubras que muchas veces lo simple es lo m&aacute;s rico. Paso a paso te llevar&eacute; de la mano para que en poco tiempo domines diferentes t&eacute;cnicas de cocina y prepares deliciosos platillos junto con tu pareja.
+        %p No es necesario que pases todo el d&iacute;a en la cocina, pueden compartir una cena f&aacute;cil de preparar pero deliciosa, elaborada por ustedes mismos en pocos minutos, donde Philadelphia® ser&aacute; nuestro mejor aliado para esos momentos del d&iacute;a a d&iacute;a y, por qu&eacute; no, tambi&eacute;n para mostrar tu cariño con un detalle especial.
+        %p Te invito a conocer mi historia como reci&eacute;n casada donde quiero compartir contigo mi experiencia para que t&uacute; goces de esta nueva etapa en pareja.
+        %p.ultimo
+          %big ¡Felicidades!
+          %span.saludos Saludos,
+      = link_to '', '/recetas?filtro=grupo-recien-casadas', class: 'boton-recetario'  
+  
+  / Seccion nutricion
+  %article#nutricion
+    #headernutricion
+     
+    #cont_nutricion
+      %h2.h2nutricion Por qué dejar de usar el salero?
+      %p El consumo excesivo de sal es una de las principales causas de hipertensión en la población. De hecho, el 30% de los casos de hipertensión son atribuibles a una ingesta de sal mayor a los valores diarios recomendados. La hipertensión constituye, a su vez, el principal factor de riesgo de enfermedades no transmisibles como infartos, accidentes cerebrovasculares y enfermedades renales.
+      %br
+      %strong ¿Qué es la presión arterial?
+      %br
+      %p La presión arterial es la fuerza que ejerce la sangre contra las paredes de las arterias. Cada vez que el corazón late, bombea sangre hacia las arterias. La presión arterial estará al nivel más elevado al latir el corazón bombeando la sangre. A esto se le llama presión sistólica. Cuando el corazón está en reposo, entre un latido y otro, la presión sanguínea disminuye. A esto se le llama presión diastólica.
+      %br
+      %strong ¿Qué es la hipertensión?
+      %br
+      %p Se considera hipertensión arterial a la elevación de los valores sistólico y diastólico por encima de los límites de tolerancia. Estos valores han sido establecidos por la Organización Mundial de la Salud y son los siguientes:
+      %br
+      = image_tag 'nosotrasyphiladelphia/presion_tabla.png'
+      %br
+      %strong Sal o sodio?
+      %br
+      %p Aunque los términos “sal” y “sodio” suelen utilizarse indistintamente, no son exactamente lo mismo. La sal está compuesta por sodio y cloro (su nombre químico es “cloruro de sodio”), el 90% del sodio que consumimos habitualmente proviene de la sal. 
+      %br
+      %strong ¿Cuál es el consumo de sodio recomendado?
+      %p La recomendación de sodio  para población mexicana es de 2.4 g  por día
+      %br
+      %strong Recomendaciones
+      %br
+      %p Limita el consumo de alimentos que han sido salados para su conservación por ejemplo, cecina, bacalao, machaca, aceitunas, embutidos, los productos de salchichonería y los enlatados, así como los condimentos y medicamentos ricos en sodio. 
+      %p Procura no agregar sal al preparar los alimentos y evitar utilizar el salero la mesa. 
+      %p Si te cuesta trabajo dejar de utilizar el salero una forma sencilla de disminuir el consumo de sal es llenar la mitad del salero con alguna especia como laurel, albahaca o romero, y la otra mitad con sal y así poco a poco ir disminuyendo la cantidad de sal para que al final termines dándole sabor a tu comida tan solo con especias y no con sal.
+      %br
+      %strong ¡Recuerda tu salud es primero!
+      %br
+      %strong Bibliografía:
+      %br
+      \-- Organización Mundial de la Salud. Reducing Salt Intake in Populations: Report of a WHO Forum and
+      \-- Technical Meeting 5‐7 Octubre, 2006, Paris, Francia, Ginebra, Suiza: Organización Mundial de la Salud, 2007.
+       
+  = render 'base/footer'

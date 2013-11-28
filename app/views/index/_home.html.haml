@@ -1,0 +1,60 @@
+#fb-root
+:javascript
+  window.fbAsyncInit = function() {
+    // init the FB JS SDK
+    FB.init({
+      appId      : '435186889874631',                        // App ID from the app dashboard
+      channelUrl : '//philadelphia.com/channel.html', // Channel file for x-domain comms
+      status     : true,                                 // Check Facebook Login status
+      xfbml      : true                                  // Look for social plugins on the page
+    });
+  };
+
+  (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/all.js";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+%script{:src => "http://code.jquery.com/jquery-latest.js", :type => "text/javascript"}  
+:javascript
+  if ($.browser.msie  && parseInt($.browser.version, 10) === 7) {
+    $('.container').html('Update your browser'); 
+  }
+%section.home.panel
+  %article#home
+    .home
+      .superior
+        .orbit
+          %a.slider{ :href => "http://www.consentidas.com.mx/" }
+            =image_tag "home/consentidas_home.jpg"
+          %a.slider{ :href => "http://www.academiaphiladelphia.com.mx/", target: '_blank' }
+            =image_tag "home/new_academia.jpg"
+        .sombra
+      .inferior
+        .cont
+          .izquierda
+            .yaz
+            %a.bloque.preguntaleayaz{ href: '#preguntaleayaz' }
+            %a.bloque.callcenter{ href: '#canalesayuda' }
+            %a.bloque.facebook{ href: '//www.facebook.com/Preguntale.a.Yaz', target: '_blank' }
+            %a.bloque.twitter{ href: '//twitter.com/preguntaleayaz', target: '_blank' }
+            
+            #columna_croquetas{:style => "margin-top:270px;margin-left:9px;"}
+              %div
+              /%h2 Tacos dorados Philadelphia cambios
+              %p.descrip_receta_home{:style => "width:100%; float:left;"} 
+              %br
+              
+              %a.ir_receta{ :style=> "margin-top: 190px;", href: 'http://www.philadelphia.com.mx/receta/469/empanadas-de-guayaba.html' } Ir a la receta
+            
+          .derecha
+            #facebook_home
+              .inside{:style => "padding-left:35px;"}
+                .fb-like-box{"data-header" => "false", "data-href" => "http://www.facebook.com/philadelphiamx", "data-show-faces" => "true", "data-stream" => "true", "data-width" => "340", "data-height" => "486" , "data-border-color" => "#FFF"} 
+           
+           
+  = render 'base/footer'
+/ :plain
+/   <map id="map1350421443037" name="map1350421443037"><area shape="rect" coords="0,4,300,372" title="" alt="" href="http://www.philadelphia.com.mx/receta/93/pechugas-de-pollo-rellenas-al-limon.html" target="_self"><area shape="rect" coords="300,0,612,372" title="" alt="" href="http://www.philadelphia.com.mx/receta/153/ensalada-de-berros-con-aderezo-cilantro.html" target="_self"><area shape="rect" coords="611,0,915,372" title="" alt="" href="http://www.philadelphia.com.mx/receta/469/empanadas-de-guayaba.html" target="_self"></map>

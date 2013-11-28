@@ -1,0 +1,14 @@
+%section.panel.recetas
+  %article.recetas
+    #recetario
+    - @recetas.each do |receta|
+      %div
+        %ul.receta
+          %li.id= receta.id
+          %li.titulo= receta.titulo
+          %li.ingredientes= receta.ingredientes
+          %li.preparacion= receta.preparacion
+          %li.tips= receta.tips
+          %li.porciones= receta.porciones
+          %li.tipo= receta.tipo_platillo
+          %li.imagen= receta.pic_small_file_name

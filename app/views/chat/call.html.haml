@@ -1,0 +1,38 @@
+.call  
+  %header
+    %h1 
+      Pronto Yaz te devolvera la llamada
+    = image_tag "chat/logo_philly.png"
+    
+  %form#call_philly(method="post" action="http://200.66.107.211/taw/ProxyWebCallback")  
+    #forma.row   
+      .six.columns
+        = field_set_tag(raw('<span class="numero">1.</span> Introduzca su información personal <span class="necesario">*Informacion necesaria</span>')) do 
+          = label_tag 'firstName', '*Nombre'
+          = text_field_tag 'firstName'    
+          = label_tag 'lastName', '*Apellido'
+          = text_field_tag 'lastName' 
+          = label_tag 'emailaddress', '*Correo electronico'
+          = email_field_tag 'emailaddress'          
+          = hidden_field_tag 'pais', '52'
+          .row
+            .three.columns
+              = label_tag 'telephone', 'Telefono'
+              = text_field_tag 'telephone'
+            .three.columns
+              = label_tag 'extension', 'Extension'
+              = text_field_tag 'extension'
+          %p.hora_dev
+            %span.numero 2. 
+            Programar hora de devolucion de llamada
+          .devolucion
+            = label_tag 'mode', 'Devolución de llamada'
+          = select_tag "mode", "<option value='1' selected>Inmediatamente</option><option value='2'>En 30 minutos</option><option value='3'>En 60 minutos</option><option value='4'>En 90 minutos</option>".html_safe 
+          /= date_select :"article", :"written_on"
+          
+        = submit_tag "Aceptar", :id => 'call'
+        
+      %aside.six.columns
+        = image_tag "chat/yaz_chat.png", :class => 'jaz_img'
+        %p En su horario de atención de 9am a 9pm de lunes a viernes y sábados de 9am a 4pm
+

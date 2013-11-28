@@ -1,0 +1,54 @@
+<div class="row" style="min-height:548px;background: transparent url(/assets/recompensas/background.png) 0 0 no-repeat">
+  <div class="three columns" style="min-height:548px; width:27.5%">
+  </div>
+  <div class="nine columns" style="border: 1 px solid white; min-height:548px; width:72.5%; margin-left: 0">
+    <div class="row">
+      <%= image_tag 'recompensas/topLanding.jpg', style: 'display:block;margin:25px auto 15px' %>
+    </div>
+    <div class="row modal-links" style="padding-top: 10px">
+      <div class="six columns" style="margin-left: 10px">
+        <%= link_to image_tag('recompensas/banner01.jpg'), '//phillymx.s3.amazonaws.com/recompensas/galeria2.html'  %>
+      </div>
+      <div class="six columns" style="float:right; margin-left: 0">
+        <%= link_to image_tag('recompensas/banner02.jpg'), '//phillymx.s3.amazonaws.com/recompensas/video2.html' %>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style type="text/css" media="screen">
+section.panel article {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.container > #main {
+  background: white;
+}
+.reveal-modal {
+  width: 820px;
+  margin-left: -410px;
+}
+</style>
+
+<% content_for :javascripts do %>
+  <%= javascript_include_tag '//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js' %>
+  <%= javascript_include_tag 'foundation/jquery.reveal' %>
+  <script type="text/javascript">
+  $(function() {
+    $('.modal-links a').click(function(event) {
+      event.preventDefault();
+      var $div, href, $iframe;
+      $div = $('<div>').addClass('reveal-modal').appendTo('body');
+      href = $(this).attr('href');
+      $iframe = $('<iframe/>').attr({
+        src: href,
+        width: 820,
+        height: 423
+      });
+      $div.empty().html($iframe).append('<a class="close-reveal-modal">&#215;</a>')
+      .reveal();
+    });
+  });
+  </script>
+<% end %>
