@@ -7,10 +7,10 @@ class ActiveAdmin::Views::Pages::Base < Arbre::HTML::Document
   def build_footer
     div :id => "footer" do
       para do
-        "Copyright © #{Date.today.year.to_s} Kraft Foods Mexico "
-        a href: 'http://creamcheese.herokuapp.com', target: '_blank', do
-          'Ir al sitio'
-        end
+      #  "Copyright © #{Date.today.year.to_s} Kraft Foods Mexico "
+      #  a href: 'http://creamcheese.herokuapp.com', target: '_blank', do
+      #    'Ir al sitio'
+      #  end
       end
     end
   end
