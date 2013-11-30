@@ -1,0 +1,60 @@
+// Active Admin CSS Styles
+@import "active_admin/mixins";
+@import "active_admin/base";
+
+
+// To customize the Active Admin interfaces, add your
+// styles here:
+
+.logged_out #content_wrapper{
+  padding-top: 90px;
+  background: image-url('admin/logo.png') no-repeat top center;
+}
+
+#titlebar_left{
+  background: image-url('admin/logo.png') no-repeat 0 -15px;
+  width: 311px;
+  height: 60px !important;
+  padding-left: 150px;
+}
+
+form fieldset > ol > li {
+  overflow: hidden;
+}
+
+#recipe_ingredientes_input {
+  textarea {
+    width: 35em;
+    float: left;
+  }
+  .parsed_ingredients {
+    float: left;
+    width: 30em;
+    margin-left: 1em;
+  }
+  p.inline-hints {
+    clear: left;
+  }
+}
+
+form fieldset > ol > li.check_boxes fieldset ol li,
+form fieldset > ol > li.boolean
+ {
+  float: left;
+  width: 20em;
+  label {
+    font-weight: normal;
+  }
+}
+
+form fieldset > ol > li.boolean {
+  width: 18em;
+}
+
+form fieldset > ol > li.radio fieldset ol li {
+  width: 5em;
+  float: left;
+  label {
+    font-weight: normal;
+  }
+}

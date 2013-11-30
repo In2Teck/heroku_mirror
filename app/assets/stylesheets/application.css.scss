@@ -1,0 +1,3097 @@
+// = require foundation
+// = require_self
+// = require index
+// = require ie
+// = require fancybox
+
+$header-heigth: 130px; 
+$bree: bree, Helvetica, Arial, sans-serif;
+$frutiger: myriad-pro, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+body {
+  background: #d3d3d3 url('Philadelphia-site-home-BG.jpg');
+  overflow-y: scroll;
+  font-family: $frutiger;
+}
+.nav-silver{
+  width:56px!important;
+}
+.hidden {
+  display: none;
+}
+.lazy{
+  max-width: 10000px;
+  height: 0;
+  display: none;
+}
+img.video-embed{
+  cursor: pointer;
+  cursor: hand;
+}
+span.video-embed, div.video-embed{
+  display: block;
+  padding: 0 !important;
+  object{
+    width: 100%;
+    height: 100%;
+  }
+}
+.inlineblock, .inline-block{
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: top;
+  zoom: 1;
+  *display: inline;
+}
+.flechas{
+  display:none;
+  z-index: 2;
+  position: fixed;
+  bottom: 0px;
+  left:0;
+  width: 100%;
+  height: 50px;
+  background: image-url('recetas/flecha.png') no-repeat center 0;
+  .scrolls{
+    margin:0 auto;
+    width:200px;
+    height:30px;
+    margin-top:10px;
+    cursor:pointer;
+  }
+}
+.bg-icon{
+  span{
+    display: none;
+  }
+}
+.ctr{ text-align: center; }
+.rgt{ text-align: right; }
+.lft{ text-align: left; }
+
+#reveal-video-global{
+  width:640px;
+  .close-reveal-modal{
+    background: image-url('videos/close.png') no-repeat 0 0;
+    display:block;
+    width:45px;
+    height:44px;
+    text-indent:-9999px;
+  }   
+  h1{
+    font-family:$bree;
+    font-weight: 400;
+    font-size: 25px;
+    color: #29ABE1;
+  }
+  .widescreen{
+    height:1px!important;
+  }
+}
+
+.fb-like{ 
+  height:30px;
+}
+.container {
+  > header {
+    $header-width: 1035px;
+    
+    position: fixed;
+    width: $header-width;
+    left: 50%;
+    margin-left: (-1*$header-width/2);
+    background: url(Philadelphia-site-home-BG.jpg) top center; 
+
+    z-index: 10;
+  
+
+    > nav {
+      background: #26b0f0;
+      position: relative;
+      z-index: 100;
+      top: 20px;
+      height: 38px;
+      margin-top: 14px;
+      padding: 0 25px;
+      border-radius: 10px;
+      font-size: 13px;
+
+      a {
+        display: block;
+        float: left;
+        width: 75px;
+        min-height: 38px;
+        text-align: center;
+        color: white;
+        font-weight: bold;
+        text-shadow: 0 0 4px #666;
+        line-height: 38px;
+        &.twolines {
+          padding-top: 3px;
+          line-height: 16px;
+        }
+        &:hover, &.active {
+          background: image-url('layout/degradado1mas.png') 0 0 repeat-x;
+        }
+        &.foodservice {
+          word-spacing: 10px;
+        }
+        &.preguntaleayaz{
+          padding-left: 2px;
+          padding-right: 2px;
+        }
+        &.nosotrasyphiladelphia{
+          padding-right: 10px;
+          padding-left: 10px;
+        }
+        &.basicos{
+          padding-left: 3px;
+          padding-right: 3px;
+          margin-right: -6px;
+        }
+        &.recompensas{
+          position: absolute;
+          top: -1px;
+          right: 0;
+          width: 149px;
+          background: image-url('promos/menu-recompensas.png') 0 0 no-repeat;
+        }
+      }
+
+      > h1 > a {
+        margin-top: 0;
+        width: 198px;
+        height: 100px;
+        text-indent: -99999px;
+        background: image-url('layout/logo.png') 0 0 no-repeat;
+
+        &:hover, &.active {
+          background: image-url('layout/logo.png') 0 0 no-repeat;
+        }
+      }
+    }
+
+    menu.secundario, menu.ayuda, menu.extra{
+      ul{
+        text-align: right;
+        li{
+          display: inline;
+          a.inlineblock{
+            width: 26px;
+            height: 26px;
+            background-repeat: no-repeat;
+            background-position: center center;
+            padding: 5px;
+            span{
+              display: none;
+            }
+          }
+          a.twitter{
+            background-image: image-url('layout/icono_twitter.png');
+          }
+          a.facebook{
+            background-image: image-url('layout/icono_fb.png');
+          }
+          a.youtube{
+            background-image: image-url('layout/icono_youtube.png');
+          }
+          a.blogger{
+            background-image: image-url('layout/icono_blogger.png');
+          }
+          a.gplus{
+            background-image: image-url('layout/icono_gplus.png');
+          }
+        }
+      }
+    }
+    menu.secundario{
+      width: 300px;
+      height: 26px;
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      white-space:nowrap;
+      ul{
+        text-align: right;
+        li{
+          font-family: $bree;
+          font-weight: 200;
+          color: #294B94;
+          display: inline;
+          a.inlineblock{
+            width: 26px;
+            height: 26px;
+            background-repeat: no-repeat;
+            background-position: center center;
+            padding: 5px;
+            span{
+              display: none;
+            }
+          }
+          a.twitter{
+            background-image: image-url('layout/icono_twitter.png');
+          }
+          a.facebook{
+            background-image: image-url('layout/icono_fb.png');
+          }
+          a.youtube{
+            background-image: image-url('layout/icono_youtube.png');
+          }
+          a.blogger{
+            background-image: image-url('layout/icono_blogger.png');
+          }
+          a.gplus{
+            background-image: image-url('layout/icono_gplus.png');
+          }
+        }
+      }
+    }
+    menu.ayuda{
+      display: none;
+      position: absolute;
+      top: 70px;
+      right: -1px;
+      width: 103px;
+      height: 135px;
+      background: #29ABE2;
+      overflow: hidden;
+      border-radius: 0 0 10px 10px;
+      ul{
+        text-align: center;
+        padding: 0;
+        margin: 30px 0 0;
+        li{
+          padding: 0;
+          margin: 0;
+          a.inlineblock{
+            width: 34px;
+            height: 38px;
+          }
+          a.twitter{
+            background-image: image-url('layout/ayuda_twitter.png');
+          }
+          a.facebook{
+            background-image: image-url('layout/ayuda_facebook.png');
+          }
+          a.callcenter{
+            background-image: image-url('layout/ayuda_callcenter.png');
+          }
+          a.email{
+            background-image: image-url('layout/ayuda_email.png');
+          }
+        }
+      }
+    }
+    menu.extra{
+      position: absolute;
+      top: 10px;
+      left: 20px;
+      > ul{
+        margin: 0;
+        > li{
+          a.bg-icon{
+            background: none no-repeat 0 0;
+            width: 20px;
+            height: 10px;
+            cursor: pointer;
+          }
+          &.recompensas{
+            a{
+              width: 70px;
+              height: 36px;
+              background-image: image-url('layout/icono_recompensas.png');
+            }
+          }
+          &.chat {
+            a {
+              width: 37px;
+              height: 37px;
+              background-image: image-url('layout/icono_chat.png');
+            }
+          }
+          &.boletin{
+            a{
+              width: 140px;
+              height: 44px;
+              background-image: image-url('layout/icono_boletin.png');
+              margin-top:-6px;
+            }
+          }
+        }
+      }
+    }
+  }
+  > #main {
+    
+    width: 960px;
+    height: auto;
+    margin: 0 auto;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    
+    position: relative;
+  }
+}
+
+#w_preindex{
+  width: 1600px; 
+  height: 900px; 
+  float: left; 
+  background:#FFF; 
+  background: url("https://s3.amazonaws.com/philly.2013/assets/home-redesing/preindex.jpg") no-repeat; padding-left: 20px;
+}
+
+section.panel {
+  width: 960px;
+  #min-height: 7757px;
+  float: left;
+  background-attachment: fixed;
+  background-position: 50% 0;
+  background-repeat: no-repeat;
+  position: relative;
+  article {
+    padding-top: 243px;
+    padding-left: 130px;
+    min-height: 500px;
+    max-width: 960px;
+    &.ghost{
+      min-height: 180px;
+    }
+    > header {
+      font-weight: 400;
+      font-size: 2em;
+      text-align: center;
+      text-shadow: 1px -1px 4px rgba(0,0,0,0.4);
+      width: 700px;
+      
+      font-family: bree, Helvetica, Arial, sans-serif;
+    }
+    .main-section {
+      margin-top: 45px;
+      padding-right: 110px;
+
+      img.main-image {
+        display: block;
+        margin: 0 auto;
+      }
+
+      > aside {
+        padding: 10px;
+        width: auto;
+        max-width: 228px;
+        border-radius: 10px;
+        > h4, p, li {
+          font-size: 1em;
+        }
+        ul {
+          list-style: disc inside;
+          > li {
+            margin: 0;
+          }
+        }
+      }
+    }
+    .slogan {
+      p {
+        font-family: $bree;
+        font-weight:  200;
+      }
+    }
+  }
+  > nav {
+  
+    position: absolute;
+    //background: white;
+    background-image: linear-gradient(top, rgba(0,42,81,.35) 16%, rgba(0,153,204,.35) 52%, rgba(150,216,247,.35) 90%);
+    background-image: -o-linear-gradient(top, rgba(0,42,81,.35) 16%, rgba(0,153,204,.35) 52%, rgba(150,216,247,.35) 90%);
+    background-image: -moz-linear-gradient(top, rgba(0,42,81,.35) 16%, rgba(0,153,204,.35) 52%, rgba(150,216,247,.35) 90%);
+    background-image: -webkit-linear-gradient(top, rgba(0,42,81,.35) 16%, rgba(0,153,204,.35) 52%, rgba(150,216,247,.35) 90%);
+    background-image: -ms-linear-gradient(top, rgba(0,42,81,.35) 16%, rgba(0,153,204,.35) 52%, rgba(150,216,247,.35) 90%);
+		
+		/*agregado redesign*/
+		margin-top:80px;
+		
+    left: 20px;
+    top: 120px;
+    width: 40px;
+    margin-left: 20px;
+
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -ms-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+
+    &.silver {
+      background-image:         linear-gradient(top, rgba(70,80,83,.35) 0%, rgba(139,146,152,.35) 48%, rgba(224,224,224,.35) 100%);
+      background-image:      -o-linear-gradient(top, rgba(70,80,83,.35) 0%, rgba(139,146,152,.35) 48%, rgba(224,224,224,.35) 100%);
+      background-image:    -moz-linear-gradient(top, rgba(70,80,83,.35) 0%, rgba(139,146,152,.35) 48%, rgba(224,224,224,.35) 100%);
+      background-image: -webkit-linear-gradient(top, rgba(70,80,83,.35) 0%, rgba(139,146,152,.35) 48%, rgba(224,224,224,.35) 100%);
+      background-image:     -ms-linear-gradient(top, rgba(70,80,83,.35) 0%, rgba(139,146,152,.35) 48%, rgba(224,224,224,.35) 100%);
+    }
+
+    > a {
+      display: block;
+      width: 80px;
+      margin: 10px 0 10px -29px;
+      > img {
+        display: block;
+        margin: 0 auto;
+      }
+      &.active {
+        position: relative;
+      }
+      .flecha{
+        position: absolute;
+        top: 50%;
+        right: -5px;
+        margin: -11px 0 0 0 !important;
+      }
+    }
+    .flecha{
+      display: none;
+    }
+    a > .flecha{
+      margin: 18px 0 0 93px;
+      width: 12px;
+      height: 22px;
+      /*background: image-url('layout/flecha-der.png');*/
+    }
+    a.active > .flecha{
+      display: block;
+    }
+  }
+  footer.pie{
+    font: $frutiger;
+    position: relative;
+    z-index: 3;
+    color: #214E9F;
+    background: image-url('layout/footer.png');
+    width: 960px;
+    height: 88px;
+    h3{
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      text-indent: -9999px;
+      width: 140px;
+      height: 45px;
+      display: block;
+    }
+    .mas{
+      position: absolute;
+      right: 50px;
+      top: 25px;
+      h5{
+        color: #214E9F;
+        font-size: 11px;
+      }
+      select{
+        font-size: 10px;
+      }
+    }
+    ul.modal-links{
+      font-size: 11px;
+      position: absolute;
+      top: 35px;
+      left: 210px;
+      li{
+        display: inline;
+      }
+      li + li:before{
+        content: '|';
+        color: rgba(33,78,159,0.5);
+        padding: 0 0.4em;
+      }
+    }
+    a{
+      color: #214E9F;
+    }
+  }
+}
+
+ul, li{list-style:none;}
+
+a{text-decoration:none;}
+
+
+
+
+
+
+
+
+
+
+
+
+section.home{
+ 
+  background-attachment: fixed;
+  article#home{
+    width: 960px;
+    margin: 0 auto;
+    padding-top: 120px;
+    padding-left: 0;
+
+    .home{
+      width: 940px;
+      height: 930px; /* Tamaño ventana Home*/
+     /* background: image-url('home/home_superior_bg.png') top center no-repeat;
+*/    position: relative;
+      .superior, .inferior{
+        position: absolute;
+        left: 14px;
+        right: 13px;
+        .slider, .slider-bg{
+          position:absolute;
+          width: 960px;
+          height:372px;
+          margin-top:10px;
+        }
+        .cont{
+          position: relative;
+          top: 0;
+          bottom: 0;
+          right: 0;
+          left: 0;
+          height: 100%;
+          a.bloque{
+            top: 0;
+            position: absolute;
+            display: block;
+          }
+        }
+      }
+      .superior{
+        top: 0;
+        z-index: 4;
+        height: 382px;
+        .slider-nav{
+          .right, .left{
+            top: 250px;
+            width: 60px;
+            height: 60px;
+            background: image-url("home/slider_flechas-new.png") no-repeat 0 0;
+          }
+          .left{
+            background-position: 0 -60px;
+          }
+          .right{
+            background-position: 0 0; float: right; margin-right: 0;
+          }
+        }
+        .sombra{
+          bottom: 0;
+          left: 0;
+          right: 0;
+          position: absolute;
+          height: 100px;
+
+        }
+        a.conoceayaz{
+          height: auto !important;
+          width: 100% !important;
+          top: 70px !important;
+          bottom: 0 !important;
+        }
+      }
+      .inferior{
+        position: absolute;
+        top: 381px;
+        bottom: 52px;
+        .derecha, .izquierda{
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          
+        }
+        .derecha{
+          width: 440px;
+
+          left: auto;
+          right: 0;
+          .timer .mask {
+            display: none;
+          }
+        }
+        .izquierda{
+          width: 491px;
+          
+          left: 0;
+          right: auto;
+          background: image-url('home/home_izquierda-new.png') no-repeat top left;
+          .yaz{
+            position: relative;
+            top: -40px;
+            z-index: 5;
+            width: 205px;
+            
+           /* background: image-url('home/home_izquierda_yaz.png') no-repeat top left;*/
+            margin-left:30px;
+          }
+          a.bloque{
+            width: 70px;
+            height: 85px;
+            top: 118px !important;
+            &.preguntaleayaz{
+              width: 240px;
+              height: 35px;
+              top: 55px !important;
+              left: 200px;
+              
+            }
+            &.callcenter{
+              left: 343px;
+            
+              margin-top:60px;
+              width: 50px;
+            }
+            &.facebook{
+              left: 215px;
+              
+              margin-top:60px;
+            }
+            &.twitter{
+            width: 50px;
+              left: 280px;
+              margin-top:60px;
+            }
+          }
+        }
+      }
+    }
+    #home_slider{
+      nav{
+        position: absolute;
+        padding: 7px 8px;
+        top: 0;
+        right: 0;
+        z-index: 11;
+        text-align: center;
+        a.boton{
+          font-size: 0;
+          padding: 15px 20px;
+          color: #2a85e8 !important;
+          background: image-url("home/banner3_slider.png") no-repeat 0 -30px;
+          &.activo{
+            text-decoration: underline;
+            background-position: 0 0;
+          }
+        }
+      }
+    }
+  }
+  footer.pie{
+background:none; 
+  }
+}
+
+/*section.marca{
+  background: image-url('layout/fondomarca.jpg') center center;
+  background-attachment: fixed;
+  width: 980px;
+  > nav{
+    background: rgba(0,0,0,0.1);
+    margin-left: 45px;
+    width: 50px;
+    ul{
+      margin-left: -27px;
+    }
+    a{
+      display: block;
+      width: 105px;
+      height: 89px;
+      background-position: top left;
+      background-repeat: no-repeat;
+      text-indent: -99999px;
+      &.historia{
+        background-image: image-url('marca/menuhistoria.png');
+      }
+    }
+  }
+  #marca{
+    padding-left: 0;
+    width: 980px;    
+  }
+}*/
+
+
+section.productos {
+  /*background-color: #1D305A;
+  background-image: image-url('layout/fondoproducto.jpg');*/
+  height: 100%;
+  color: white;
+  nav{
+    a{
+      margin-left: -30px;
+    }
+  }
+  > article {
+    padding-top: 230px;
+    header {
+      font-size: 2.3em;
+      
+    }
+    .main-section {
+      padding-top: 10px;
+      > aside {
+        background: rgba(255,255,255,0.4);
+        > h4, p, li {
+          color: white;
+        }
+      }
+    }
+    .recetas{
+      white-space: nowrap;
+      text-align: center;
+      width: 400px;
+      min-width: 0;
+      margin-top:50px;
+      margin-left:170px;
+      h4{
+        font-weight: 400;
+        font-family: $bree;
+        color: #fff;
+        font-size:1.8em;
+      }    
+    }
+    .recetas-menos{
+      margin-top:5px;
+    }
+    .menos{
+      margin-top:-20px;
+    }
+    .slogan {
+      $slogan-w: 470px;
+      margin-top: 30px;
+      padding-left: ((960px - (130px*2)) - ($slogan-w)) / 2;
+      p {
+        margin-top:-25px;
+        background: rgba(0,27,104,.3);
+        box-shadow: 0 0 10px 2px rgba(255,255,255,0.8);
+        border-radius: 10px;
+        padding: 20px;
+        font-size: 1.5em;
+        line-height: 1.2em;
+        text-align: center;
+        text-shadow: 1px -1px 4px rgba(0,0,0,0.4);
+        width: $slogan-w;
+      }
+    }
+  }
+  .img-producto{
+    margin-top:40px;
+  }
+  #infografia{
+  width:960px; 
+    .infografia-actual{
+      position:relative;
+      margin-top:-20px!important;
+      .actual-left{
+        left:0;
+        position:absolute;
+        h1{
+          font-family:$frutiger;
+          font-size:100px;
+          font-weight: bold;
+          color:#fff;
+          padding-right:10px;
+        }
+      }
+      .info-borde{
+        background-image: image-url('marca/border2012.png');
+        width:6px;
+        height:68px;
+        position:absolute;
+        left:250px;
+        top:30px;
+      }
+      .actual-right{
+        top:40px;
+        position:absolute;
+        right:40px;
+        width:510px;
+        h2{
+          color:#fff;
+          font-family: $bree;
+          font-size:20px;
+          font-weight:normal;
+        }
+      }
+    }   
+  }
+}
+section.nosotrasyphiladelphia {
+/* escondido fondo azul de marca*/
+ /* background-image: image-url('layout/fondonosotrasyphiladelphia.png');
+  background-repeat: repeat; */
+  > nav{
+    width: 48px;
+    
+    a{
+      margin-left: -30px;
+      width: 100px;
+    }
+    .mini{
+      margin-left: -17px;
+    }
+  }
+  article {
+    .shadow{
+      box-shadow: 0px 3px 5px rgba(0,0,0,0.3);
+      border-radius: 10px;
+    }
+    > header {
+      color: white;
+      
+    }
+    > .row > aside {
+      font-size: 12px;
+      color: white;
+      padding: 0;
+      > header {
+      
+        text-align: center;
+        font-weight: bold;
+      }
+      .p1, .p2, .p3{
+        margin: 0;
+        padding: 7px 5px 7px 7px;
+      }
+      .p1{
+        border-radius: 10px 10px 0 0;
+        background: #4d4d4d;
+      }
+      .p2{
+        background: #a7a9ac;
+        background: rgba(167, 169, 172, 0.6);
+      }
+      .p3{
+        background: #999;
+      }
+      .last{
+        border-radius: 0 0 10px 10px;
+      }
+    }
+    &#intro{
+      .flecha{
+        margin-top: 40px;
+        margin-right: 100px;
+      }
+      .nosotras-liston{
+        margin-left:190px;
+      }
+      .globo{
+        margin-left: 60px;
+        width: 640px;
+        height: 507px;
+        background: image-url('nosotrasyphiladelphia/fondo_intro.png') no-repeat 0 0;
+        .cont-uno{
+          font-size: 16px;
+          text-align: center;
+          padding: 40px 80px 0;          
+        }
+        .cont-dos{
+          font-size: 16px;
+          text-align: center;
+          color:#2C4C93; 
+          width:170px;
+          margin-left:440px;
+          .fin{
+            color:#4e4e4e;
+          }       
+          .nosotras-firma{
+            margin-left:10px;
+          }
+        }
+      }
+    }
+    &#reciencasadas{
+      margin-left: 20px;
+      p.ctr{
+        margin-right: 150px;
+      }
+      .intro{
+        position: relative;
+        text-align: center;
+        font-size: 13px;
+        color: #888;
+        background: image-url('nosotrasyphiladelphia/fondo_reciencasadas.png') no-repeat top left;
+        width: 668px;
+        height: 505px;
+        padding-bottom:305px;
+        .cont{
+          padding: 30px 220px 0 30px;
+          p{
+            margin: 0 0 7px 0;
+            line-height: 1.1em;
+            &.ultimo{
+              big{
+                color: #555;
+                display: block;
+                font-size: 26px;
+                padding: 10px 0;
+              }
+            }
+            .saludos{
+              display: block;
+              padding-bottom: 50px;
+              background: image-url('yaz/yaz_firma.png') center bottom no-repeat;
+            }
+          }
+        }
+        a.boton-recetario{
+          position: absolute;
+          top: 30px;
+          right: -95px;
+          display: block;
+          width: 253px;
+          height: 150px;
+          background: image-url('nosotrasyphiladelphia/boton_recetario.png') no-repeat top left;
+        }
+      }
+    }
+    &#receta-enviar{
+      .cont{
+        width: 720px;
+        padding-top: 1px;
+        margin: 0 auto;
+        margin-left: 20px;
+        background: #fff;
+        box-shadow: 5px 5px 8px rgba(0,0,0,.4);
+        h3{
+          margin: 1em 0;
+          font-family: $bree;
+          font-weight: 200;
+          text-align: center;
+          color: #fff;
+          padding: 0.3em 0;
+          background: image-url('nosotrasyphiladelphia/cmft_cintillo.jpg') #1B4A84;
+        }
+        .tenedor{
+          position: relative;
+          z-index: 1;
+          span{
+            background: image-url('nosotrasyphiladelphia/cmft_tenedor.jpg') no-repeat 0 0;
+            pointer-events: none;
+            display: block;
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 228px;
+            height: 169px;
+          }
+        }
+        .texto{
+          margin-bottom: -22px;
+          padding-left: 220px;
+          padding-right: 10px;
+          min-height: 300px;
+          background: image-url('nosotrasyphiladelphia/cmft_yaz.jpg') no-repeat 0 bottom;
+          ol{
+            list-style-position: inside;
+            margin: 0;
+            li{
+              margin: 0;
+            }
+          }
+          .redes{
+            text-align: center;
+          }
+          .firma{
+            span{
+              display: block;
+              clear: both;
+              margin: 0 auto;
+              width: 53px;
+              height: 63px;
+              background: image-url('nosotrasyphiladelphia/cmft_firma.jpg') no-repeat 0 0;
+            }   
+          }          
+        }
+        iframe{
+          position: relative;
+          top:58px;
+          z-index: 2;
+          overflow-x: hidden !important;
+        }       
+      }
+    }
+  }
+  article.boletin{   
+    .boletin-content{
+      border:1px solid transparent;
+      background: image-url('mundophiladelphia/bg_boletin.png')no-repeat;
+      width:803px;
+      height:429px;
+      .boletin-intro{
+        width:495px;
+        margin-top:110px!important;
+        margin-left:30px;
+        p{
+          text-align:center;
+          font-size:15px;
+          padding-left:20px;
+          padding-right:20px;
+        }
+      }
+      .boletin-success{       
+        margin-top:30px;
+        width:297px;
+        margin-left:120px;
+        p{
+          font-family: $frutiger;
+          font-size:20px;
+          color:#656565;
+          text-align:center;
+        }
+      }
+      .boletin-text{
+        width:380px!important;
+        text-align:center;
+        margin-left:80px;
+        p{
+          font-size:15px;
+          font-family: $frutiger;
+          color:#29ABE1;
+        }  
+      }
+      #boletin{
+        margin-top:30px;
+        width:270px;
+        margin-left:50px;
+        position:relative;
+        width:460px;
+        .mail-container{
+          position:relative;
+          label{
+            font-size:14px;            
+            position:absolute;
+            top:35%;
+            left:10px;
+          }
+          input{
+            border:2px solid #dadada;
+            background:#f9f9f9;
+            height:40px;
+            padding-left:130px;
+            font-size:25px;
+            width: 320px;
+            max-width: 100%;
+          }
+          .error{
+            color: #29ABE1;
+            font-size:11px;
+            position:absolute;
+            right:30px;
+            top:-15px;
+            font-family: $frutiger;
+            padding-bottom:20px!important;
+          }      
+        }
+        .terminos-content{
+          .error{
+            color: #29ABE1;
+            font-size:11px;
+            position:absolute;
+            font-family: $frutiger;
+            bottom:-20px;
+            right:0;
+          } 
+        }
+        .terminos{
+          label{
+            font-family: $frutiger;
+            font-size:15px;
+            color:#b3b3b3!important;
+          }
+          input{
+            border:2px solid black!important;            
+          }          
+        }
+        .field_with_errors{
+          #suscripcion_email{
+            border:2px solid #dadada;
+            background:#f9f9f9;
+            height:40px;
+            width:320px!important;
+            padding-left:130px;
+            font-size:25px;
+          }
+          .form-error{
+            font-size:14px;            
+            position:absolute;
+            left:10px;
+            margin-top:15px;
+          }
+          .label-error{
+            margin-left:20px!important;
+            margin-top:-18px!important;
+          }
+        }   
+        #suscribe{
+          width:107px!important;
+          height:40px!important;
+          background: image-url('mundophiladelphia/boton_boletin.png');
+          text-indent:-9999px;
+          border:0;
+          padding:0!important;
+          position:absolute;
+          right:0;
+          top:60px;          
+        }
+      }    
+    }      
+  }
+}
+section.basicos {
+  /*background-image: image-url('layout/fondonosotrasyphiladelphia.png');
+  background-repeat: repeat; */
+  article {
+    .shadow{
+      box-shadow: 0px 3px 5px rgba(0,0,0,0.3);
+      border-radius: 10px;
+    }
+    > header {
+      color: #005573;
+      
+    }
+    > .row > aside {
+      font-size: 12px;
+      color: white;
+      padding: 0;
+      > header {
+        text-align: center;
+        font-weight: bold;
+      }
+      .p1, .p2, .p3{
+        margin: 0;
+        padding: 7px 5px 7px 7px;
+      }
+      .p1{
+        border-radius: 10px 10px 0 0;
+        background: #4d4d4d;
+      }
+      .p2{
+        background: #a7a9ac;
+        background: rgba(167, 169, 172, 0.6);
+      }
+      .p3{
+        background: #999;
+      }
+      .last{
+        border-radius: 0 0 10px 10px;
+      }
+    }
+  }
+  .subtitulo_basicos{
+    display:block;
+    margin:0 auto;
+    text-indent:-9999px;
+    margin-top:50px;
+    margin-bottom:35px; 
+    width:352px;
+    height:66px;       
+  }
+  .vid_recetas{
+    background: image-url('videos/liston-vid-recetas.png') no-repeat 0 0;    
+  }
+  .list_herramientas{
+    background: image-url('mundophiladelphia/herramientas_list.png') no-repeat 0 0; 
+    margin-left:180px!important;
+  }
+  .list_tips{    
+    background: image-url('mundophiladelphia/tips_list.png') no-repeat 0 0; 
+    margin-left:180px!important;
+
+  }
+  article#video-recetas{
+    width:700px!important;              
+    .paginacion-tips{
+      margin:0 auto;
+      width:683px;
+      overflow:hidden;
+      margin-top:-10px;
+      margin-left:40px;
+    }
+    .tips_vid_img{
+      display:block;
+      width:201px;
+      height:201px;
+      text-indent:-9999px;
+      float:left;
+      margin-top:20px;
+    } 
+    .tip_crema_vid_img{
+      background: image-url('videos/video-tips-crema.png') no-repeat 0 0;
+    }
+    .tip_enfrijoladas_vid_img{
+      background: image-url('videos/video-tips-enfrijoladas.png') no-repeat 0 0;
+      margin-left:20px;
+    }
+    .tip_ensalada_fresa_vid_img{
+      background: image-url('videos/video-tips-ensalada-fresa.png') no-repeat 0 0;        
+      margin-left:20px;
+    }
+    .tip_ensalada_vid_img{
+      background: image-url('videos/video-tips-ensalada.png') no-repeat 0 0;
+    }
+    .tip_fideo_vid_img{
+      background: image-url('videos/video-tips-fideo.png') no-repeat 0 0;
+      margin-left:20px;
+    }
+    .tip_muslos_vid_img{
+      background: image-url('videos/video-tips-muslos.png') no-repeat 0 0;
+      margin-left:20px;
+    }
+    .tip_pasta_vid_img{
+      background: image-url('videos/video-tips-pasta.png') no-repeat 0 0; 
+    }
+    .tip_rajas_vid_img{
+      background: image-url('videos/video-tips-rajas.png') no-repeat 0 0;       
+      margin-left:20px;
+    }
+    .tip_surimi_vid_img{
+      background: image-url('videos/video-tips-surimi.png') no-repeat 0 0;
+      margin-left:20px;     
+    }
+  }   
+  .basicos-content{
+    dl{
+      margin: 0 0 17px;
+      border: 0;
+      dd{
+        width:167px;
+        margin: 0;      
+        text-align: center;
+        margin-left:15px;
+        margin-right:15px;
+        .active{
+          height:69px!important;
+          margin-top:-25px;
+
+          -webkit-transition: all 0.2s ease-out;  
+          -moz-transition: all 0.2s ease-out;  
+          -ms-transition: all 0.2s ease-out;  
+          -o-transition: all 0.2s ease-out;  
+          transition: all 0.2s ease-out;
+        }
+        &.tab a{
+          border-top: 4px solid !important;
+          border-left: 4px solid !important;
+          border-right: 4px solid !important;
+          border:0;
+          height:40px;
+          &.active{
+            height:65px;
+            span{
+              font-size:19px;
+              margin-top:23px;
+              line-height:15px;
+            }
+          }
+          span{
+            font-size:15px;
+            font-family:$bree;
+            display:block;
+            margin-top:12px;
+            line-height:12px;
+          }
+        }
+        &.manual a{
+          background:#399cd8;
+          color: #fff;
+          border-color: #7ad0ef !important;
+        }
+        &.tips a{
+          background:#6cc9df;
+          color: #fff;
+          border-color: #4660ad !important;
+        }
+        &.equivalencias a{
+          background:#bbdcf4;
+          color: #004382;
+          border-color: #2c6fb9 !important;
+        }
+        &.platillos a{
+          background:#1d4f91;
+          color: #fff;
+          border-color: #c2e6f7 !important;
+          span{
+            margin-top:7px;
+            padding:0 5px;
+          }  
+        }
+      }      
+    }
+    .tabs-content{
+      width:767px;
+      margin-top:-3px;
+      margin-left:15px;     
+      > li{
+        &#manualTab{
+          height:580px!important;
+          background: #399cd8;
+          border:4px solid #7ad0ef;
+          .manual-content{
+            position:relative;          
+            .titulo{
+              width:580px;
+              background-color:#2b6a8e;   
+              border-radius:10px;         
+              margin:0 auto;            
+              h1{
+                margin-top:10px;
+                color:#fff;
+                text-align:center;
+                font-size:20px;
+                font-family:$bree;
+                font-weight:400;
+                text-shadow:1px #000;
+              }             
+            }
+            .menu-manual{
+              margin-left:0px;
+              position:absolute;
+              width:120px;
+              height:330px;
+              margin-top: 40px;
+              .active{
+                border:2px solid #fff;
+                border-radius:10px;
+                float: left;
+              }
+              img{
+                margin-top:5px;
+                margin-right:20px;
+                margin-left:5px;
+                text-align:center;
+                padding:4px;
+              }
+              .rellenar{
+                float:left;
+              }
+            }
+            .manual-contenido{
+              position:absolute;
+              right:15px;
+              top:72px;
+              width:510px;
+              height:300px;
+              margin-top:15px;
+              .titulos{
+                h1{
+                  color:#fff!important;
+                  text-align:center;
+                  font-size:20px;
+                  font-family:$bree;
+                  font-weight:400;
+                  position:relative;
+                  z-index:100;
+                  text-shadow:1px 1px 3px #000;
+                }
+                p{
+                  color:#fff;
+                  padding:0 10px;
+                }
+                ul{
+                  color:#000;
+                  list-style:disc;
+                  padding:0 10px 0 20px;
+                  li{
+                    margin-top:-10px!important;
+                  }
+                }                
+              }
+              .columna1{
+                width:160px;
+                height:390px;
+                position:absolute;
+                top:0;
+                left:0;
+                background-color:#2b6a8e;                
+              }
+              .columna2{
+                position:absolute;
+                width:160px;
+                height:390px;
+                left:175px;
+                background-color:#8bbce5;
+              }
+              .columna3{
+                position:absolute;
+                right:0;
+                width:160px;
+                height:390px;
+                background-color:#d6e5f6;
+              }
+              #contenido-intro{ 
+              width:515px; float:left;
+                background-color:#fff; 
+                border:1px solid transparent;
+                margin-top:30px;
+                margin-left:0;
+                .glos{
+                  margin-left:15px;
+                  margin-top:15px;
+                  .glos-img{
+                    margin-right:10px;
+                    margin-bottom:10px;
+                  }              
+                }
+                
+              }
+              #acremar-content{
+                display:none;
+              }
+              #batir-content{
+                display:none;
+              }
+              #licuar-content{
+                display:none;
+              }
+              #sarten-content{
+                display:none;
+              }
+              #rellenar-content{
+                display:none;
+              }                                                     
+            }            
+          }  
+        }
+        &#tipsTab{
+          height:550px!important;
+          background: #6cc9df;
+          border:4px solid #4660ad;
+          .tips-content{
+            position:relative;
+            .titulo{
+              width:580px;
+              background-color:#399dd8;   
+              border-radius:10px;         
+              margin:0 auto;            
+              h1{
+                margin-top:10px;
+                color:#fff;
+                text-align:center;
+                font-size:20px;
+                font-family:$bree;
+                font-weight:400;
+                text-shadow:1px #000;
+                padding:5px;
+              }             
+            }
+            ol.menu-tips{
+              position:absolute;
+              left:0;
+              margin-left:-1px!important;
+              margin-top:40px;
+              list-style:none;
+              background-color:#e7e7e7;
+              border-radius:10px;
+              width:143px;
+              .coccion-li{
+                background: image-url('mundophiladelphia/basicos/coccion-icon.png');
+                margin-top:15px;
+                &.active{
+                  background: image-url('mundophiladelphia/basicos/coccion-icon-active.png')!important;
+                  width:176px!important;
+                }
+              }
+              .descongelacion-li{
+                background: image-url('mundophiladelphia/basicos/descongelacion-icon.png');
+                &.active{
+                  background: image-url('mundophiladelphia/basicos/descongelacion-icon-active.png')!important;
+                  width:176px!important;
+                }
+              }
+              .emulsion-li{
+                background: image-url('mundophiladelphia/basicos/emulsion-icon.png');
+                &.active{
+                  background: image-url('mundophiladelphia/basicos/emulsion-icon-active.png')!important;
+                  width:176px!important;
+                }
+              }
+              .carne-li{
+                background: image-url('mundophiladelphia/basicos/carne-icon.png');
+                &.active{
+                  background: image-url('mundophiladelphia/basicos/carne-icon-active.png')!important;
+                  width:176px!important;
+                }
+              }                
+              .frescura-li{
+                background: image-url('mundophiladelphia/basicos/frescura-icon.png');
+                &.active{
+                  background: image-url('mundophiladelphia/basicos/frescura-icon-active.png')!important;
+                  width:176px!important;
+                }
+              }
+              li{
+                width:156px;
+                height:56px;
+                margin-left:-10px; 
+                cursor: pointer;
+                text-indent:-9999px;
+              }             
+            }
+            .tips-cocina-content{
+              .tips-contenido{
+                position:absolute;
+                top:75px;
+                left:165px;
+                width:190px;
+                border:1px solid transparent;
+                p{
+                  padding:20px 15px 0 15px;
+                  line-height:25px;
+                  font-size:13px;
+                  text-align:center;
+                }
+                img{
+                  display:block;
+                  margin:0 auto;
+                  padding-bottom:10px;
+                  margin-top:-10px;
+                }
+              }                        
+              #coccion-content{
+                background-color:#d0edf7;
+                p{
+                  color:#035392;
+                }
+              }
+              #descongelacion-content{
+                display:none;
+                background-color:#00aeef;
+                p{
+                  color:#fff;
+                }
+              }
+              #emulsion-content{
+                display:none;
+                background-color:#283892;
+                p{
+                  color:#fff;
+                }
+              }
+              #carne-content{
+                display:none;
+                background-color:#abdee0;
+                p{
+                  color:#035392;
+                }
+              }
+              #indicador-content{
+                display:none;
+                background-color:#1a93bf;
+                p{
+                  color:#fff;
+                }
+                img{
+                  padding-top:100px!important;
+                }
+              }
+            }
+            h1.titulo-dos{
+              position:absolute;
+              background-color:#b0dedf;
+              color:#6b6c6b;
+              top:75px;
+              right:90px;
+              font-size:20px;
+              padding:5px 50px 5px 50px;
+            }
+            .tips-cocina-content-dos{
+              position:absolute;
+              width:350px;
+              height:367px;
+              right:0;
+              top:110px;
+              background-color:#b0dedf;
+              margin-right:-15px!important;
+              .tips-texto{
+                overflow:scroll;
+                width:320px;
+                height:340px;
+                margin:0 auto;
+                margin-top:10px;
+                p{
+                  font-size:15px;
+                }
+              }
+              .scroll{
+                position:absolute;
+                right:0;
+                bottom:0;
+                margin-right:130px;
+                margin-bottom:-20px!important;
+              }
+            }
+          }
+        }
+         &#equivalenciasTab{
+          background: #bbdcf4;
+          border:4px solid #2c6fb9;
+          height:500px;
+          .equivalencias-content{
+            position:relative;
+            .titulo-equivalencias{
+              background-color:#399dd8;   
+              border-radius:10px;         
+              margin:0 auto;
+              width:600px;
+              h1{
+                margin-top:10px;
+                color:#fff;
+                text-align:center;
+                font-size:20px;
+                font-family:$bree;
+                font-weight:400;
+                text-shadow:1px #000;
+                padding:5px;
+              }
+            }
+            .equivalencias-uno{
+              position:absolute;
+              left:90px;
+              top:100px;
+              background-color:#e6e7e5;
+              width:232px;
+              height:350px;
+              border-radius:10px;
+              ul.equivalencias-menu{
+                margin-top:40px;
+                margin-left:-2px;
+                li{
+                  background: image-url('mundophiladelphia/basicos/liston.png');
+                  width:235px;
+                  height:47px;                  
+                  margin-top:25px;
+                  cursor:pointer;
+                  p{
+                    color:#fff;
+                    font-size:15px;
+                    text-align:center;
+                    font-family:$bree;
+                    padding-top:10px;
+                  }
+                }
+              }
+              .equivalencias-contenido{
+                position:absolute;
+                background-color:#3272ba;
+                left:5px;                              
+                width:220px;
+                ul{
+                  color:#fff;
+                  margin-left:20px;
+                  margin-top:10px;
+                }
+                .flecha{
+                  margin-left:90px;
+                  cursor:pointer;
+                }
+              }
+              #varias-content{
+                display:none;
+                top:78px;
+              }
+              #peso-content{
+                display:none;
+                top:150px;
+              }
+              #volumen-content{
+                display:none;
+                top:222px;
+              }
+              #temperatura-content{
+                display:none;
+                top:292px;
+              }
+            }
+            .equivalencias-dos{
+              position:absolute;
+              right:90px;
+              top:100px;
+              background-color:#e6e7e5;
+              width:232px;
+              height:350px;
+              border-radius:10px;
+              ul.equivalencias-menu{
+                margin-left:-2px;
+                margin-top:40px;
+                li{
+                  background:image-url('mundophiladelphia/basicos/liston.png');
+                  width:235px;
+                  height:47px;
+                  margin-top:25px;
+                  cursor:pointer;
+                  p{
+                    color:#fff;
+                    font-size:15px;
+                    text-align:center;
+                    font-family:$bree;
+                    padding-top:10px;
+                  }
+                }
+              }
+              .equivalencias-contenido{
+                position:absolute;                
+                background-color:#3272ba;
+                left:5px;                
+                width:220px;
+                ul{
+                  color:#fff;
+                  margin-left:20px;
+                  margin-top:10px;
+                }
+                .flecha{
+                  margin-left:90px;
+                  cursor:pointer;
+                }              
+              }
+              #liquidos-content{
+                display:none;
+                top:150px;
+              }
+              #huevo-content{
+                display:none;
+                top:222px;
+              }
+              #varios-content{
+                display:none;
+                top:294px;
+              }
+              #utiles-content{
+                display:none;
+                top:78px;
+              }
+            }
+          }
+        }
+        &#platillosTab{
+          height:330px!important;
+          background: #1d4f91;
+          border:4px solid #c2e6f7;
+          .platillos-content{
+            position:relative;
+            .titulo-platillos{
+              background-color:#399dd8;   
+              border-radius:10px;         
+              margin:0 auto;
+              width:600px;
+              h1{
+                margin-top:10px;
+                color:#fff;
+                text-align:center;
+                font-size:20px;
+                font-family:$bree;
+                font-weight:400;
+                text-shadow:1px #000;
+                padding:5px;
+              }
+            }
+            .paginacion{
+              position:relative;
+              margin:0 auto;
+              width:650px;
+              height:210px;
+              margin-top:50px;
+              .vid_img{
+                width:202px;
+                height:201px;
+                text-indent:-9999px;
+              }
+              .licuar_vid_img{
+                background: image-url('mundophiladelphia/basicos/video-licuar.png') no-repeat 0 0;
+                position:absolute;
+                left:0;
+              }
+              .sarten_vid_img{
+                background: image-url('mundophiladelphia/basicos/video-sarten.png') no-repeat 0 0;
+                position:absolute;
+                right:222px;
+              }
+              .rellenar_vid_img{
+                background: image-url('mundophiladelphia/basicos/video-rellenar.png') no-repeat 0 0;
+                position:absolute;
+                right:0;
+              }
+            }           
+          }
+          .reveal-modal{
+            margin-right:70px;
+            width:640px;
+            .close-reveal-modal{
+              background: image-url('videos/close.png') no-repeat 0 0;
+              display:block;
+              width:45px;
+              height:44px;
+              text-indent:-9999px;
+            }   
+            h1{
+              font-family:$bree;
+              font-weight: 400;
+              font-size: 25px;
+              color: #29ABE1;
+            }
+            .widescreen{
+              height:1px!important;
+            }
+          }
+        }
+      }      
+    }    
+  }
+  article#cocina-tips{
+
+    margin-bottom: 20px;
+    .cocina-tips{
+      width:721px; 
+      margin-left:25px;
+      .cocina-tips-content{
+        height:300px;
+        background-color:#ffffff;
+        margin-top:-4px!important;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        ol{
+          padding:10px;
+          font-size: 14px;
+        }
+      }
+    }
+  }  
+}
+
+section.foodservice {
+  /*background-color: #6B6C70;
+  background-image: image-url('layout/fondofoodservice.jpg');
+  color: white;*/
+  > nav{
+    background: rgba(255,255,255,0.5);
+    margin-left: 45px;
+    width: 50px;
+    ul{
+      margin-left: -28px;
+      li{
+        margin: 0;
+      }
+    }
+    a{
+      display: block;
+      width: 55px;
+      height: 89px;
+      background-repeat: no-repeat;
+      background-position: top left;
+      text-indent: -99999px;
+      &.centrogastronomico{
+
+        background-image: image-url('foodservice/menucentrogastronomico.png');
+      }
+      &.comidarapida{
+        background-image: image-url('foodservice/menucomidarapida.png');
+      }
+      &.panaderia{
+        background-image: image-url('foodservice/menupanaderia.png');
+      }
+      &.socios{
+        background-image: image-url('foodservice/menusocios.png');
+      }
+      &.entretenimiento{
+        background-image: image-url('foodservice/menuentretenimiento.png');
+      }
+      &.restaurantes{
+        background-image: image-url('foodservice/menurestaurantes.png');
+      }
+      &.contactoventas{
+        background-image: image-url('foodservice/menucontacto.png');
+        margin-left:8px;
+      }
+      &:hover{margin:0;}
+    }
+  }  
+  article {
+    .main-section{
+      margin-bottom: 55px;
+    }
+    > .slogan p {
+      margin: 0 auto;
+      font-size: 15px;
+      font-weight: bold;
+      margin-bottom: 1em;
+      width: 40em;
+
+      &.normal {
+        font-family: $frutiger;
+        font-weight: 400;
+        width: 50em;
+        font-size: 14px;
+      }
+    }
+    .titulos{
+      color:#4d4d4d;
+      font-weight: 400;
+      font-size: 2.5em;
+      text-align: center;
+      text-shadow: 1px -1px 4px rgba(0, 0, 0, 0.4);
+      width: 700px;
+      font-family: $bree;
+    }
+     .subtitulo{
+      width: 630px;
+      margin-left:40px;
+      background-color:rgba(255, 255, 255, 0.3);
+      border-radius:5px;
+      box-shadow:1px 1px 3px rgba(0, 0, 0, 0.3);
+      margin-bottom:20px;
+      h4{
+        font-weight: 400;
+        font-size: 1.2em;
+        text-align: center;
+        font-family: $bree;
+        padding:10px 10px;
+      }    
+     }
+     .logos{
+      overflow:hidden;
+      width: 630px;
+      margin-left:40px;
+      text-align: center;    
+      .food-logo{
+        padding:10px; 
+        margin-right:20px; 
+        cursor:pointer; 
+      }
+      .lonchi{
+        margin-top:10px!important;
+      }
+      .selected{
+        border-radius:5px 5px 0 0;
+        background-color:#848484;
+      }
+      .fs-contenido{
+        display:none;
+      }
+     }
+     .content-contenedor{
+      margin-top:-10px;
+      overflow:hidden;
+      width: 630px;
+      margin-left:40px;
+      background-color:#848484;
+      border-radius:5px;
+      box-shadow:1px 1px 3px rgba(0, 0, 0, 0.3);
+      .content-principal{
+        width:430px;
+        float:right;
+        margin-bottom:30px;        
+        .img-content{
+          margin-bottom:20px;
+          text-align:center!important;
+          margin-top:20px;
+          width:430px;
+        }
+        .oxxo-logo{
+          margin-top:-8px;
+        }
+        .flecha-next{
+          margin-top:-240px;
+          display:none;
+          position:absolute;
+          border:1px solid transparent;
+          margin-left:380px;
+          cursor:pointer;
+        }
+        .flecha-prev{
+          margin-top:-240px;
+          position:absolute;
+          margin-left:-195px;
+          cursor:pointer;
+          display:none;
+        }
+        p{
+          font-size:1.2em;
+          font-family: $frutiger;
+        }
+      }
+      .content-secundario{
+        width:120px;
+        background-color:rgba(0, 0, 0, 0.2);
+        text-align:center;
+        border-radius:5px;
+        position:absolute;
+        margin-top:140px;
+        margin-left:40px;
+        h1{
+          font-family: $bree;
+          font-size:1.5em;
+          color:#fff;
+          padding-top:10px;
+        }
+        h1.esperanza{
+          font-size:1.2em!important;
+        }
+        h1.lonch{
+          margin-bottom:2px!important;
+        }
+        p{
+          font-size:1.2em;
+          font-family: $bree;
+        }
+      }
+      .lonchibon{
+        margin-top:30px!important;
+      }       
+    }
+    .food-active{
+    }   
+    > .venta {
+      width: 550px;
+      h4 {
+        font-size: 21px !important;
+        text-transform: uppercase;
+      }
+      h3, h4 {
+        color: white;
+      }
+      h3, .deventa, .slogan {
+        font-family: $bree;
+      }
+      h4{
+        display:block;
+        width:10px;
+        height:10px;
+        background-color:red;
+      }
+      .deventa {
+        font-weight: 200;
+        font-size: 1.6em;
+        margin: 0;
+      }
+      .three.columns {
+        text-align: center;
+        background: black;
+        background: rgba(0,0,0,0.2);
+        border-radius: 10px;
+      }
+    }
+    &#foodservice{
+    margin-left:25px;
+      .slogan{
+        text-align: center;
+      }
+    }
+    &#centrogastronomico{
+      margin-left: 30px;
+      margin-bottom: 130px;
+      width: 665px;
+      font-size: 13px;
+      h3{
+        text-align: center;
+        color: #0A568C;
+        font-family: $bree;
+        font-weight: 400;
+      }
+      .bloque1{
+        padding: 0.5em 160px 0.5em 1em;
+        background: #ccc;
+        background: rgba(100,100,100, 0.05);
+        border-radius: 10px;
+        img{
+          float: right;
+          border-radius: 10px;
+          box-shadow: 0 0 7px rgba(0,0,0,0.7);
+          margin-top: 24px;
+          margin-right: -180px;
+        }
+      }
+      .bloque2{
+        margin-top: 30px;
+        margin-left: 170px;
+        padding: 0.5em 1em;
+        color: #fff;
+        background: #222;
+        background: rgba(0,0,0, 0.3);
+        border-radius: 10px;
+        img{
+          float: left;
+          border-radius: 10px;
+          box-shadow: 0 0 7px rgba(0,0,0,0.7);
+          margin-top: -15px;
+          margin-left: -180px;
+        }
+      }
+      .bloque3{
+        position: relative;
+        text-align: center;
+        margin-top: 20px;
+        .columns{ overflow: hidden; }
+        .eight.columns{
+          position: absolute;
+          left: 0;
+          margin-top: 20px;
+          white-space: nowrap;
+          img{
+            border-radius: 10px;
+            box-shadow: 0 0 7px rgba(0,0,0,0.7);
+            margin-right: 18px;
+          }
+        }
+        .four.columns{
+          position: absolute;
+          right: 40px;
+          
+        }
+      }
+    }
+    &.marca {
+      header{
+        text-indent: -99999px;
+        margin: 0 auto;
+        position: relative;
+       
+       
+        left: -60px;
+        a{
+          display:block;
+          width: 100%;
+          height: 100%;
+        }
+      }      
+    }
+    &#lazarza{
+      .deventa + img{
+        max-width: 130px;
+      }
+    }
+    &#cinepolis{
+      .deventa + img{
+        margin-top: 5px;
+        max-width: 130px;
+      }
+    }
+    &#terecazola{
+      .deventa + img{
+        max-width: 120px;
+      }
+    }
+    &#lazarza, &#delico{
+      .venta{
+        .three.columns{
+          h4{
+            font-size: 27px;
+          }
+        }
+      }
+    }
+    .iframe{
+      iframe{
+        border-radius: 10px;
+      }
+    }
+  }
+}
+section.preguntaleayaz{
+    > nav{
+    width: 50px;
+    z-index: 9;
+    left: 20px;
+    margin-left: 45px;
+    .videos a{
+      background: image-url('yaz/menu-videos.png') no-repeat 0 0;      
+    }
+    .conoceyaz a{
+      background: image-url('yaz/menu-conoce.png') no-repeat 0 0;
+      margin-left:-8px;
+    }
+    .facebook a{
+      background: image-url('yaz/menu-facebook.png') no-repeat 0 0;
+    }
+    .canalesayuda a{
+      background: image-url('yaz/menu-canalesayuda.png') no-repeat 0 0;
+    }
+    .yaz-blog a{
+      background: image-url('yaz/menu-blog.png') no-repeat 0 0;
+    }
+    a{
+      display: block;
+      background: #f00;
+      text-indent: -99999px;
+      vertical-align: bottom;
+      width: 101px;
+      height: 87px;
+    }
+    ul{
+      margin-left: -27px;
+    }
+  }
+  
+
+  #videos{    
+    .video{
+      width: 640px;
+      padding: 10px 0 90px;
+      h4{
+        color: #2A4994;
+        font-weight: 200;
+        font-size: 30px;
+        font-family: $bree;
+        text-align: center;
+      }
+    }
+  }
+  #yazinicio{
+    .conoce-yaz{
+      width:821px;
+      height:597px;
+      position:relative;
+      background: image-url('yaz/bg.png')no-repeat;
+      .intro-text{
+        width:522px;
+        right:22px;
+        top:90px;
+        position:absolute;
+        p{
+          padding-left:20px;
+          padding-right:20px;
+          font-size:15px;
+        }
+      }
+      .intro-video{
+        width:501px;
+        position:absolute;
+        right:34px;
+        bottom:53px;
+        .pregunta_vid_img{
+          display:block;
+          text-indent:-9999px;
+          width:501px;
+          height:271px;
+          background: image-url('yaz/video.jpg') no-repeat;             
+        }
+      }
+    }
+    .fotos-yaz{
+      .fotos-titulo{
+        margin-left:9px;
+        width:190px;
+        height:46px;
+      }
+      .yaz-galeria{
+        width:778px;
+        margin-left:18px;
+        height:158px;
+        position:relative;
+        .phot-margin{
+          margin-right:3px;
+        }
+        .yaz-familia{
+          position:absolute;
+          left:0;
+          top:0;
+          margin-right:19px;
+          width:175px;
+        }
+        .yaz-compras{
+          position:absolute;
+          left:202px;
+          top:0;
+          margin-right:19px;
+          width:175px;
+        }
+        .yaz-vida{
+          position:absolute;
+          left:403px;
+          top:0;
+          margin-right:19px;
+          width:175px;
+        }
+        .yazcocina{
+          position:absolute;
+          right:0;
+          top:0;
+          width:175px;
+        }      
+      }             
+    }
+  }
+  #canalesayuda{
+    background: image-url('yaz/yaz_atencion_fondo.png') no-repeat 0 120px;
+    width: 600px;
+    min-height: 680px;
+    padding-left: 200px;
+    margin-left: 200px;
+    font-size: 18px;
+    color: #999;
+    a{
+      color: #999;
+    }
+    .row .nine.columns{
+      padding-top: 20px;
+    }
+    > .row.callcenter{
+      padding-top: 90px;
+      background: image-url('yaz/yaz_atencion_titulo.png') no-repeat 0 0;
+    }
+    .callcenter .horario{
+      display: block;
+    }
+  }
+  #fblikebox{
+    width: 664px;
+    height:630px;
+    top: 180px;
+    margin-left:80px;
+    h4{
+      color: #2A4994;
+      font-family: $bree;
+      font-size: 30px;
+      font-weight: 200;
+      text-align: center;
+    }
+    img{
+      margin: 10px 0;
+    }
+    .boton_facebook{
+      background: image-url('yaz/boton_facebook_yaz.png') no-repeat 0 0;
+      display:block;
+      width:153px;
+      height:66px;
+      text-indent:-9999px;
+      float:right;
+    }
+  }  
+  
+  /* Preguntale a Yaz */
+
+#videos{
+  background: image-url('yaz/bg_videos.png') no-repeat 30px 0;
+  margin-top:141px!important;
+  position:relative;
+  .videos-intro{
+    width:458px;
+    height:210px;
+			margin-top: -95px;
+    right: 10px;
+    float:right;
+    text-align: center;
+    
+      h3{
+        color:#004083;
+        font-family: $frutiger;
+        font-size:14px;
+        font-weight: normal;
+      }
+      h4{
+        color:#23ace0;
+        font-family: $bree;
+        font-size: 14px;
+        font-weight: normal;
+      }
+      .intro-parrafo{
+        margin-top:10px;
+        p{
+          color: #666;
+          font-family: $frutiger;
+          margin-bottom:10px;
+        }
+      }      
+    }
+    .videos-platillos{
+      margin-top:345px;
+      width:793px;
+      .licuar_vid_img{
+        background: image-url('videos/video-licuar-yaz.jpg') no-repeat 0 0;
+        width:248px;
+        height:138px;
+        display:inline-block;
+        text-indent:-9999px;
+        margin-left:10px;
+        margin-right:10px;
+      }
+      .sarten_vid_img{
+        background: image-url('videos/video-sarten-yaz.jpg') no-repeat 0 0;
+        width:248px;
+        height:138px;
+        display:inline-block;
+        text-indent:-9999px;
+        margin-right:10px;
+      }
+      .rellenar_vid_img{
+        background: image-url('videos/video-rellenar-yaz.jpg') no-repeat 0 0;
+        width:248px;
+        height:138px;
+        display:inline-block;
+        text-indent:-9999px;
+      }
+    }
+    .videos-vermas{
+      background: image-url('videos/masvideos.jpg') no-repeat 0 0;
+      width:695px;
+      height:74px;
+      margin:0 auto;
+      margin-top:15px;
+      cursor:pointer;
+    }
+    .videos-content{
+      background:#fff;
+      width:793px;
+      margin-top:-14px;  
+      display:none;  
+      margin-left:1px!important;
+      .subtitulo_vid{
+        display:block;
+        margin:0 auto;
+        width:355px;
+        height:80px;
+        text-indent:-9999px;
+        margin-top:20px;        
+      }
+      .vid_yaz{
+        background: image-url('videos/liston-vid-yaz.png') no-repeat 0 0;        
+      }
+      .vid_tuto{
+        background: image-url('videos/liston-vid-tuto.png') no-repeat 0 0;
+      }        
+      .vid_img{
+        display:block;
+        width:289px;
+        height:145px;
+        text-indent:-9999px;
+        margin:0 auto;               
+      }      
+      .yaz_vid_img{
+        background: image-url('videos/video-preguntale-a-yaz.jpg') no-repeat 0 0;            
+      }
+      .paginacion{
+        margin:0 auto;
+        width:598px;
+        overflow:hidden;
+        margin-top:10px;
+      }
+      .cena_vid_img{
+        background: image-url('videos/video-cena-yaz.jpg') no-repeat 0 0;
+        float:left;
+      }
+      .baguette_pescado_vid_img{
+        background: image-url('videos/video-baguette-pescado.jpg') no-repeat 0 0; 
+        float:left;
+        margin-left:20px;
+      }
+      .ensalada_griega_vid_img{
+        background: image-url('videos/video-ensalada-griega.jpg') no-repeat 0 0;
+        float:left;
+        margin-left:150px;
+        margin-top:20px;
+      }
+    }      
+  }      
+  .reveal-modal{
+    width:640px;
+    .close-reveal-modal{
+      background: image-url('videos/close.png') no-repeat 0 0;
+      display:block;
+      width:45px;
+      height:44px;
+      text-indent:-9999px;
+    }
+    h1{
+      font-family:$bree;
+      font-weight: 400;
+      font-size: 25px;
+      color: #29ABE1;
+    }
+  }
+  #yazblog{
+    img{
+      display:block;
+      margin:0 auto;
+    }
+    .intro_yaz_blog{      
+      margin:0 auto;
+      box-shadow:10px black;
+      background-color:#fff;
+      width:410px;
+      box-shadow:0px 0px 10px 2px #929292;
+      p{
+        color:#888;
+        font-family:$frutiger;
+        font-size: 1em;
+        line-height: 1.25;
+        padding:0 22px 0 29px;
+      } 
+      p:nth-child(1){
+        padding-top:10px;
+      }     
+      p:nth-child(2){
+        margin-top:-12px;
+      }
+      p:nth-child(3){
+        margin-top:-12px;
+        padding-bottom:10px;
+      }
+    }
+    iframe{
+      margin-left:60px;
+    }
+  }  
+}
+
+.ie6, .ie7, ie8{
+  .foodservice{
+    .marca{
+      .row.venta{
+        .three.columns{
+          background: image-url('layout/pixelgris30.png');
+        }
+      }
+    }
+  }
+}
+.generatedcontent {
+  section.foodservice article.marca {
+    header {
+      background: none !important;
+      width: 200px !important;
+      height: 50px !important;
+      margin-top: 40px;
+      
+      &:after {
+        content: "";
+        display: block;
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        left: 50px;
+        top: -25px;
+        z-index: 0;
+        pointer-events: none;
+      }
+    }
+    &#pizzahut header {
+      &:after {
+        background: image-url('foodservice/pizzahut/logo_pizzahut.png') center 0 no-repeat;
+      }
+    }
+    &#terecazola header {
+      &:after {
+        background: image-url('foodservice/terecazola/logo_terecazola.png') center 0 no-repeat;
+        width: 169px;
+        height: 85px;
+        left: 20px;
+        top: -10px;
+      }
+    }
+    &#lazarza header {
+      &:after {
+        background: image-url('foodservice/lazarza/logo_lazarza.png') center 0 no-repeat;
+        width: 152px;
+        height: 63px;
+        left: 25px;
+        top: -10px;
+      }
+    }
+    &#delico header {
+      &:after {
+        background: image-url('foodservice/delico/logo_delico.png') center 0 no-repeat;
+        width: 86px;
+        height: 85px;
+        left: 60px;
+        top: -15px;
+      }
+    }
+    &#cinepolis header {
+      &:after {
+        background: image-url('foodservice/cinepolis/logo_cinepolis.png') center 0 no-repeat;
+        width: 176px;
+        height: 64px;
+        left: 12px;
+        top: -6px;
+      }
+    }
+  }
+}
+
+.ie7{
+  body{
+    overflow-y: hidden;
+  }
+}
+
+
+section.promo-festejemos{
+  #festejemos{
+    padding-left: 0;
+    text-align: center;
+    .iframe{
+      padding-top: 30px;
+      padding-bottom: 10px;
+      width: 875px;
+      margin: 0 auto;
+      margin-bottom: 20px;
+      background: image-url("promos/festejemos-fondo.png") no-repeat top center;
+      iframe{
+        overflow-x: hidden;
+      }
+    }
+  }
+}
+
+
+
+/***** HUBERMANN ****/
+.block{width: 960px;}
+.col_header_1{width:320px; float:left;}
+.col_header_2{width:320px;float:left;}
+.col_header_3{width:320px;float:left; }
+
+#social_btns ul{float:right; margin:0; padding: 0;}
+#social_btns li{float:left; }
+
+#logoheader{width:290px; height:140px; float:left; background: url(home-redesing/logo-header.png) no-repeat;}
+
+.logolink{width:290px; height:100px; float:left;}
+
+header nav{ float: left; -webkit-border-radius: 10px; -moz-border-radius: 10px; border-radius: 10px;  width: 1031px;}
+
+
+
+nav { background:none;
+
+      font-size: 16px;
+
+      a {
+        display: block;
+        float: left;
+				font-weight: 300;
+				font-family: 'Bree Serif', serif;
+       
+        text-align: center;
+        color: #FFF;
+        line-height: 38px;
+        padding: 0 25px;
+        
+        
+        &.producto {
+      		margin-left:14px;
+      		margin-top:24px;
+
+        }
+        &:hover, &.active {
+         margin-top:24px;
+          text-decoration:none;
+        }
+        &.foodservice {
+          margin-left:2px;
+          margin-top:24px;
+        }
+        &.preguntaleayaz{
+          
+        }
+        &.nosotrasyphiladelphia{
+        	margin-left:3px;
+       margin-top:24px;
+        }
+        &.basicos{
+
+margin-top:24px;
+        }
+        &.recompensas{
+         float:right;
+          width: 205px;
+          height:92px;
+          padding: 0 50px 0 15px;
+          color:red;
+          text-indent:-9999px;
+          position:relative;
+          top:-19px;
+        }
+        &.recetas{margin-top:24px;}
+      }
+}
+nav {background: url(home-redesing/bg-nav.jpg) left no-repeat;}
+nav a:hover{color:#fff;}
+
+.recompensas{ text-align: left; min-height:68px;}
+
+
+nav .producto:hover{background:#01437F;}
+nav .recetas:hover{background:#01437F;}
+nav .nosotrasyphiladelphia:hover{background:#01437F;}
+nav .foodservice:hover{background:#01437F;}
+nav .basicos:hover{background:#01437F;}
+
+
+/****** Containers ******/
+.block{width:960px; margin: 0 auto; overflow: hidden;}
+.full{width:940px; }
+
+
+/****** Base divs ******/
+.half{width:460px; float: left;}
+.one_3{width:300px; float: left;}
+.two_3{width:620px; float: left;}
+.one_4{width:220px; float: left;}
+.three_4{width:700px; float: left;}
+/*columns for articles width sidebar */
+.col_three_4{width:700px; float:left; }
+.col_two_3{width:620px; float:left; }
+.half, .one_3, .one_4, .two_3, .three_4, .full, .col_two_3,.col_three_4{ margin: 0 10px 10px 10px; float:left;}
+
+
+
+.title_soc{font-size: 10px; text-align: right; margin: 35px 0 13px 0; color:#01437F; line-height: 0;}
+.soc_facebook{width:30px; height:30px; float:left; background: url(home-redesing/btn-soc-facebook.jpg) no-repeat; margin-left:5px;}
+.soc_twitter{width:30px;height:30px;float:left;background: url(home-redesing/btn-soc-twitter.jpg) no-repeat;  margin-left:5px;}
+.soc_youtube{width:60px;height:30px;float:left;background: url(home-redesing/btn-soc-youtube.png) no-repeat;  margin-left:5px;}
+.soc_pinterest{width:30px;height:30px;float:left;background: url(home-redesing/btn-soc-pinterest-new.png) no-repeat;  margin-left:5px;}
+.soc_instagram{width:30px;height:30px;float:left;background: url(home-redesing/btn-soc-instagram.png) no-repeat;  margin-left:5px;}
+.soc_telefono{width:30px;height:30px;float:left; background: url(home-redesing/btn-soc-telefono.png) no-repeat;  margin-left:5px;}
+
+
+
+
+#col_pregunta_yaz{background-image: url(home-redesing/columna_pregunta_yaz.png); background-repeat: no-repeat;}
+.soc_columna_facebook{  background: url(home-redesing/btn_soc_columna_facebook.jpg) no-repeat;}
+.soc_columna_twitter{  background: url(home-redesing/btn_soc_columna_twitter.jpg) no-repeat;}
+.soc_columna_email{  background: url(home-redesing/btn_soc_columna_email.jpg) no-repeat;}
+
+
+
+#col_pregunta_yaz{width: 460px; float: left; height: 289px; }
+#columna_croquetas{width: 460px; height: 248px; float: left; background:#FFF; background: url("home-redesing/empanadas.jpg") no-repeat; padding-left: 20px;}
+#columna_croquetas h2{font-family: Helvetica; margin: 60px 0 0 10px; color: #00437f; font-weight:100; width:120px;}
+.descrip_receta_home{width: 180px; float: left; margin: 10px 0 0 10px; line-height: 1.2em; float:left;}
+
+
+a.ir_receta{width: 120px; float: left; background: #ee2e24; height: 30px; text-align: center; color: #FFF; font-weight: 300; 
+font-family: 'Bree Serif', serif; 
+margin: 25px 0;
+-webkit-border-radius: 10px;
+-moz-border-radius: 10px;
+border-radius: 10px; 
+padding-top: 8px;}
+
+
+#facebook_home{ border-radius: 6px; margin-top:32px; margin-right:10px; width: 400px; float: right; padding-top:15px; padding-bottom:15px; background:#FFF}
+#facebook_home .titulofacebook{font-weight:bold; color: #004282; margin: 0 0 10px 25px;}
+#facebook_home .me_gusta{width: 340px; float:left; height: 70px; border-bottom: 1px solid #ddd; margin-left:10px; background: url(home-redesing/logo-facebook-home.png) no-repeat; padding-left: 35px;}
+
+#facebook_home .actividad{width: 340px; float:left; height: 315px;  margin-left:10px; background: url(home-redesing/logo-facebook-home.png) no-repeat; padding-left: 35px; margin-top:10px;}
+
+
+#facebook_home .facepile{width: 340px; float:left; height: 105px;  margin-left:10px;  padding-left: 10px; margin-top:10px;}
+#wrap_facebook_widgets{width: 400px;  float:left; background:#FFF; border-radius: 6px; padding-top:10px}
+
+
+/****** Containers ******/
+.block{width:960px; margin: 0 auto; overflow: hidden;}
+.full{width:940px; }
+
+
+/****** Base divs ******/
+.half{width:460px; float: left;}
+.one_3{width:300px; float: left;}
+.two_3{width:620px; float: left;}
+.one_4{width:220px; float: left;}
+.three_4{width:700px; float: left;}
+/*columns for articles width sidebar */
+.col_three_4{width:700px; float:left; }
+.col_two_3{width:620px; float:left; }
+.half, .one_3, .one_4, .two_3, .three_4, .full, .col_two_3,.col_three_4{ margin:0 10px 10px 10px; float:left;}
+
+
+article{margin:0 0 10px 0; float:left;}
+article :first-child{margin:0 10px 0 0px;}
+
+
+
+header, footer{ float:none; }
+
+
+
+/**** Header nav ****/
+
+
+/**** container for h1 title and navigation menu on header ****/
+.conttitle{float:left;width:300px;}
+.contnav{width:640px; float:left}
+
+
+
+
+
+/****** columns ******/
+.col_30{width: 30%; float: left; margin: 0 .5em .5em 0;  }
+.col_70{width: 68%; float: left; margin-left: 2% }
+
+.col_40{width: 40%; float: left; margin: 0 .5em .5em 0;  }
+.col_60{width: 58%; float: left; margin-left: 2% }
+
+
+
+
+/********************************/
+/****** Your custom styles ******/
+/********************************/
+
+body{background:#d3d3d3 url(Philadelphia-site-home-BG.jpg) top center;background-attachment: fixed; font-family: Helvetica; font-weight: 300;}
+.recompensas{background:  url(home-redesing/consentidas2_btn.png) right no-repeat; text-align: left; }
+.recompensas:hover{background:  url(home-redesing/consentidas2_btn.png) right no-repeat;-webkit-border-top-right-radius: 10px;
+-webkit-border-bottom-right-radius: 5px;
+-moz-border-radius-topright: 5px;
+-moz-border-radius-bottomright: 5px;
+border-top-right-radius: 5px;
+border-bottom-right-radius: 5px; margin-top:0px;}
+/* Header */
+
+#btnsuscribe{width: 195px; height: 53px; background: url(home-redesing/btn_header_suscribe.png) no-repeat; margin: 45px 0 0 0;}
+#btnsuscribe a{width: 195px; height: 53px; display: block; float:left; }
+header nav{ float: left; -webkit-border-radius: 10px;
+-moz-border-radius: 10px;
+border-radius: 10px;  width: 1034px; height:84px}
+
+
+
+a.family{ width:140px; float: left; display: block; font-size: 12px; padding: 12px 20px 8px 8px; background: #fff url(home-redesing/deco_button_familia_kraft.jpg) top right no-repeat; -webkit-border-radius: 10px;
+-moz-border-radius: 10px;
+border-radius: 10px; text-decoration: none; margin: 15px 0 0 20px; }
+
+/* select con css (familia craft - footer)*/
+.familycrakt input[select]{ margin:0; padding:0; float:left; background:#FFF; border:0; 
+}
+
+
+
+
+#col_pregunta_yaz{
+background-image: url(home-redesing/columna_pregunta_yaz.png);
+background-repeat: no-repeat;
+}
+.soc_columna_facebook{  background: url(home-redesing/btn_soc_columna_facebook.jpg) no-repeat;}
+.soc_columna_twitter{  background: url(home-redesing/btn_soc_columna_twitter.jpg) no-repeat;}
+.soc_columna_email{  background: url(home-redesing/btn_soc_columna_email.jpg) no-repeat;}
+
+
+
+
+#menu_footer{margin-top:20px; float:right;}
+#menu_footer ul{float:left;}
+#menu_footer li{float:left; margin:5px;}
+
+.izquierda{ float: left;}
+
+#menu_footer a{font-size: 11px; font-weight:bold; color: #00437f;}
+.logo_footer{ width:185px; height:60px; float:left; background: url(home-redesing/logo-footer.png) no-repeat; }
+
+.col_40{float:left; margin:0 0 0 10px;}
+.col_60{ float:left; margin:0;}
+
+footer{padding-bottom:50px; padding-top:40px; float: right; padding-left:15px;}
+
+/****** Media queries ******/
+
+  @media only screen and (min-width: 768px) and (max-width: 959px) {
+  .block{width:768px; margin: 0 auto; overflow: hidden;}
+	.full{width:748px;}
+	.half{width:364px; float: left;}
+	.one_3{width:236px; float: left;}
+	.two_3{width:492px; float: left;}
+	.three_4{width:556px; float: left;}
+	.one_4{width:172px; float: left;}
+	.col_three_4{width:556px;float:left;}
+	.col_two_3{width:492px;float:left;}
+	.auto-image-border{ width:98%; height:auto; border:3px solid #e2e2e2; }
+	header{ width:748px; }
+	/**** container for h1 title and navigation menu on header ****/
+	.conttitle{float:left;width:236px;}
+	.contnav{width:512px; float:left}
+	/**** custom styles ****/
+  }
+
+
+  @media only screen and (min-width: 480px) and (max-width: 767px) {
+  .block{width:480px; margin: 0 auto; overflow: hidden;}
+	.full{width:460px; margin:10px auto;}
+	.half{width:460px; float: left;}
+	.one_3{width:460px; float: left;}
+	.two_3{width:460px; float: left;}
+	.three_4{width:460px; float: left;}
+	.one_4{width:460px; float: left;}
+	.col_three_4{width:460px;float:left;}
+	.col_two_3{width:460px;float:left;}
+	.half, .one_3, .one_4, .two_3, .three_4, .full, .col_two_3,.col_three_4{ margin:0 10px 10px 10px;}
+	
+	/*** nav ***/
+	header nav li a {width:230px;display: block; padding:0.5em 0; }
+	header nav li{margin:0;margin-top:0.1em;}
+	header nav{width:100%; margin:0}
+	/**** container for h1 title and navigation menu on header ****/
+	.conttitle{width:460px; margin:0}
+	.conttitle h1{text-align:center}
+	.contnav{width:460px;}
+
+	article :first-child{margin:0 0 10px 0;}
+	article :nth-child(2){margin:0 0 10px 0;}
+	article :last-child{margin:0 0 10px 0;}
+	/**** custom styles ****/
+  }
+ 
+  @media only screen and (min-width: 320px) and (max-width: 479px){
+  	.block{width:320px; margin: 0 auto; overflow: hidden;}
+	.full{width:300px; margin:0 auto;}
+	.half{width:300px; float: left;}
+	.one_3{width:300px; float: left;}
+	.two_3{width:300px; float: left;}
+	.three_4{width:300px; float: left;}
+	.one_4{width:300px; float: left;}
+	.col_three_4{width:300px;float:left;}
+	.col_two_3{width:300px;float:left;}
+	.half, .one_3, .one_4, .two_3, .three_4, .full, .col_two_3, .col_three_4{ margin:0 10px 10px 10px;}
+	
+	/*** nav ***/
+	header nav li a {width:300px;display: block;padding:0.5em 0;}
+	header nav li{margin:0;margin-top:0.1em;}
+	header nav{width:100%; margin:0}
+	/**** container for h1 title and navigation menu on header ****/
+	.conttitle{width:100%; margin:0}
+	.conttitle h1{text-align:center}
+	.contnav{width:300px;}
+
+
+	/**** custom styles ****/
+  }
+
+
+/* ----------------------------------------------  Reset form elements ---------------------------------------------- */
+
+	input, select, textarea {
+		margin:0; padding:8px; font-size:0.85em; outline:none;
+		font-family:inherit;	
+		-moz-box-sizing:border-box; /* Firefox */
+		-webkit-box-sizing:border-box; /* Safari */
+		box-sizing:border-box;}
+		
+		
+div.styled, select, input[type="submit"], input[type="button"], 
+	input[type="file"]:after {
+		background: white url(home-redesing/formelements-select.png) no-repeat center right;
+		-webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.2); 
+		box-shadow: 0 1px 3px rgba(0,0,0,0.2);-webkit-border-radius: 8px;
+		-moz-border-radius: 8px;
+		border-radius: 8px;}
+		
+		
+
+		/* ----------------------------------------------  Select menu  ---------------------------------------------- */
+/* For IE and Firefox */
+
+	div.styled { overflow:hidden; padding:0; margin:0; }
+		
+		.ie7 div.styled {border:none;}
+
+	div.styled select {	
+		width:115%; background-color:transparent; background-image:none;
+		-webkit-appearance: none; border:none; box-shadow:none;}
+		
+		.ie7 div.styled select {
+			width:100%; background-color:#fff; border: solid 1px #ccc; 
+			padding:0.3em 0.5em;}	
+			
+			
+			/* For IE and Firefox */
+
+			div.styled { overflow:hidden; padding:0; margin:0; }
+
+			.ie7 div.styled {border:none;}
+
+			div.styled select {	
+				 background-color:transparent; background-image:none;
+				-webkit-appearance: none; border:none; box-shadow:none;
+				}
+
+				.ie7 div.styled select {
+					width:100%; background-color:#fff; border: solid 1px #ccc; 
+					padding:0.3em 0.5em;}	
+
+		/* ----------------------------------------------  File field  ----------------------------------------------  */
+
+			/* Webkit Only */
+
+			input[type="file"] { 
+				position: relative; 
+				-webkit-appearance: none;
+				-webkit-box-sizing: border-box;
+				box-sizing: border-box;	width: 40%;	padding:0;}
+
+			input[type=file]::-webkit-file-upload-button {
+				width: 0; padding: 0; margin: 0;-webkit-appearance: none; border: none;}	
+
+			input[type="file"]:after {
+				content: 'Upload File';
+				margin:0 0 0 0.5em;
+				display: inline-block; left: 100%; position: relative;
+				background:white url(formelements-select.png) no-repeat center left;
+				padding:0.3em 0.5em; border: solid 1px #ccc !important;
+				-webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.2); 
+				box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+				border-radius:4px;}	
+
+
+				input[type="file"]:active:after {box-shadow:none;}
+
+.right{float: right; }
+
+
+.menu-manual a{float:left; margin: 0 0 0 35px;}
+
+
+.chatyaz{
+      white-space: nowrap;
+      text-align: center;
+      width: 960px;
+      min-width: 0;
+      margin-top:200px;
+   
+    }
+ 
+ 
+
+.interna a{background:pink; float:left; margin-top: 1px ;margin-bottom: 1px ;}   
+
+
+
+#nutricion{width: 700px; float:left; margin-left: 170px; margin-top: 220px; background:#fff; padding:20px; -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.2); 
+				box-shadow: 0 1px 3px rgba(0,0,0,0.2);}
+				
+#nutricion #headernutricion{width:690px; height:220px; float:left; background: url(nosotrasyphiladelphia/header_nutricion2.png) no-repeat;}
+h2.h2nutricion{font-size:18px; color:#333;}
+.aligncenter{text-align:center; width:100%; float:left; padding: 40px;}
+#nutricion strong{color:#333;}
+.tab{width:100%;  float:left; padding-left:19px;}
+
+
+#wrapperrecomendada{width:940px; float:left; background:#fff;-webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.2); 
+				box-shadow: 0 1px 3px rgba(0,0,0,0.2); margin-top:240px;  font-family: 'Bree'; -webkit-border-radius: 8px;
+-moz-border-radius: 8px;
+border-radius: 8px; }
+#wrapperrecomendada .comun{font-size:16px;}
+
+#wrapperrecomendada .celeste{color:#25B0EF;}
+#wrapperrecomendada .azul{color:#115591;}
+#wrapperrecomendada ul{list-style-type:circle}
+
+
+.recomendadarow{width:900px; float:left; margin: 0 0 10px 20px;}
+.titulorecomendada{font-family: 'Bree'; font-size:260%; color:#115591; font-weight:400; float:left; margin-top:10px; width:100%;}
+.imagenprincipal{width:900px; height:600px; float:left; margin: 10px 0; background:url(recomendadas/receta-supertazon.jpg) no-repeat;}
+.colrecomendada1{background:url(recomendadas/recomendada-col1.jpg) no-repeat; width:470px; float:left; height:520px; }
+.colrecomendada2{background:url(recomendadas/recomendada-col2.jpg) no-repeat; width:360px; float:left; height:520px;  margin-left:15px;}
+
+
+
+#bannerocultable{float:left; width:800px; }
