@@ -20,7 +20,7 @@ class Recipe < ActiveRecord::Base
     :p_pescado, :p_cerdo, :p_pasta, :ingredientes, :preparacion, :tips, :etiquetas,
     :t_relleno, :t_licuadora, :t_sarten, :t_mezclar, :t_hornear, :t_batir,
     :utensilio_ids, :recipe_photo, :pic_small, :pic_big, :uso_ids, :medio_ids, :orden,
-    :video, :video_url, :comunidad_autor
+    :video, :video_url, :comunidad_autor, :p_chocolate
 
   validates_presence_of :titulo, :product, :tiempo, :porciones,
     :ingredientes, :preparacion
