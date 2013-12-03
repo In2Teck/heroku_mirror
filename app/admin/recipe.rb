@@ -12,6 +12,7 @@ ActiveAdmin.register Recipe do
   filter :ingredientes
   filter :preparacion
   filter :dificultad
+  filter :p_chocolate, :as => :select
 
   # controller do 
   #   def update
@@ -28,6 +29,17 @@ ActiveAdmin.register Recipe do
     end
     column "Titulo", sortable: :titulo do |model|
       link_to model.to_s, edit_admin_recipe_path(model.id)
+    end
+  end 
+
+  action_item :only => :index do
+    link_to 'Download XML', "recipes/download_xml.xml", :target => "_blank" 
+  end
+
+  collection_action :download_xml do
+    @recipies = Recipe.all
+    respond_to do |format|
+      format.xml { render xml: @recipies }
     end
   end
 
