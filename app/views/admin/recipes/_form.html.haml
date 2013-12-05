@@ -27,6 +27,12 @@
         %label.label
           %small Vista previa
         = image_tag @recipe.pic_small.url(:mini)
+    = f.input :pic_nutrimental, as: :file, :label => 'Foto nutrimental'
+    - unless @recipe.pic_nutrimental_file_name.to_s.empty?
+      %li
+        %label.label
+          %small Vista previa
+        = image_tag @recipe.pic_nutrimental.url(:mini)
     %li
       %label.label{ :for => "recipe_video" } Videoreceta
       = f.check_box :video

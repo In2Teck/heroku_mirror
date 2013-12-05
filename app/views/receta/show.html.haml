@@ -97,6 +97,8 @@
                       - @utensilios.each do |utensilio|
                         %li
                           = utensilio
+                - unless @receta.pic_nutrimental_file_name.nil?
+                  = image_tag @receta.pic_nutrimental.url(:normal), itemprop: "image"
           .principal
             .preparacion
               %ul.nicelist{ itemprop: 'recipeInstructions' }

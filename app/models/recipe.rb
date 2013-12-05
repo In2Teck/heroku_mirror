@@ -20,7 +20,7 @@ class Recipe < ActiveRecord::Base
     :p_pescado, :p_cerdo, :p_pasta, :ingredientes, :preparacion, :tips, :etiquetas,
     :t_relleno, :t_licuadora, :t_sarten, :t_mezclar, :t_hornear, :t_batir,
     :utensilio_ids, :recipe_photo, :pic_small, :pic_big, :uso_ids, :medio_ids, :orden,
-    :video, :video_url, :comunidad_autor, :p_chocolate
+    :video, :video_url, :comunidad_autor, :p_chocolate, :pic_nutrimental
 
   validates_presence_of :titulo, :product, :tiempo, :porciones,
     :ingredientes, :preparacion
@@ -40,6 +40,10 @@ class Recipe < ActiveRecord::Base
   has_attached_file :pic_small, {
       :styles => { :normal => "200x200#", :mini => "55x55#" }
     }.merge(PAPERCLIP_STORAGE_OPTIONS)
+  has_attached_file :pic_nutrimental, {
+      :styles => { :normal => "680x460#", :mini => "136x92#" }
+    }.merge(PAPERCLIP_STORAGE_OPTIONS)
+
 
   mount_uploader :recipe_photo, RecipePhotoUploader
 
