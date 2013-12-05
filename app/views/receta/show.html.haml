@@ -97,14 +97,15 @@
                       - @utensilios.each do |utensilio|
                         %li
                           = utensilio
-                - unless @receta.pic_nutrimental_file_name.nil?
-                  = image_tag @receta.pic_nutrimental.url(:normal), itemprop: "image"
           .principal
             .preparacion
               %ul.nicelist{ itemprop: 'recipeInstructions' }
                 - @receta.preparacion.lines.each do |paso|
                   %li
                     = paso
+                %div{:style => "display: inline-block; margin-top: -20px;" }
+                  - unless @receta.pic_nutrimental_file_name.nil?
+                    = image_tag @receta.pic_nutrimental.url(:normal), itemprop: "image"
             <div class="fb-comments" data-href="http://www.philadelphia.com.mx/receta/#{@receta.id}/#{@receta.slug}.html" data-width="397" data-num-posts="10"></div>
       .two.columns{:style => " float:right; "}
         %aside.tips{:style => " float:right; margin: 0; "}

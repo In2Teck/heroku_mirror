@@ -41,7 +41,7 @@ class Recipe < ActiveRecord::Base
       :styles => { :normal => "200x200#", :mini => "55x55#" }
     }.merge(PAPERCLIP_STORAGE_OPTIONS)
   has_attached_file :pic_nutrimental, {
-      :styles => { :normal => "680x460#", :mini => "136x92#" }
+      :styles => { :normal => "426x526#", :mini => "75x93#" }
     }.merge(PAPERCLIP_STORAGE_OPTIONS)
 
 
