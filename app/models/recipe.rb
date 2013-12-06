@@ -103,6 +103,7 @@ class Recipe < ActiveRecord::Base
     tipos << "Postres" if p_postre
     tipos << "Ensalada" if p_ensalada
     tipos << "Desayuno" if desayuno
+    tipos << "Chocolate" if p_chocolate
     tipos
   end
 
@@ -122,7 +123,7 @@ class Recipe < ActiveRecord::Base
   end
 
   def tipo_platillo_present?
-    if %w(desayuno p_postre p_sopa p_botana p_entrada p_aves p_carne p_pescado p_cerdo p_pasta).all? {|attr| self[attr].blank?}
+    if %w(desayuno p_postre p_sopa p_botana p_entrada p_aves p_carne p_pescado p_cerdo p_pasta p_chocolate).all? {|attr| self[attr].blank?}
       errors[:base] << "Selecciona al menos un tipo de platillo"
     end
   end

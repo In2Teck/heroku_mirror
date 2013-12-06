@@ -59,6 +59,8 @@ class RecetaController < ApplicationController
             f = 'p_pasta'
           when 'ensalada'
             f = 'p_ensalada'
+          when 'chocolate'
+            f = 'p_chocolate'
         end
 
         r = r.porplatillo(f) if f
